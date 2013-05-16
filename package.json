@@ -1,0 +1,23 @@
+{
+    "author": "Your Name",
+    "name": "cleancoffee",
+    "version": "0.0.0",
+    "dependencies": {
+        "express": "*",
+        "mongoose": "~3.0.3",
+        "package-parser": "*",
+        "coffee-script": "*"
+    },
+    "devDependencies": {},
+    "coffeebone": {
+        "settings": {
+            "publicDir": "dist",
+            "sessionSecret": "sldfubh",
+            "mongo": {
+                "host": "localhost",
+                "dbName": "cleancoffee"
+            },
+            "port": 9898
+        }
+    }
+}
