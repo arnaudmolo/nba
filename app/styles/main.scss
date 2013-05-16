@@ -1,0 +1,40 @@
+#map{
+    g{
+        path{
+            &:hover{
+                fill: #b33944;
+                opacity: 1 !important;
+            }
+        }
+        :hover{
+            path{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+#map path, #map g{
+    transition: all 1s ease;
+    position: relative;
+    -webkit-transform-origin: 50% 50%;
+    z-index: 10;
+}
+.fat{
+    transition: all 1s ease;
+    -webkit-transform: scale(2);
+}
+.zoomed, .zoomed path{
+    fill: #b33944 !important;
+    opacity: 1 !important;
+}
+#pointer{
+    position: absolute;
+    top: 244px;
+    left: 175px;
+    background-color: red;
+    height: 5px;
+    width: 5px;
+}
+.fat path{
+    opacity: 0.5;
+}

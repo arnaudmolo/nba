@@ -1,0 +1,44 @@
+/* line 4, main.scss */
+#map g path:hover {
+  fill: #b33944;
+  opacity: 1 !important;
+}
+/* line 10, main.scss */
+#map g :hover path {
+  opacity: 0.5;
+}
+
+/* line 16, main.scss */
+#map path, #map g {
+  transition: all 1s ease;
+  position: relative;
+  -webkit-transform-origin: 50% 50%;
+  z-index: 10;
+}
+
+/* line 22, main.scss */
+.fat {
+  transition: all 1s ease;
+  -webkit-transform: scale(2);
+}
+
+/* line 26, main.scss */
+.zoomed, .zoomed path {
+  fill: #b33944 !important;
+  opacity: 1 !important;
+}
+
+/* line 30, main.scss */
+#pointer {
+  position: absolute;
+  top: 244px;
+  left: 175px;
+  background-color: red;
+  height: 5px;
+  width: 5px;
+}
+
+/* line 38, main.scss */
+.fat path {
+  opacity: 0.5;
+}
