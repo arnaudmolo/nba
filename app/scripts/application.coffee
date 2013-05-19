@@ -7,18 +7,27 @@ requirejs.config
     jquery: "framework/jquery.min"
     two: "vendor/two/build/two"
     view: "views/View"
+    goto: "framework/goto"
   shim:
     backbone:
       deps: ["lodash", "jquery"]
       exports: "Backbone"
+    goto:
+      deps: ["jquery"]
 
 
 
 require(['backbone', 'handlebars', './views/ApplicationView', './collections/TeamCollection', './routes/Router'], (Backbone, Handlebars, ApplicationView, TeamCollection, Router) ->
-  window.router = new Router()
-  Backbone.history.start()
+  window.temp = {}
   window.NBA = new TeamCollection()
-  window.NBA.fetch()
-  window.mainView = new ApplicationView {el: $('#container')}
-  window.mainView.render()
+  document.onscroll = (e)->
+    e.preventDefault()
+  $(document).on 'loaded', ->
+    console.log 'loaded'
+    window.router = new Router()
+    window.temp.loaded = true
+    Backbone.history.start(trigger: true)
+  window.NBA.fetch
+    success: ->
+      window.mainView = new ApplicationView {el: $('#container')}
 )

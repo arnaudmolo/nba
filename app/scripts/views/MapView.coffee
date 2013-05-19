@@ -1,27 +1,33 @@
 define ['backbone', 'view', 'two'], (Backbone, View, Two)->
     class MapView extends View
         initialize: ->
-            cetteVue = @;
+
+        map: document.getElementById 'map'
+
+        createMap: ->
+
+            if @svgMap isnt undefined
+                return @
+            
             two = new Two
                 width: "100%"
-                height: "100%"
+                height: "70%"
             .appendTo @map
-            $.get "./img/usa_map.svg", (doc) ->
-                cetteVue.svgMap = map = two.interpret($(doc).find("svg")[0])
-                _.each map.children[2].children, (elem) ->
-                    if elem instanceof Two.Group
-                        elem.bind "mousedown", ()->
-                            window.router.navigate('#/'+@dataId, trigger: true)
-                two.update()
+            
+            _this = @
+            
+            $.ajax
+                url:"/img/usa_map.svg"
+                async: true
+                success: (doc) ->
+                    _this.svgMap = two.interpret($(doc).find("svg")[0])
+            
+                    _.each _this.svgMap.children[2].children, (elem) ->
+                        if elem instanceof Two.Group
+                            elem.bind "mousedown", ()->
+                                window.router.navigate('//'+@dataId, trigger: true)
+            
+                    two.update()
+                    window.mainView.loaded()
+            
             @
-        map: document.getElementById 'map'
-        goTo: (state)->
-            console.log state.dataId
-            b = state.getCenter()
-            @svgMap.DOMElement.classList.add 'fat'
-            @svgMap.DOMElement.style.webkitTransformOrigin = b.x+"px "+b.y+"px"
-            state.DOMElement.classList.add 'zoomed'
-            _.each state.children, (town)->
-                model = window.NBA.where({city: town.dataId})[0]
-                if model isnt undefined
-                    model.bottomBar()

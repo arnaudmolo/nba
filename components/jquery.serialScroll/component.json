@@ -1,0 +1,33 @@
+{
+  "name": "jquery.serialScroll",
+  "version": "0.0.0",
+  "description": "This plugin allows you to easily animate any series of elements, by sequentially scrolling them.",
+  "homepage": "https://github.com/flesler/jquery.serialScroll",
+  "main": [
+    "./jquery.serialScroll.js",
+    "./jquery.serialScroll-min.js"
+  ],
+  "dependencies": {
+    "jquery": "~1.8",
+    "jquery.scrollTo": "~1.4.3"
+  },
+  "keywords": [
+    "browser",
+    "client",
+    "functional",
+    "scrolling"
+  ],
+  "author": {
+    "name": "Ariel Flesler",
+    "url": "http://flesler.blogspot.com/"
+  },
+  "gitHead": "f39ffee8785ccf87eca603d00ce493c8fbc9278a",
+  "readme": "# jQuery.SerialScroll\r\n\r\n### Installation and usage\r\n\r\nUsing [bower](https://github.com/twitter/bower):\r\n```bash\r\nbower install jquery.serialScroll\r\n```\r\n\r\n### Notes\r\n\r\n* The plugin requires jQuery.ScrollTo. http://github.com/flesler/jquery.scrollTo\r\n\r\n* The hash of settings is passed in to jQuery.ScrollTo, so, in addition to jQuery.LocalScroll's settings, you can use any of jQuery.ScrollTo's. Check that plugin's documentation for further information.\r\n\r\n* Most of this plugin's defaults, belong to jQuery.ScrollTo, check it's demo for an example of each option.",
+  "readmeFilename": "README.md",
+  "_id": "jquery.serialScroll@1.2.2",
+  "commit": "f39ffee8785ccf87eca603d00ce493c8fbc9278a",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/flesler/jquery.serialScroll.git"
+  }
+}

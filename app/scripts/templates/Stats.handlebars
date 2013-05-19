@@ -1,0 +1,30 @@
+<h1>All you need to know</h1>
+<nav>
+    <a href="#/stats/{{name}}">Statistics</a>
+    <a href="#/awards/{{name}}">Awards</a>
+    <a href="#/players/{{name}}">Players</a>
+</nav>
+<div class="left">
+    {{#each years}}
+        <div class="year">
+            <div class="points">
+                <p>Points: {{points}}</p>
+            </div>
+            <div class="rebounds">
+                <p>Rebounds : {{rebounds}}</p>
+            </div>
+            <div class="field-goals">
+                <p>Field Goals : {{fieldGoalsPercent}}%</p>
+            </div>
+            <div class="assists">
+                <p>Assists : {{assists}}</p>
+            </div>
+            <div class="three-pointer">
+                <p>3 Pointer : {{threePointsPercent}}%</p>
+            </div>
+            <div class="blocks">
+                <p>blocks : {{blocks}}</p>
+            </div>
+        </div>
+    {{/each}}
+</div>

@@ -36,4 +36,5 @@ define(['text!templates/Application.handlebars', 'backbone', 'two'], (templateSt
             data = @model.attributes if typeof @model != 'undefined'
             $(@el).empty().append(template(data))
             @onRendered()
+
 )

@@ -1816,7 +1816,6 @@ define(['backbone'], function(Backbone){
       this.count = 0;
       this.domElement = svg.createElement('svg');
       this.elements = [];
-
       this.domElement.style.visibility = 'hidden';
 
       this.unveil = _.once(_.bind(function() {
@@ -2168,9 +2167,6 @@ define(['backbone'], function(Backbone){
 
     _.extend(Shape.prototype, Backbone.Events, {
       tear: function(){
-        if (this.DOMElement === undefined) {
-          this.DOMElement = document.getElementById("two-"+ this.id);
-        }
         this.DOMElement.parentNode.appendChild(this.DOMElement);
         return this;
       },

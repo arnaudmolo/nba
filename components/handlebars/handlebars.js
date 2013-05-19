@@ -148,7 +148,7 @@ Handlebars.registerHelper('each', function(context, options) {
   if(i === 0){
     ret = inverse(this);
   }
-
+  console.log(ret);
   return ret;
 });
 

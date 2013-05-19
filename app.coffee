@@ -2,7 +2,6 @@ express = require 'express'
 package_parser = require 'package-parser'
 packageJson = package_parser.getPackageJsonSync()
 settings = packageJson.coffeebone.settings
-
 app = express()
 
 console.log('static assets: ' + __dirname + '/' + settings.publicDir)
@@ -12,7 +11,7 @@ app.use express.cookieParser()
 app.use (req, res, next)->
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Credentials", true);
-    res.header("Access-Control-Allow-Methods", "*");
+    res.header("Access-Control-Allow-Methods", "POST, PUT, GET, DELETE");
     res.header("Access-Control-Allow-Headers", "X-HTTP-Method-Override, Content-Type");
     next()
 app.use express.session({ secret: settings.sessionSecret})
@@ -27,4 +26,7 @@ app.db.once('open', ->
     require('./schemas').initialize app
     require('./routes').initialize app
     app.listen settings.port
+    app.get('/state/:state', (req, res)->
+    	res.redirect '/#/'
+    )
 );
