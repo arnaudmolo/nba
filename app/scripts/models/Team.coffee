@@ -19,7 +19,7 @@ define ['backbone', '.././views/BottomBarView', '.././views/StatsView'], (Backbo
                     threePointsAttemped: 0
                     blocks: 0
         initialize: ->
-            
+            console.log "coucou"
             _.each @get('years'), (year)->
                 year.fieldGoalsPercent = year.fieldGoalsMade / year.fieldGoalsAttemped * 100
                 year.threePointsPercent = year.threePointsMade / year.threePointsAttemped * 100

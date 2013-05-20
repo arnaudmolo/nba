@@ -1,3 +1,7 @@
+jsdom = require 'jsdom'
+request = require 'request'
+url = require 'url'
+_ = require 'underscore'
 module.exports.initialize = (app) -> 
   Team = app.db.model('Team', app.schemas.Team)
 
@@ -14,6 +18,7 @@ module.exports.initialize = (app) ->
   )
   app.put('/team/:id', (request, response) ->
     id = request.params.id;
+    console.log request.body
     delete request.body._id if request.body._id
     Team.update({_id: id}, {$set: request.body}, (error, result) ->
         response.send(JSON.stringify(result))
@@ -34,7 +39,81 @@ module.exports.initialize = (app) ->
           )
       )
   )
- 
+
+  # app.get('/lesteams', (req, res)->
+  #   res.send(lesTeams)
+  # )
+
+  # app.get('/gogo', (req, res)->
+  #   console.log 'wai1'
+  #   _.each lesTeams, (team)->
+  #     obj = new Team(team)
+  #     obj.save (err)->
+  #       if err
+  #         console.log err
+  #       else
+  #         console.log "good"
+  # )
+
+  # lesTeams = {}
+  # console.log 'lets scrap bb'
+  # request url: 'http://www.databasebasketball.com/teams/teamlist.htm', (err, res, body)->
+  #   self = @
+  #   jsdom.env
+  #     html: body
+  #     scripts: ['http://code.jquery.com/jquery-1.9.1.min.js']
+  #   , (err, window)->
+  #     $ = window.jQuery
+  #     $body = $("body")
+  #     $teamLinks = $($body.find("table table")[0]).find('font a')
+  #     console.log $teamLinks = $($teamLinks.splice($teamLinks.length/2, $teamLinks.length));
+  #     $teamLinks.each (a)->
+
+  #       website = "http://www.databasebasketball.com/teams/teampage.htm"
+  #       teampage = url.parse(@href).search
+  #       request url: website + teampage, (err, res, body)->
+  #         self = @
+  #         jsdom.env
+  #           html: body
+  #           scripts: ['http://localhost:3501/scripts/framework/jquery.min.js']
+  #         , (err, window)->
+  #           $ = window.jQuery
+  #           $body = $("body")
+  #           websiteWai = "http://www.databasebasketball.com"
+  #           $teamName = $($body.find('table')[1]).find('font a')
+  #           $tableau = $($body.find('table')[2]).find('td:first-child a')
+  #           name = $teamName.html().split("(")[0]
+  #           if lesTeams[name] is undefined
+  #             lesTeams[name] = {}
+  #           lesTeams[name] = lesTeams[name] || {}
+  #           lesTeams[name].name = name
+  #           lesTeams[name].creation = $teamName.html().split('(')[1].split(' ')[0]
+
+  #           $tableau.each ->
+  #             yearPage = $(this).attr('href')
+  #             season = $(this).html().split("-")[0];
+  #             request url: websiteWai + yearPage, (err, res, body)->
+  #               jsdom.env
+  #                 html: body
+  #                 scripts: ['http://localhost:3501/scripts/framework/jquery.min.js']
+  #               , (err, window)->
+  #                 $ = window.jQuery
+  #                 $body = $("body")
+  #                 $tableauAnnee = $($($body.find('table')[3]).find('tr')[1]).find('td')
+  #                 if lesTeams[name].years is undefined
+  #                   lesTeams[name].years = {}
+  #                 lesTeams[name].years[season] = 
+  #                   points: $tableauAnnee[2].innerHTML
+  #                   rebounds: $tableauAnnee[14].innerHTML
+  #                   fieldsGoalsMade: $tableauAnnee[4].innerHTML
+  #                   fieldsGoalsAttemped: $tableauAnnee[5].innerHTML
+  #                   assists: $tableauAnnee[16].innerHTML
+  #                   freeThrow: $tableauAnnee[9].innerHTML
+  #                   threePointsMade: $tableauAnnee[10].innerHTML
+  #                   threePointsAttemped: $tableauAnnee[11].innerHTML
+  #                   blocks: $tableauAnnee[19].innerHTML
+  #                 console.log lesTeams[name].years[season].rebounds
+
   # knicks = new Team(
   #   name: 'knicks'
   #   city: 'new_york'

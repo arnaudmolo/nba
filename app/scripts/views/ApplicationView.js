@@ -85,7 +85,10 @@ define(['text!templates/Application.handlebars', 'backbone', 'two', 'view', 'vie
           cities = window.NBA.where({
             state: stateName
           });
+          console.log(stateName);
+          console.log(cities);
           return _.each(cities, function(team) {
+            console.log(team);
             if (team !== void 0) {
               return team.bottomBar();
             }

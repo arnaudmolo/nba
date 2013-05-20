@@ -35,7 +35,6 @@ define ['text!templates/Application.handlebars', 'backbone', 'two', 'view', 'vie
                 mainFrame.appendChild(a)
 
         goTo: (stateName, options = zoom:true)->
-
             @map.createMap()
             state = null
 
@@ -55,7 +54,9 @@ define ['text!templates/Application.handlebars', 'backbone', 'two', 'view', 'vie
                 
                 if town.dataId isnt undefined and town.dataId isnt ''
                     cities = window.NBA.where state: stateName
-                
+                    console.log stateName
+                    console.log cities
                     _.each cities, (team)->
+                        console.log team
                         if team isnt undefined
                             team.bottomBar()
