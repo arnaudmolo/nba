@@ -12,18 +12,105 @@
         <link rel="stylesheet" href="styles/main.css"/>
     </head>
     <body>
-        <div id="loader">
-            <div id="nba-logo">
-                <img src="./img/NBA_player.svg" alt="">                
+        <div id="main" class="pull-left">
+            <section id="home" class="loading">
+                <div class="content logo">
+                    <img src="./img/NBA_logo.png" alt="logo nba" id="nba-logo">
+                    <h1><span></span>NBA Dataviz<span></span></h1>
+                </div> 
+                <header>
+                    <nav>
+                        <ul>
+                            <li class="detailsmenu"><span><a href="#/map">Atlantic</a></span>
+                                <ul>
+                                    <nav class="content">
+                                        <li class="celtics"><a href="#/stats/boston-celtics"><p>Boston</p><p>Celtics</p></a></li>
+                                        <li class="brooklyn"><a href="#/stats/brooklyn-nets"><p>Brooklyn</p><p>Nets</p></a></li>
+                                        <li class="knicks"><a href="#/stats/new-york-knicks"><p>New York</p> <p>Knicks</p></a></li>
+                                        <li class="philadelphie"><a href="#/stats/philadelphia-76ers"><p>Philadelphie</p><p>76ers</p></a></li>
+                                        <li class="toronto"><a href="#/stats/toronto-raptors"><p>Toronto</p><p>Raptors</p></a></li>
+                                    </nav>
+                                </ul>
+                            </li>
+                            <li class="detailsmenu"><span><a href="#/map">Central</a></span>
+                                <ul>
+                                    <nav class="content">
+                                        <li class="celtics"><p>Boston</p><p>Celtics</p></li>
+                                        <li class="brooklyn"><p>Brooklyn</p> <p>Nets</p></li>
+                                        <li class="knicks"><a href="#/stats/new-york-knicks"><p>New York</p> <p>Knicks</p></a></li>
+                                        <li class="philadelphie"><p>Philadelphie</p> <p>76ers</p></li>
+                                        <li class="toronto"><p>Toronto</p> <p>Raptors</p></li>
+                                    </nav>
+                                </ul>
+                            </li>
+                            <li><span><a href="#/map">Southeast</a></span></li>
+                            <li><span><a href="#/map">Southwest</a></span></li>
+                            <li><span><a href="#/map">Northwest</a></span></li>
+                            <li><span><a href="#/map">Pacific</a></span></li>
+                        </ul>
+                    </nav>
+                </header>
+            </section>
+            <section id="teams">
+                <h1 class="arvobold center uppercase">Where would you like to <strong>go</strong> ?</h1>
+                <div id="map" class="container" ></div>
+                <div class="bottom-bar container">
+                    <div id="choose">
+                        <p>Choose your team</p>
+                    </div>
+                    <div id="bottom-bar" class="container" >
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <div id="playoffs"></div>
+                <div id="legend" class="container">
+                    <div class="team new-york-knicks"><span>New York Knicks</span></div>
+                    <div class="team san-antonio-spurs"><span>San Antonio Spurs</span></div>
+                    <div class="team los-angeles-lakers"><span>Los Angeles Lakers</span></div>
+                    <div class="team denver-nuggets"><span>Denver Nuggets</span></div>
+                    <div class="team atlanta-hawks"><span>Atlanta Hawks</span></div>
+                    <div class="team portland-blazers"><span>Portland Blazers</span></div>
+                    <div class="team milwaukee-bucks"><span>Milwaukee Bucks</span></div>
+                    <div class="team buffalo-braves"><span>Buffalo Braves</span></div>
+                    <div class="team chicago-bulls"><span>Chicago Bulls</span></div>
+                    <div class="team cap"><span>CAP</span></div>
+                    <div class="team baltimore-bullets"><span>Baltimore Bullets</span></div>
+                    <div class="team washington-wizards"><span>Washington Wizards</span></div>
+                    <div class="team philadelphie-sixers"><span>Philadelphie Sixers</span></div>
+                    <div class="team houston-rockets"><span>Houston Rockets</span></div>
+                    <div class="team phenix-suns"><span>Phenix Suns</span></div>
+                    <div class="team seattle-supersonics"><span>Seattle Supersonics</span></div>
+                    <div class="team golden-state-warriors"><span>Golden State Warriors</span></div>
+                    <div class="team kansas-city-kings"><span>Kansas City Kings</span></div>
+                    <div class="team boston-celtics"><span>Boston Celtics</span></div>
+                    <div class="team cleveland-cavaliers"><span>Cleveland Cavaliers</span></div>
+                    <div class="team detroit-pistons"><span>Detroit Pistons</span></div>
+                    <div class="team brooklyn-nets"><span>Brooklin Nets</span></div>
+                    <div class="team utah-jazz"><span>Utah Jazz</span></div>
+                    <div class="team dallas-mavericks"><span>Dallas Mavericks</span></div>
+                    <div class="team charlotte-bobcats"><span>Charlotte Bobcats</span></div>
+                    <div class="team indiana-pacers"><span>Indiana Pacers</span></div>
+                    <div class="team orlando-magic"><span>Orlando Magic</span></div>
+                    <div class="team miami-heat"><span>Miami Heats</span></div>
+                    <div class="team toronto-raptors"><span>Toronto Raptors</span></div>
+                    <div class="team minnesota-timberwolves"><span>Minnesota Tomberwolves</span></div>
+                    <div class="team sacramento-kings"><span>Sacramento Kings</span></div>
+                    <div class="team new-orleans-hornets"><span>New Orleans Hornets</span></div>
+                    <div class="team los-angeles-clippers"><span>Los Angeles Clippers</span></div>
+                    <div class="team memphis-grizzlies"><span>Memphis Grizzlies</span></div>
+                    <div class="team oklahoma-city-thunder"><span>Oklahoma City Thunder</span></div>
+                </div>
+            </section>
+            <div id="stats-style">
+                <section id="stats" class="container">
+                    
+                </section>
             </div>
         </div>
-        <div id="map"></div>
-        <div id="bottom-bar">
-        </div>
-        
-        <div id="stats">
-            
-        </div>
+       <div id="menu" class="pull-left">
+           <p>coucou</p>
+       </div> 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/framework/require.js" data-main="scripts/application"></script>
         <!-- endbuild -->

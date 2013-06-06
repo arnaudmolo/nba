@@ -12,31 +12,39 @@ define ['backbone', '.././views/BottomBarView', '.././views/StatsView'], (Backbo
                     players: []
                     points: 0
                     rebounds: 0
-                    fieldGoalsMade: 0
-                    fieldGoalsAttemped: 0
+                    fieldsGoalsMade: 0
+                    fieldsGoalsAttemped: 0
                     assists: 0
                     threePointsMade: 0
                     threePointsAttemped: 0
                     blocks: 0
+                    fielsdGoalsPercent: 0
+                    threePointsPercent: 0
         initialize: ->
-            console.log "coucou"
-            _.each @get('years'), (year)->
-                year.fieldGoalsPercent = year.fieldGoalsMade / year.fieldGoalsAttemped * 100
-                year.threePointsPercent = year.threePointsMade / year.threePointsAttemped * 100
-        
         bottomBar: ->
-        
-            if @bottomBarView is null
-                @bottomBarView = new BottomBarView(model:@)
-            window.mainView.bottomBarElement.insertBefore(@bottomBarView.render())
-            @bottomBarView.el.classList.add('show')
-        
+            if @bottomBarView isnt undefined
+                @bottomBarView = new BottomBarView model:@
+            window.mainView.bottomBarElement.insertBefore @bottomBarView.render()
+            t = @
+            setTimeout ->
+                t.bottomBarView.el.classList.add 'show'
+            , 3
+            window.mainView.bottomBarModels.push(@)
+        bottomBarRemove: ->
+            @bottomBarView.remove()
+        render: ->
+            @statsView = new StatsView model:@
+            $("#stats").empty().prepend @statsView.render()
         stats: ->
-            window.mainView.resetMap();
-
             if @statsView is null
-                @statsView = new StatsView({model:@})
-        
-            $("#stats").empty().prepend(@statsView.render())
-        
-            @
+                @render()
+            @statsView.data()
+            return @
+        awards: ->
+            if @statsView is null
+                @render()
+            @statsView.awards()
+        players: ->
+            if @statsView is null
+                @render()
+            @statsView.players()

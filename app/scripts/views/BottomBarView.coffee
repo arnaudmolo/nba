@@ -1,8 +1,9 @@
-define ['text!templates/BottomBar.handlebars', 'backbone', 'view', 'two'], (templateString, Backbone, View)->
+define ['text!templates/BottomBar.handlebars', 'backbone', 'view'], (templateString, Backbone, View)->
     class BottomBarView extends View
         initialize: ->
             @el = document.createElement('a')
-            @el.href = "#/stats/"+@model.get('name')
+            @el.href = "#/stats/"+@model.get('sluggedName')
+            @el.classList.add 'arvobold'
             @listenTo(@model, 'change', @render)
         render: ->
             @onRender()
@@ -12,3 +13,8 @@ define ['text!templates/BottomBar.handlebars', 'backbone', 'view', 'two'], (temp
             @el.innerHTML = template data
             @onRendered()
             @el
+        remove: ->
+            @el.classList.remove('show')
+            @el.addEventListener 'webkitTransitionEnd', ->
+                console.log "transitionend"
+                this.parentNode.removeChild this

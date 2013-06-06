@@ -16,25 +16,60 @@ define(['backbone', 'goto'], function() {
       '': 'init',
       'state/:name': 'state',
       'stats/:name': 'stats',
-      'map': 'map'
+      'map': 'map',
+      'playoffs': 'playoffs',
+      'awards/:name': 'awards',
+      'players/:name': 'players'
     };
 
     Router.prototype.state = function(name) {
       window.mainView.goTo(name);
-      return $.scrollTo("#bottom-bar", 500);
+      $.scrollTo("#map", 500);
+      return window.transition = true;
     };
 
     Router.prototype.init = function() {};
 
     Router.prototype.stats = function(name) {
-      window.mainView.goTo(window.mainView.stats(name).get('state'), {
-        zoom: false
-      });
-      return $.scrollTo("#stats", 500);
+      if (window.transition) {
+        return window.mainView.goTo(window.mainView.stats(name).get('state'), {
+          zoom: window.transition,
+          stats: true
+        });
+      } else {
+        $.scrollTo("#stats", 1000);
+        return window.mainView.stats(name);
+      }
     };
 
     Router.prototype.map = function() {
-      return $.scrollTo("#map", 500);
+      return $.scrollTo("#teams", 500);
+    };
+
+    Router.prototype.playoffs = function() {
+      return $.scrollTo("#playoffs", 500);
+    };
+
+    Router.prototype.awards = function(name) {
+      if (window.transition) {
+        return window.mainView.goTo(window.mainView.awards(name).get('state'), {
+          zoom: window.transition,
+          stats: true
+        });
+      } else {
+        return window.mainView.awards(name);
+      }
+    };
+
+    Router.prototype.players = function(name) {
+      if (window.transition) {
+        return window.mainView.goTo(window.mainView.players(name).get('state'), {
+          zoom: window.transition,
+          stats: true
+        });
+      } else {
+        return window.mainView.players(name);
+      }
     };
 
     return Router;

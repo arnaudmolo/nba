@@ -1,0 +1,41 @@
+
+            # $.ajax
+            #     url: '/img/playoffs.svg'
+            #     success: (data)->
+            #         ex = 
+            #             finalconf: []
+            #             semifinal: []
+            #             quarterfinal: []
+            #             final: []
+            #         $(data).find('#finalconf>g').each (i, e)->
+            #             group = []
+            #             $(e).find('circle, path').each (index, element)->
+            #                 forme = {}
+            #                 forme.color = element.attributes.fill.nodeValue
+            #                 forme.width = 1
+            #                 group.push(forme)
+            #             ex.finalconf.push(group)
+            #         $(data).find('#semifinal>g').each (i, e)->
+            #             group = []
+            #             $(e).find('circle, path').each (index, element)->
+            #                 forme = {}
+            #                 forme.color = element.attributes.fill.nodeValue
+            #                 forme.width = 1
+            #                 group.push(forme)
+            #             ex.semifinal.push(group)
+            #         $(data).find('#quarterfinal>g').each (i, e)->
+            #             group = []
+            #             console.log i
+            #             $(e).find('circle, path').each (index, element)->
+            #                 forme = {}
+            #                 forme.color = element.attributes.fill.nodeValue
+            #                 forme.width = 1
+            #                 group.push(forme)
+            #             ex.quarterfinal.push(group)
+            #         $(data).find('#final path, #final circle').each (index, element)->
+            #             forme = {}
+            #             forme.color = element.attributes.fill.nodeValue
+            #             forme.width = 1
+            #             ex.final.push(forme)
+
+            #         console.log ex

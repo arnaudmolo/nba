@@ -1,62 +1,58 @@
-define ['text!templates/Application.handlebars', 'backbone', 'two', 'view', 'views/MapView'], (templateString, Backbone, Two, View, Map) ->
+define ['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapView', 'views/PlayoffsView', '../framework/csv'], (templateString, Backbone, View, Map, Playoffs) ->
     class ApplicationView extends View
         bottomBarElement: document.getElementById("bottom-bar")
+        bottomBarModels: []
         initialize: ->
-            
             window.mainView = @
             @map = new Map()
             @map.createMap()
             @map.render()
-        stats: (name)->
-            
-            window.NBA.findWhere(name:name).stats()
-
-        resetMap: ->
-            
-            @map.svgMap.DOMElement.classList.remove 'fat'
-            @map.svgMap.DOMElement.style.webkitTransformOrigin = "50% 50%"
-            
-            if window.temp.zoomed
-                window.temp.zoomed.DOMElement.classList.remove "zoomed"
-            
-            @
-        loaded: ->
-            
-            console.log 'main loaded'
-            $(document).trigger('loaded')
-            mainFrame = document.getElementById('loader')
-            logo = document.getElementById('nba-logo')
-            logo.style.height = '525px'
-            
-            logo.addEventListener 'webkitTransitionEnd',->
-                a = document.createElement('a')
-                a.href = '#/map'
-                a.innerText = "go"
-                mainFrame.appendChild(a)
-
-        goTo: (stateName, options = zoom:true)->
-            @map.createMap()
-            state = null
-
-            _.each @map.svgMap.children[2].children, (e)->
-                if e.dataId is 'state/'+stateName
-                    state = e
-            if options.zoom
-                b = state.getCenter()
-                @map.svgMap.DOMElement.classList.add 'fat'
-                @map.svgMap.DOMElement.style.webkitTransformOrigin = b.x+"px "+b.y+"px"
-                state.DOMElement.classList.add 'zoomed'
-                window.temp.zoomed = state
-            @bottomBarElement.classList.remove 'show'
-            $(@bottomBarElement).empty()
-            
-            _.each state.children, (town)->
+            @playoffs = new Playoffs()
+            # $.ajax
+            #     url: '/temp.json'
+            #     dataType: 'json'
+            #     success: (data)->
+            #         _.each data, (team)->
+            #             modelTeam = window.NBA.findWhere sluggedName: team.name
+            #             console.log modelTeam.set('awards', team.awards)
+            #             modelTeam.save()
                 
-                if town.dataId isnt undefined and town.dataId isnt ''
-                    cities = window.NBA.where state: stateName
-                    console.log stateName
-                    console.log cities
-                    _.each cities, (team)->
-                        console.log team
-                        if team isnt undefined
-                            team.bottomBar()
+        stats: (name)->
+            window.NBA.findWhere(sluggedName:name).stats()
+        loaded: ->
+            $(document).trigger('loaded')
+            @mainFrame = document.getElementById('home')
+            @mainFrame.classList.remove('loading')
+        goTo: (stateName, options = {zoom:true})->
+            t = @
+            next = ->
+                @map.createMap()
+                state = null
+                paths = d3.selectAll '#states path'
+                paths.each (e)->
+                    if e.properties.name is stateName
+                        state = e.properties.name
+                        window.mainView.map.zoom(e)
+                _.each @bottomBarModels, (model)->
+                    model.bottomBarRemove()
+                _.each window.NBA.where(state:state), (team)->
+                    team.bottomBar()
+                window.transition = false
+
+            if options.zoom
+                $.scrollTo "#map", 1000, ->
+                    next.apply(t)
+                    if options.stats
+                        setTimeout ->
+                            $.scrollTo "#stats", 1000
+                        , 1000
+            else
+                next.apply(t)
+        awards: (name)->
+            team = window.NBA.findWhere(sluggedName:name)
+            team.awards()
+            team
+        players: (name, player)->
+            team = window.NBA.findWhere(sluggedName:name)
+            team.players(player)
+            team 

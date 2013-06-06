@@ -1,0 +1,122 @@
+[
+	{
+		"name": "chicago-bulls",
+		"awards":{
+			"nba-champion":6
+		}
+	},
+	{
+		"name": "miami-heat",
+		"awards":{
+			"nba-champion":2
+		}
+	},
+	{
+		"name": "dallas-mavericks",
+		"awards":{
+			"nba-champion":1
+		}
+	},
+	{
+		"name": "los-angeles-lakers",
+		"awards":{
+			"nba-champion":16
+		}
+	},
+	{
+		"name": "boston-celtics",
+		"awards":{
+			"nba-champion":17
+		}
+	},
+	{
+		"name": "detroit-pistons",
+		"awards":{
+			"nba-champion":3
+		}
+	},
+	{
+		"name": "san-antonio-spurs",
+		"awards":{
+			"nba-champion":4
+		}
+	},
+	{
+		"name": "chicago-bulls",
+		"awards":{
+			"nba-champion":2
+		}
+	},
+	{
+		"name": "houston-rockets",
+		"awards":{
+			"nba-champion":2
+		}
+	},
+	{
+		"name": "philadelphia-76ers",
+		"awards":{
+			"nba-champion":4
+		}
+	},
+	{
+		"name": "oklahoma-thunder",
+		"awards":{
+			"nba-champion":1
+		}
+	},
+	{
+		"name": "washington-wizards",
+		"awards":{
+			"nba-champion":1
+		}
+	},
+	{
+		"name": "portland-blazers",
+		"awards":{
+			"nba-champion":1
+		}
+	},
+	{
+		"name": "brooklyn-nets",
+		"awards":{
+			"nba-champion":2
+		}
+	},
+	{
+		"name": "brooklyn-nets",
+		"awards":{
+			"nba-champion":2
+		}
+	},
+	{
+		"name": "golden-state-warriors",
+		"awards":{
+			"nba-champion":3
+		}
+	},
+	{
+		"name": "new-york-knicks",
+		"awards":{
+			"nba-champion":2
+		}
+	},
+	{
+		"name": "new-york-knicks",
+		"awards":{
+			"nba-champion":2
+		}
+	},
+	{
+		"name": "indiana-pacers",
+		"awards":{
+			"nba-champion":3
+		}
+	},
+	{
+		"name": "milwaukee-bucks",
+		"awards":{
+			"nba-champion":1
+		}
+	}
+]

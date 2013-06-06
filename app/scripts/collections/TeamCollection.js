@@ -16,8 +16,6 @@ define(["./../models/Team"], function(Team) {
 
     TeamCollection.prototype.url = 'http://localhost:9898/team';
 
-    TeamCollection.prototype.initialize = function() {};
-
     return TeamCollection;
 
   })(Backbone.Collection);

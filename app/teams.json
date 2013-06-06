@@ -1,0 +1,65 @@
+[
+	{
+		"name": "nom-de-l-equipe",
+		"joueurs":
+		[
+			{
+				"firstname": "jannie",
+				"lastname": "longo la killeuse",
+				"number": 29,
+				"datebirth": "mm/jj/yy",
+				"height":"6 ft 0 in",
+				"weight":"175 lb",
+				"position":"point quard",
+				"seasons":"6 (2005 - 2011)",
+				"rebounds": 23651,
+				"fieldGoals": 8521,
+				"assists": 8523,
+				"threePoints":8526,
+				"blocks": 7412
+			},
+			{
+				"firstname": "jannie",
+				"lastname": "longo la killeuse",
+				"number": 29,
+				"datebirth": "mm/jj/yy",
+				"height":"6 ft 0 in",
+				"weight":"175 lb",
+				"position":"point quard",
+				"seasons":"6 (2005 - 2011)",
+				"rebounds": 23651,
+				"fieldGoals": 8521,
+				"assists": 8523,
+				"threePoints":8526,
+				"blocks": 7412
+			}
+		],
+		"records": {
+			"rebounds": {
+				"number": 23924,
+				"player": "W.Chamberlain",
+				"seasons": 14
+			},
+			"fieldGoals":  {
+				"number": 23924,
+				"player": "Abdul Jabbard",
+				"seasons": 20
+			},
+			"assists":{
+				"number": 23924,
+				"player": "W.Chamberlain",
+				"seasons": 14
+			},
+			"threePoints":{
+				"number": 23924,
+				"player": "W.Chamberlain",
+				"seasons": 14
+			},
+			"blocks":{
+				"number": 23924,
+				"player": "W.Chamberlain",
+				"seasons": 14
+			}
+		}
+	}
+]

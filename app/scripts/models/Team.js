@@ -27,42 +27,67 @@ define(['backbone', '.././views/BottomBarView', '.././views/StatsView'], functio
           players: [],
           points: 0,
           rebounds: 0,
-          fieldGoalsMade: 0,
-          fieldGoalsAttemped: 0,
+          fieldsGoalsMade: 0,
+          fieldsGoalsAttemped: 0,
           assists: 0,
           threePointsMade: 0,
           threePointsAttemped: 0,
-          blocks: 0
+          blocks: 0,
+          fielsdGoalsPercent: 0,
+          threePointsPercent: 0
         }
       }
     };
 
-    Team.prototype.initialize = function() {
-      return _.each(this.get('years'), function(year) {
-        year.fieldGoalsPercent = year.fieldGoalsMade / year.fieldGoalsAttemped * 100;
-        return year.threePointsPercent = year.threePointsMade / year.threePointsAttemped * 100;
-      });
-    };
+    Team.prototype.initialize = function() {};
 
     Team.prototype.bottomBar = function() {
-      if (this.bottomBarView === null) {
+      var t;
+
+      if (this.bottomBarView !== void 0) {
         this.bottomBarView = new BottomBarView({
           model: this
         });
       }
       window.mainView.bottomBarElement.insertBefore(this.bottomBarView.render());
-      return this.bottomBarView.el.classList.add('show');
+      t = this;
+      setTimeout(function() {
+        return t.bottomBarView.el.classList.add('show');
+      }, 3);
+      return window.mainView.bottomBarModels.push(this);
+    };
+
+    Team.prototype.bottomBarRemove = function() {
+      return this.bottomBarView.remove();
+    };
+
+    Team.prototype.render = function() {
+      this.statsView = new StatsView({
+        model: this
+      });
+      return $("#stats").empty().prepend(this.statsView.render());
     };
 
     Team.prototype.stats = function() {
-      window.mainView.resetMap();
       if (this.statsView === null) {
-        this.statsView = new StatsView({
-          model: this
-        });
+        this.render();
       }
-      $("#stats").empty().prepend(this.statsView.render());
+      this.statsView.data();
       return this;
+    };
+
+    Team.prototype.awards = function() {
+      if (this.statsView === null) {
+        this.render();
+      }
+      return this.statsView.awards();
+    };
+
+    Team.prototype.players = function() {
+      if (this.statsView === null) {
+        this.render();
+      }
+      return this.statsView.players();
     };
 
     return Team;

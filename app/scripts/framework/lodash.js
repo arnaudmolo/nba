@@ -195,8 +195,7 @@
    * a string without a `toString` property value of `typeof` "function".
    */
   try {
-    var noNodeClass = ({ 'toString': 0 } + '',
-      toString.call(window.document || 0) == objectClass);
+    var noNodeClass = ({ 'toString': 0 } + '', toString.call(window.document || 0) == objectClass);
   } catch(e) { }
 
   /* Detect if `Function#bind` exists and is inferred to be fast (all but V8) */

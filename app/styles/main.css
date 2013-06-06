@@ -542,23 +542,115 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 524, main.scss */
+/* line 528, main.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 534, main.scss */
+/* line 532, main.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 535, main.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 538, main.scss */
+.arvobold {
+  font-family: 'arvobold';
+}
+
+/* line 542, main.scss */
+h1.center, h2.center, h3.center, h4.center, h5.center, p.center {
+  text-align: center;
+}
+/* line 545, main.scss */
+h1.uppercase, h2.uppercase, h3.uppercase, h4.uppercase, h5.uppercase, p.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 549, main.scss */
+.bolder {
+  font-weight: bolder;
+}
+
+/* line 552, main.scss */
+strong {
+  color: #b23843;
+}
+
+@font-face {
+  font-family: 'arvobold';
+  src: url("/fonts/arvo-bold-webfont.eot");
+  src: url("/fonts/arvo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/arvo-bold-webfont.woff") format("woff"), url("/fonts/arvo-bold-webfont.ttf") format("truetype"), url("/fonts/arvo-bold-webfont.svg#arvobold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arvobold_italic';
+  src: url("/fonts/arvo-bolditalic-webfont.eot");
+  src: url("/fonts/arvo-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/arvo-bolditalic-webfont.woff") format("woff"), url("/fonts/arvo-bolditalic-webfont.ttf") format("truetype"), url("/fonts/arvo-bolditalic-webfont.svg#arvobold_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arvoitalic';
+  src: url("/fonts/arvo-italic-webfont.eot");
+  src: url("/fonts/arvo-italic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/arvo-italic-webfont.woff") format("woff"), url("/fonts/arvo-italic-webfont.ttf") format("truetype"), url("/fonts/arvo-italic-webfont.svg#arvoitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arvoregular';
+  src: url("/fonts/arvo-regular-webfont.eot");
+  src: url("/fonts/arvo-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/arvo-regular-webfont.woff") format("woff"), url("/fonts/arvo-regular-webfont.ttf") format("truetype"), url("/fonts/arvo-regular-webfont.svg#arvoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserratbold';
+  src: url("/fonts/montserrat-bold-webfont.eot");
+  src: url("/fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-bold-webfont.woff") format("woff"), url("/fonts/montserrat-bold-webfont.ttf") format("truetype"), url("/fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserratregular';
+  src: url("/fonts/montserrat-regular-webfont.eot");
+  src: url("/fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-regular-webfont.woff") format("woff"), url("/fonts/montserrat-regular-webfont.ttf") format("truetype"), url("/fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 617, main.scss */
+#map {
+  height: 500px;
+}
+/* line 619, main.scss */
+#map svg {
+  background-image: url(/img/d_pattern1.png);
+  position: absolute;
+  left: 0;
+}
+/* line 626, main.scss */
 #map g path:hover {
   fill: #b33944;
   opacity: 1 !important;
 }
-/* line 540, main.scss */
+/* line 632, main.scss */
 #map g :hover path {
   opacity: 0.5;
 }
 
-/* line 546, main.scss */
+/* line 638, main.scss */
 #map path, #map g {
   transition: all 1s ease;
   position: relative;
@@ -566,73 +658,802 @@ table {
   z-index: 10;
 }
 
-/* line 552, main.scss */
+/* line 644, main.scss */
 .fat {
   transition: all 1s ease;
   -webkit-transform: scale(5);
 }
 
-/* line 556, main.scss */
+/* line 648, main.scss */
 .zoomed, .zoomed path {
   fill: #b33944 !important;
   opacity: 1 !important;
 }
 
-/* line 560, main.scss */
+/* line 652, main.scss */
 .fat path {
   opacity: 0.5;
 }
 
-/* line 563, main.scss */
+/* line 656, main.scss */
+#bottom-bar .team {
+  width: 130px;
+  height: 130px;
+  margin: 0;
+  padding: 0;
+  background-image: url(/img/logos/sprite-logo.png);
+  background-position-y: -130px;
+}
+/* line 664, main.scss */
+#bottom-bar .boston-celtics {
+  background-position-x: 0px;
+}
+/* line 667, main.scss */
+#bottom-bar .brooklyn-nets {
+  background-position-x: -130px;
+}
+/* line 670, main.scss */
+#bottom-bar .new-york-knicks {
+  background-position-x: -260px;
+}
+/* line 673, main.scss */
+#bottom-bar .philadelphie-76ers {
+  background-position-x: -390px;
+}
+/* line 676, main.scss */
+#bottom-bar .toronto-raptors {
+  background-position-x: -520px;
+}
+/* line 679, main.scss */
+#bottom-bar .atlanta-hawks {
+  background-position-x: -650px;
+}
+/* line 682, main.scss */
+#bottom-bar .charlotte-bobcats {
+  background-position-x: -780px;
+}
+/* line 685, main.scss */
+#bottom-bar .chicago-bulls {
+  background-position-x: -910px;
+}
+/* line 688, main.scss */
+#bottom-bar .cleveland-cavaliers {
+  background-position-x: -1040px;
+}
+/* line 691, main.scss */
+#bottom-bar .dallas-mavericks {
+  background-position-x: -1170px;
+}
+/* line 694, main.scss */
+#bottom-bar .denver-nuggets {
+  background-position-x: -1300px;
+}
+/* line 697, main.scss */
+#bottom-bar .detroit-pistons {
+  background-position-x: -1430px;
+}
+/* line 700, main.scss */
+#bottom-bar .golden-state-warriors {
+  background-position-x: -1560px;
+}
+/* line 703, main.scss */
+#bottom-bar .houston-rockets {
+  background-position-x: -1690px;
+}
+/* line 706, main.scss */
+#bottom-bar .indiana-pacers {
+  background-position-x: -1820px;
+}
+/* line 709, main.scss */
+#bottom-bar .los-angeles-clippers {
+  background-position-x: -1950px;
+}
+/* line 712, main.scss */
+#bottom-bar .los-angeles-lakers {
+  background-position-x: -2080px;
+}
+/* line 715, main.scss */
+#bottom-bar .memphis-grizzlies {
+  background-position-x: -2210px;
+}
+/* line 718, main.scss */
+#bottom-bar .miami-heat {
+  background-position-x: -2340px;
+}
+/* line 721, main.scss */
+#bottom-bar .milwaukee-bucks {
+  background-position-x: -2470px;
+}
+/* line 724, main.scss */
+#bottom-bar .minnesota-timberwolves {
+  background-position-x: -2600px;
+}
+/* line 727, main.scss */
+#bottom-bar .new-orleans-hornets {
+  background-position-x: -2730px;
+}
+/* line 730, main.scss */
+#bottom-bar .oklahoma-city-thunder {
+  background-position-x: -2860px;
+}
+/* line 733, main.scss */
+#bottom-bar .orlando-magic {
+  background-position-x: -2990px;
+}
+/* line 736, main.scss */
+#bottom-bar .phenix-suns {
+  background-position-x: -3120px;
+}
+/* line 739, main.scss */
+#bottom-bar .portland-blazers {
+  background-position-x: -3250px;
+}
+/* line 742, main.scss */
+#bottom-bar .sacramento-kings {
+  background-position-x: -3380px;
+}
+/* line 745, main.scss */
+#bottom-bar .san-antonio-spurs {
+  background-position-x: -3510px;
+}
+/* line 748, main.scss */
+#bottom-bar .utah-jazz {
+  background-position-x: -3640px;
+}
+/* line 751, main.scss */
+#bottom-bar .buffalo-braves {
+  background-position-x: -3370px;
+}
+
+/* line 755, main.scss */
 #bottom-bar {
-  height: 300px;
   background-color: #e2e6e8;
 }
-/* line 566, main.scss */
+/* line 757, main.scss */
+#bottom-bar a, #bottom-bar h1 {
+  font-size: 18px;
+  color: #313249;
+  text-align: center;
+}
+/* line 762, main.scss */
 #bottom-bar a {
   display: inline-block;
   margin-left: 20px;
   width: 0px;
   -webkit-transition: all 1s ease;
-  transition: all 5s ease;
+  transition: all 0.5s ease;
   overflow: hidden;
 }
-/* line 573, main.scss */
+/* line 769, main.scss */
 #bottom-bar a.show {
   width: 160px;
 }
-/* line 577, main.scss */
-#bottom-bar #choose {
+
+/* line 774, main.scss */
+.bottom-bar {
+  height: 324px;
+  margin-top: 60px !important;
+}
+
+/* line 778, main.scss */
+#choose {
   cursor: pointer;
   float: left;
   background-color: #313249;
-  width: 50px;
+  width: 60px;
   height: 100%;
   color: white;
 }
-/* line 584, main.scss */
-#bottom-bar #choose span {
+/* line 785, main.scss */
+#choose p {
+  color: white;
+  border: 0px solid red;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+  font-size: 24px;
+  font-weight: normal;
+  -webkit-transform-origin: 135px 120px;
+}
+/* line 800, main.scss */
+#choose span {
   -webkit-transform: rotate(90deg);
   display: block;
 }
 
-/* line 590, main.scss */
-#loader {
-  width: 100%;
-  height: 1000px;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMTgwMTE3NDA3MjA2ODExODA4M0EzRUI4RUVGNEI3RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDQzM4RkU0QUMwMTYxMUUyQUIwM0Q4NUNCNEZFMDZCRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDQzM4RkU0OUMwMTYxMUUyQUIwM0Q4NUNCNEZFMDZCRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjc2MTdDQTVFRkVCRUUyMTFBMENGQkE1QTc0MTVCRDA4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4MDgzQTNFQjhFRUY0QjdEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+80WXTwAAABdJREFUeNpi5OER4uUVZgJiBgYGgAADAASGAIhsjgQEAAAAAElFTkSuQmCC);
+/* line 805, main.scss */
+#nba-logo {
   transition: all 1s ease;
   overflow: hidden;
 }
 
-/* line 598, main.scss */
-#nba-logo {
-  transition: all 1s ease;
+/* line 809, main.scss */
+body, html, #main {
+  height: 100%;
+}
+
+/* line 812, main.scss */
+#main {
+  width: 100%;
+}
+
+/* line 815, main.scss */
+body {
+  font-size: 18px;
+  font-family: "montserratregular";
+  overflow: hidden;
+  background: #ecf0f1;
+}
+
+/* line 822, main.scss */
+section {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 826, main.scss */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 830, main.scss */
+section#home {
+  color: #ecf0f1;
+  height: 100%;
+  background-image: url("../img/pattern_home.png"), url("../img/home_screen.jpg");
+  background-position: left top,right bottom;
+  background-repeat: repeat,no-repeat;
+  -webkit-background-size: auto,100%;
+  -moz-background-size: auto, 100%;
+  -o-background-size: auto, 100%;
+  background-size: auto,100%;
+  box-shadow: 0 0 0 15px #b23843 inset;
+}
+/* line 844, main.scss */
+section#home.loading header {
   height: 0;
   overflow: hidden;
 }
+/* line 849, main.scss */
+section#home header {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  transition: all 0.5s ease;
+  background-color: rgba(49, 50, 73, 0.5);
+  font-family: "montserratbold";
+  border-top: 1px solid #191925;
+}
+/* line 858, main.scss */
+section#home header nav {
+  text-align: center;
+}
+/* line 860, main.scss */
+section#home header nav > ul > li {
+  display: inline-block;
+  text-align: center;
+  width: 155px;
+}
+/* line 864, main.scss */
+section#home header nav > ul > li:hover ul {
+  height: 262px;
+}
+/* line 867, main.scss */
+section#home header nav > ul > li span {
+  text-decoration: none;
+  height: 39px;
+  border-left: 1px solid #191925;
+  border-right: 1px solid #393951;
+  display: block;
+  font-size: 0.8em;
+  color: #ecf0f1;
+  padding-top: 20px;
+  width: 160px;
+  cursor: pointer;
+}
+/* line 878, main.scss */
+section#home header nav > ul > li span:hover {
+  background-color: #313249;
+}
+/* line 881, main.scss */
+section#home header nav > ul > li span:first-child {
+  border-left: 1px solid #393951;
+}
+/* line 884, main.scss */
+section#home header nav > ul > li span:last-child {
+  border-right: 1px solid #191925;
+}
+/* line 891, main.scss */
+section#home .content {
+  width: 960px;
+  margin: auto;
+}
+/* line 894, main.scss */
+section#home .content h1 {
+  font-weight: normal;
+  margin: 0 20px;
+  font-family: "arvobold";
+  font-size: 1.7em;
+  text-transform: uppercase;
+}
+/* line 900, main.scss */
+section#home .content h1 span {
+  width: 100px;
+  height: 1px;
+  background-color: white;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+}
+/* line 908, main.scss */
+section#home .content img {
+  margin-bottom: 10px;
+}
+/* line 912, main.scss */
+section#home .logo {
+  position: relative;
+  top: 25%;
+  text-align: center;
+}
 
-/* line 603, main.scss */
-body {
+/* line 918, main.scss */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 922, main.scss */
+.detailsmenu ul {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  margin-bottom: 59px;
+  border-top: 2px solid #1d1d2c;
+  background-color: #313249;
+  z-index: 10;
+  transition: all 0.5s ease;
   overflow: hidden;
+}
+
+/* line 938, main.scss */
+.detailsmenu ul li {
+  float: left;
+  width: 188px;
+  height: 227px;
+  text-align: center;
+  padding-top: 33px;
+}
+
+/* line 945, main.scss */
+.detailsmenu ul li:after {
+  content: "";
+  width: 1px;
+  background-color: #606273;
+  height: 180px;
+  float: right;
+  margin-top: -43px;
+}
+
+/* line 953, main.scss */
+.detailsmenu ul li:last-child:after {
+  display: none;
+}
+
+/* line 956, main.scss */
+.detailsmenu ul li:hover {
+  background-color: #923645;
+  cursor: pointer;
+}
+
+/* line 960, main.scss */
+.celtics {
+  background: url(/img/logos/celtics.png) no-repeat;
+  background-position: 50% 96px;
+}
+
+/* line 964, main.scss */
+.brooklyn {
+  background: url(/img/logos/brooklyn.png) no-repeat;
+  background-position: 50% 96px;
+}
+
+/* line 968, main.scss */
+.knicks {
+  background: url(/img/logos/new-york-knicks.png) no-repeat;
+  background-position: 50% 96px;
+}
+
+/* line 972, main.scss */
+.philadelphie {
+  background: url(/img/logos/philadelphie.png) no-repeat;
+  background-position: 50% 96px;
+}
+
+/* line 976, main.scss */
+.toronto {
+  background: url(/img/logos/toronto.png) no-repeat;
+  background-position: 50% 96px;
+}
+
+/* line 981, main.scss */
+.detailsmenu ul li p {
+  line-height: 18px;
+}
+
+/* line 984, main.scss */
+.detailsmenu ul li:hover p {
+  color: #313249;
+}
+
+/* line 987, main.scss */
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+/* line 992, main.scss */
+#states {
+  fill: #aaa;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* line 998, main.scss */
+#states .active {
+  fill: #b23843;
+}
+
+/* line 1001, main.scss */
+#states rect {
+  fill: url(/img/pattern_map.png);
+}
+
+/* line 1004, main.scss */
+path {
+  transition: all 1s ease;
+}
+
+/* line 1007, main.scss */
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+/* line 1011, main.scss */
+#stats-style {
+  background-image: url(/img/bg-stats.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* line 1016, main.scss */
+#stats {
+  color: white;
+}
+/* line 1018, main.scss */
+#stats div {
+  overflow: hidden;
+}
+/* line 1021, main.scss */
+#stats > section > div {
+  display: inline-block;
+  transition: width 1s ease, height 0s ease 1s;
+  width: 100%;
+  vertical-align: top;
+  height: 2000px;
+}
+/* line 1029, main.scss */
+#stats #awards > div {
+  display: inline-block;
+  width: 32.5%;
+  height: 280px;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 1035, main.scss */
+#stats #awards > div .bg {
+  transition: all 0.5s ease 0s;
+  background-image: url(/img/sprite-awards.png);
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  background-position-y: -5px;
+  -webkit-transform: scale(1);
+}
+/* line 1046, main.scss */
+#stats #awards > div.on .bg {
+  background-position-y: -210px;
+}
+/* line 1052, main.scss */
+#stats #awards .all-star-mvp .bg {
+  background-position-x: -400px;
+  transition-delay: 0.5s;
+}
+/* line 1058, main.scss */
+#stats #awards .defensive-player-of-the-year .bg {
+  background-position-x: -600px;
+  transition-delay: 1s;
+}
+/* line 1064, main.scss */
+#stats #awards .sixth-man-of-the-year .bg {
+  background-position-x: -200px;
+  transition-delay: 1.5s;
+}
+/* line 1070, main.scss */
+#stats #awards .rookie-of-the-year .bg {
+  background-position-x: -810px;
+  transition-delay: 2s;
+}
+/* line 1076, main.scss */
+#stats #awards .nba-champion .bg {
+  background-position-x: -1020px;
+  transition-delay: 2.5s;
+}
+
+/* line 1083, main.scss */
+.notif {
+  background-color: #b23843;
+  height: 35px;
+  width: 35px;
+  border-radius: 35px;
+  border-color: white;
+  border-width: 3px;
+  border-style: solid;
+  line-height: 35px;
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 25px;
+}
+
+/* line 1100, main.scss */
+.team {
+  display: inline-block;
+  width: 200px;
+  font-size: 15px;
+  margin-left: 10px;
+  padding-left: 15px;
+  background-repeat: no-repeat;
+  background-image: url(/img/sprite-legende.png);
+  background-position-y: 3px;
+}
+
+/* line 1110, main.scss */
+#teams {
+  color: #313249;
+}
+
+/* line 1114, main.scss */
+#legend .new-york-knicks {
+  background-position-y: 3px;
+}
+/* line 1117, main.scss */
+#legend .san-antonio-spurs {
+  background-position-y: -11px;
+}
+/* line 1120, main.scss */
+#legend .los-angeles-lakers {
+  background-position-y: -26px;
+}
+/* line 1123, main.scss */
+#legend .denver-nuggets {
+  background-position-y: -41px;
+}
+/* line 1126, main.scss */
+#legend .atlanta-hawks {
+  background-position-y: -57px;
+}
+/* line 1129, main.scss */
+#legend .portland-blazers {
+  background-position-y: -72px;
+}
+/* line 1132, main.scss */
+#legend .milwaukee-bucks {
+  background-position-y: -87px;
+}
+/* line 1135, main.scss */
+#legend .buffalo-braves {
+  background-position-y: -101px;
+}
+/* line 1138, main.scss */
+#legend .chicago-bulls {
+  background-position-y: -116px;
+}
+/* line 1141, main.scss */
+#legend .cap {
+  background-position-y: -131px;
+}
+/* line 1144, main.scss */
+#legend .baltimore-bullets {
+  background-position-y: -146px;
+}
+/* line 1147, main.scss */
+#legend .washington-wizards {
+  background-position-y: -161px;
+}
+/* line 1150, main.scss */
+#legend .philadelphie-sixers {
+  background-position-y: -176px;
+}
+/* line 1153, main.scss */
+#legend .houston-rockets {
+  background-position-y: -191px;
+}
+/* line 1156, main.scss */
+#legend .phenix-suns {
+  background-position-y: -206px;
+}
+/* line 1159, main.scss */
+#legend .seattle-supersonics {
+  background-position-y: -221px;
+}
+/* line 1162, main.scss */
+#legend .golden-state-warriors {
+  background-position-y: -236px;
+}
+/* line 1165, main.scss */
+#legend .kansas-city-kings {
+  background-position-y: -251px;
+}
+/* line 1168, main.scss */
+#legend .boston-celtics {
+  background-position-y: -266px;
+}
+/* line 1171, main.scss */
+#legend .cleveland-cavaliers {
+  background-position-y: -281px;
+}
+/* line 1174, main.scss */
+#legend .detroit-pistons {
+  background-position-y: -296px;
+}
+/* line 1177, main.scss */
+#legend .brooklyn-nets {
+  background-position-y: -311px;
+}
+/* line 1180, main.scss */
+#legend .utah-jazz {
+  background-position-y: -326px;
+}
+/* line 1183, main.scss */
+#legend .dallas-mavericks {
+  background-position-y: -341px;
+}
+/* line 1186, main.scss */
+#legend .charlotte-bobcats {
+  background-position-y: -356px;
+}
+/* line 1189, main.scss */
+#legend .indiana-pacers {
+  background-position-y: -371px;
+}
+/* line 1192, main.scss */
+#legend .orlando-magic {
+  background-position-y: -386px;
+}
+/* line 1195, main.scss */
+#legend .miami-heat {
+  background-position-y: -401px;
+}
+/* line 1198, main.scss */
+#legend .toronto-raptors {
+  background-position-y: -416px;
+}
+/* line 1201, main.scss */
+#legend .minnesota-timberwolves {
+  background-position-y: -431px;
+}
+/* line 1204, main.scss */
+#legend .sacramento-kings {
+  background-position-y: -446px;
+}
+/* line 1207, main.scss */
+#legend .new-orleans-hornets {
+  background-position-y: -461px;
+}
+/* line 1210, main.scss */
+#legend .los-angeles-clippers {
+  background-position-y: -476px;
+}
+/* line 1213, main.scss */
+#legend .memphis-grizzlies {
+  background-position-y: -491px;
+}
+/* line 1216, main.scss */
+#legend .oklahoma-city-thunder {
+  background-position-y: -506px;
+}
+
+/* line 1220, main.scss */
+#slider > article {
+  transition: all 1s ease;
+}
+/* line 1222, main.scss */
+#slider > article.hidden {
+  position: absolute;
+  margin-left: -100%;
+}
+
+/* line 1228, main.scss */
+.transition .bg {
+  -webkit-transform: scale(0) !important;
+}
+
+/* line 1232, main.scss */
+.dial {
+  width: 19.5%;
+  display: inline-block;
+}
+
+/* line 1236, main.scss */
+nav.center {
+  text-align: center;
+}
+
+/* line 1239, main.scss */
+#stats > section > div.title.underline {
+  width: 250px;
+  height: 2px;
+  border-top: 1px white solid;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 1246, main.scss */
+#stats > section > h1 {
+  margin-bottom: 0;
+}
+
+/* line 1249, main.scss */
+#stats > section > nav {
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+
+/* line 1253, main.scss */
+nav.navigation a {
+  padding: 5px 24px;
+}
+/* line 1255, main.scss */
+nav.navigation a.active {
+  border-bottom: 1px #b23843 solid;
+}
+
+/* line 1260, main.scss */
+#players nav.navigation a {
+  transition: all 0.5s ease;
+  border-bottom: none;
+}
+/* line 1261, main.scss */
+#players nav.navigation a.active {
+  background-color: #b23843;
+}
+
+/* line 1269, main.scss */
+.number strong {
+  color: white;
+  font-size: 10em;
+}
+
+/* line 1274, main.scss */
+.tiers {
+  width: 33.3330%;
+  display: inline-block;
+}
+
+/* line 1279, main.scss */
+.lignes span {
+  width: 90px;
+  height: 1px;
+  background-color: white;
+  display: inline-block;
+  margin: 0 10px 5px 10px;
 }

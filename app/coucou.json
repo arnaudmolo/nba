@@ -1,0 +1,1154 @@
+[
+	{
+		"name": "chicago-bulls",
+		"joueurs":
+		[
+			{
+				"firstname": "Mickael",
+				"lastname": "Jordan",
+				"number": 23,
+				"datebirth": "02/17/63",
+				"height":"6 ft 6 in",
+				"weight":"195 lb",
+				"position":"guard forward",
+				"seasons":"15 (1984 - 2003)",
+				"rebounds": 6672,
+				"fieldGoals": 12192,
+				"assists": 5633,
+				"threePoints":581,
+				"blocks": 893
+			},
+			{
+				"firstname": "Derrick",
+				"lastname": "Rose",
+				"number": 1,
+				"datebirth": "10/06/88",
+				"height":"6 ft 3 in",
+				"weight":"190 lb",
+				"position":"Guard",
+				"seasons":"4 (2008 - 2012)",
+				"rebounds": 1071,
+				"fieldGoals": 2259,
+				"assists": 1911,
+				"threePoints":214,
+				"blocks": 124
+			}
+		]
+	},
+	{
+		"name": "atlanta-hawks",
+		"joueurs":
+		[
+			{
+				"firstname": "Bob",
+				"lastname": "Pettit",
+				"number": 9,
+				"datebirth": "12/12/32",
+				"height":"6 ft 9 in",
+				"weight":"205 lb",
+				"position":"forward",
+				"seasons":"11 (1954 - 1965)",
+				"rebounds": 12849,
+				"fieldGoals": 7349,
+				"assists": 2369,
+				"threePoints":0,
+				"blocks": 0
+			},
+			{
+				"firstname": "Josh",
+				"lastname": "Smith",
+				"number": 5,
+				"datebirth": "12/05/85",
+				"height":"6 ft 9 in",
+				"weight":"225 lb",
+				"position":"Forward",
+				"seasons":"9 (2004 - 2013)",
+				"rebounds": 5407,
+				"fieldGoals": 4030,
+				"assists": 2170,
+				"threePoints":267,
+				"blocks": 1440
+			}
+		]
+	},
+	{
+		"name": "boston-celtics",
+		"joueurs":
+		[
+			{
+				"firstname": "Bill",
+				"lastname": "Russel",
+				"number": 6,
+				"datebirth": "02/12/34",
+				"height":"6 ft 10 in",
+				"weight":"215 lb",
+				"position":"center",
+				"seasons":"13 (1956 - 1969)",
+				"rebounds": 0,
+				"fieldGoals": 5687,
+				"assists": 4100,
+				"threePoints":581,
+				"blocks": 0
+			},
+			{
+				"firstname": "Kevin",
+				"lastname": "Garnett",
+				"number": 21,
+				"datebirth": "05/19/76",
+				"height":"6 ft 11 in",
+				"weight":"220 lb",
+				"position":"Forward",
+				"seasons":"18 (1995 - 2013)",
+				"rebounds": 13843,
+				"fieldGoals": 10151,
+				"assists": 5224,
+				"threePoints":173,
+				"blocks": 1970
+			}
+		]
+	},
+	{
+		"name": "brooklyn-nets",
+		"joueurs":
+		[
+			{
+				"firstname": "Julius",
+				"lastname": "Erving",
+				"number": 32,
+				"datebirth": "02/22/50",
+				"height":"6 ft 6 in",
+				"weight":"200 lb",
+				"position":"forward guard",
+				"seasons":"16 (1971 - 1987)",
+				"rebounds": 10525,
+				"fieldGoals": 11818,
+				"assists": 5176,
+				"threePoints":134,
+				"blocks": 1941
+			},
+			{
+				"firstname": "Deron",
+				"lastname": "Williams",
+				"number": 8,
+				"datebirth": "06/26/84",
+				"height":"6 ft 3 in",
+				"weight":"210 lb",
+				"position":"Guard",
+				"seasons":"10 (2005 - 2013)",
+				"rebounds": 1877,
+				"fieldGoals": 3670,
+				"assists": 5241,
+				"threePoints":811,
+				"blocks": 154
+			}
+		]
+	},
+	{
+		"name": "charlotte-bobcats",
+		"joueurs":
+		[
+			{
+				"firstname": "Gerald",
+				"lastname": "Wallace",
+				"number": 3,
+				"datebirth": "07/23/82",
+				"height":"6 ft 7 in",
+				"weight":"215 lb",
+				"position":"forward",
+				"seasons":"12 (2001 - 2013)",
+				"rebounds": 4569,
+				"fieldGoals": 3386,
+				"assists": 1571,
+				"threePoints":387,
+				"blocks": 663
+			},
+			{
+				"firstname": "Kemba",
+				"lastname": "Walker",
+				"number": 15,
+				"datebirth": "12/26/90",
+				"height":"6 ft 1 in",
+				"weight":"172 lb",
+				"position":"Guard",
+				"seasons":"2 (2011 - 2013)",
+				"rebounds": 517,
+				"fieldGoals": 807,
+				"assists": 760,
+				"threePoints":176,
+				"blocks": 51
+			}
+		]
+	},
+	{
+		"name": "cleveland-cavaliers",
+		"joueurs":
+		[
+			{
+				"firstname": "Lebron",
+				"lastname": "James",
+				"number": 23,
+				"datebirth": "12/30/84",
+				"height":"6 ft 8 in",
+				"weight":"240 lb",
+				"position":"forward guard",
+				"seasons":"10 (2003 - 2013)",
+				"rebounds": 5553,
+				"fieldGoals": 7559,
+				"assists": 5302,
+				"threePoints":1020,
+				"blocks": 649
+			},
+			{
+				"firstname": "Kyrie",
+				"lastname": "Irving",
+				"number": 2,
+				"datebirth": "03/23/92",
+				"height":"6 ft 2 in",
+				"weight":"180 lb",
+				"position":"Guard",
+				"seasons":"2 (2011 - 2013)",
+				"rebounds": 407,
+				"fieldGoals": 834,
+				"assists": 625,
+				"threePoints":182,
+				"blocks": 41
+			}
+		]
+	},
+	{
+		"name": "dallas-mavericks",
+		"joueurs":
+		[
+			{
+				"firstname": "Dirk",
+				"lastname": "Nowitzki",
+				"number": 41,
+				"datebirth": "06/19/78",
+				"height":"7 ft 0 in",
+				"weight":"237 lb",
+				"position":"Forward",
+				"seasons":"15 (1998 - 2013)",
+				"rebounds": 9096,
+				"fieldGoals": 8774,
+				"assists": 2923,
+				"threePoints":1340,
+				"blocks": 1050
+			},
+			{
+				"firstname": "Tyson",
+				"lastname": "Chandler",
+				"number": 6,
+				"datebirth": "10/02/82",
+				"height":"7 ft 1 in",
+				"weight":"235 lb",
+				"position":"center",
+				"seasons":"12 (2001 - 2013)",
+				"rebounds": 7168,
+				"fieldGoals": 2542,
+				"assists": 634,
+				"threePoints":0,
+				"blocks": 1055
+			}
+		]
+	},
+	{
+		"name": "denver-nuggets",
+		"joueurs":
+		[
+			{
+				"firstname": "Alex",
+				"lastname": "English",
+				"number": 2,
+				"datebirth": "01/05/54",
+				"height":"6 ft 7 in",
+				"weight":"190 lb",
+				"position":"Forward",
+				"seasons":"17 (1976 - 1991)",
+				"rebounds": 6538,
+				"fieldGoals": 10659,
+				"assists": 4351,
+				"threePoints":18,
+				"blocks": 833
+			},
+			{
+				"firstname": "Danilo",
+				"lastname": "Gallinari",
+				"number": 8,
+				"datebirth": "07/08/88",
+				"height":"6 ft 10 in",
+				"weight":"225 lb",
+				"position":"forward",
+				"seasons":"5 (2008 - 2013)",
+				"rebounds": 1327,
+				"fieldGoals": 1270,
+				"assists": 546,
+				"threePoints":516,
+				"blocks": 148
+			}
+		]
+	},
+	{
+		"name": "detroit-pistons",
+		"joueurs":
+		[
+			{
+				"firstname": "Isiah",
+				"lastname": "Thomas",
+				"number": 11,
+				"datebirth": "04/30/61",
+				"height":"6 ft 1 in",
+				"weight":"180 lb",
+				"position":"Guard",
+				"seasons":"13 (1981 - 1994)",
+				"rebounds": 3478,
+				"fieldGoals": 7194,
+				"assists": 9061,
+				"threePoints":398,
+				"blocks": 249
+			},
+			{
+				"firstname": "Brandon",
+				"lastname": "Knight",
+				"number": 7,
+				"datebirth": "12/02/1991",
+				"height":"6 ft 3 in",
+				"weight":"189 lb",
+				"position":"Guard",
+				"seasons":"2 (2011 - 2013)",
+				"rebounds": 458,
+				"fieldGoals": 676,
+				"assists": 554,
+				"threePoints":225,
+				"blocks": 18
+			}
+		]
+	},
+	{
+		"name": "golden-state-warriors",
+		"joueurs":
+		[
+			{
+				"firstname": "Wilt",
+				"lastname": "Chamberlain",
+				"number": 13,
+				"datebirth": "08/21/36",
+				"height":"7 ft 1 in",
+				"weight":"275 lb",
+				"position":"Center",
+				"seasons":"15 (1959 - 1973)",
+				"rebounds": 23924,
+				"fieldGoals": 12681,
+				"assists": 4643,
+				"threePoints":0,
+				"blocks": 0
+			},
+			{
+				"firstname": "Stephen",
+				"lastname": "Curry",
+				"number": 30,
+				"datebirth": "03/14/88",
+				"height":"6 ft 3 in",
+				"weight":"185 lb",
+				"position":"Guard",
+				"seasons":"4 (2009 - 2013)",
+				"rebounds": 1044,
+				"fieldGoals": 1804,
+				"assists": 1581,
+				"threePoints":644,
+				"blocks": 59
+			}
+		]
+	},
+	{
+		"name": "houston-rockets",
+		"joueurs":
+		[
+			{
+				"firstname": "Hakeem",
+				"lastname": "Olajuwon",
+				"number": 34,
+				"datebirth": "01/21/63",
+				"height":"7 ft 0 in",
+				"weight":"255 lb",
+				"position":"Center",
+				"seasons":"18 (1984 - 2002)",
+				"rebounds": 13748,
+				"fieldGoals": 10749,
+				"assists": 3058,
+				"threePoints":25,
+				"blocks": 3830
+			},
+			{
+				"firstname": "James",
+				"lastname": "Harden",
+				"number": 13,
+				"datebirth": "06/26/89",
+				"height":"6 ft 5 in",
+				"weight":"220 lb",
+				"position":"Guard",
+				"seasons":"4 (2009 - 2013)",
+				"rebounds": 1130,
+				"fieldGoals": 1425,
+				"assists": 997,
+				"threePoints":449,
+				"blocks": 97
+			}
+		]
+	},
+	{
+		"name": "indiana-pacers",
+		"joueurs":
+		[
+			{
+				"firstname": "Reggie",
+				"lastname": "Miller",
+				"number": 31,
+				"datebirth": "08/24/65",
+				"height":"6 ft 7 in",
+				"weight":"185 lb",
+				"position":"Guard Forward",
+				"seasons":"18 (1987 - 2005)",
+				"rebounds": 4182,
+				"fieldGoals": 8241,
+				"assists": 4141,
+				"threePoints":2560,
+				"blocks": 299
+			},
+			{
+				"firstname": "Paul",
+				"lastname": "George",
+				"number": 24,
+				"datebirth": "05/2/90",
+				"height":"6 ft 8 in",
+				"weight":"210 lb",
+				"position":"Forward",
+				"seasons":"3 (2010 - 2013)",
+				"rebounds": 1197,
+				"fieldGoals": 953,
+				"assists": 550,
+				"threePoints":301,
+				"blocks": 115
+			}
+		]
+	},
+	{
+		"name": "los-angeles-clippers",
+		"joueurs":
+		[
+			{
+				"firstname": "Bob",
+				"lastname": "Mc Adoo",
+				"number": 11,
+				"datebirth": "09/25/51",
+				"height":"6 ft 9 in",
+				"weight":"210 lb",
+				"position":"Center Forward",
+				"seasons":"15 (1972 - 1986)",
+				"rebounds": 8048,
+				"fieldGoals": 7420,
+				"assists": 1951,
+				"threePoints":3,
+				"blocks": 1147
+			},
+			{
+				"firstname": "Chris",
+				"lastname": "Paul",
+				"number": 3,
+				"datebirth": "05/06/85",
+				"height":"6 ft 0 in",
+				"weight":"175 lb",
+				"position":"Guard",
+				"seasons":"8 (2005 - 2013)",
+				"rebounds": 2426,
+				"fieldGoals": 3630,
+				"assists": 5449,
+				"threePoints":534,
+				"blocks": 50
+			}
+		]
+	},
+	{
+		"name": "los-angeles-lakers",
+		"joueurs":
+		[
+			{
+				"firstname": "Magic",
+				"lastname": "Johnson",
+				"number": 32,
+				"datebirth": "08/14/59",
+				"height":"6 ft 8 in",
+				"weight":"215 lb",
+				"position":"Guard Forward",
+				"seasons":"13 (1979 - 1996)",
+				"rebounds": 6559,
+				"fieldGoals": 6211,
+				"assists": 10141,
+				"threePoints":325,
+				"blocks": 374
+			},
+			{
+				"firstname": "Kobe",
+				"lastname": "Bryant",
+				"number": 24,
+				"datebirth": "06/23/78",
+				"height":"6 ft 6 in",
+				"weight":"200 lb",
+				"position":"Guard",
+				"seasons":"17 (1996 - 2013)",
+				"rebounds": 6575,
+				"fieldGoals": 11024,
+				"assists": 5887,
+				"threePoints":1637,
+				"blocks": 619
+			}
+		]
+	},
+	{
+		"name": "memphis-grizzlies",
+		"joueurs":
+		[
+			{
+				"firstname": "Pau",
+				"lastname": "Gasol",
+				"number": 16,
+				"datebirth": "06/06/80",
+				"height":"7 ft 0 in",
+				"weight":"227 lb",
+				"position":"Forward Center",
+				"seasons":"12 (2001 - 2013)",
+				"rebounds": 7756,
+				"fieldGoals": 5886,
+				"assists": 2780,
+				"threePoints":34,
+				"blocks": 1392
+			},
+			{
+				"firstname": "Marc",
+				"lastname": "Gasol",
+				"number": 33,
+				"datebirth": "01/29/85",
+				"height":"7 ft 1 in",
+				"weight":"265 lb",
+				"position":"Center",
+				"seasons":"5 (2008 - 2013)",
+				"rebounds": 3015,
+				"fieldGoals": 1878,
+				"assists": 1030,
+				"threePoints":5,
+				"blocks": 595
+			}
+		]
+	},
+	{
+		"name": "miami-heat",
+		"joueurs":
+		[
+			{
+				"firstname": "Dwyane",
+				"lastname": "Wade",
+				"number": 3,
+				"datebirth": "01/17/82",
+				"height":"6 ft 4 in",
+				"weight":"212 lb",
+				"position":"Guard",
+				"seasons":"10 (2003 - 2013)",
+				"rebounds": 3364,
+				"fieldGoals": 5861,
+				"assists": 4049,
+				"threePoints":341,
+				"blocks": 667
+			},
+			{
+				"firstname": "Lebron",
+				"lastname": "James",
+				"number": 23,
+				"datebirth": "12/30/84",
+				"height":"6 ft 8 in",
+				"weight":"240 lb",
+				"position":"forward guard",
+				"seasons":"10 (2003 - 2013)",
+				"rebounds": 5553,
+				"fieldGoals": 7559,
+				"assists": 5302,
+				"threePoints":1020,
+				"blocks": 649
+			}
+		]
+	},
+	{
+		"name": "milwaukee-bucks",
+		"joueurs":
+		[
+			{
+				"firstname": "Kareem",
+				"lastname": "Abdul-Jabbar",
+				"number": 33,
+				"datebirth": "04/16/47",
+				"height":"7 ft 2 in",
+				"weight":"225 lb",
+				"position":"Center",
+				"seasons":"20 (1969 - 1989)",
+				"rebounds": 17440,
+				"fieldGoals": 15837,
+				"assists": 5660,
+				"threePoints":1,
+				"blocks": 3189
+			},
+			{
+				"firstname": "Monta",
+				"lastname": "Ellis",
+				"number": 11,
+				"datebirth": "10/26/85",
+				"height":"6 ft 3 in",
+				"weight":"175 lb",
+				"position":"Guard",
+				"seasons":"8 (2005 - 2013)",
+				"rebounds": 1914,
+				"fieldGoals": 3862,
+				"assists": 2437,
+				"threePoints":457,
+				"blocks": 169
+			}
+		]
+	},
+	{
+		"name": "minnesota-timberwolves",
+		"joueurs":
+		[
+			{
+				"firstname": "Kevin",
+				"lastname": "Garnett",
+				"number": 21,
+				"datebirth": "05/19/76",
+				"height":"6 ft 11 in",
+				"weight":"220 lb",
+				"position":"Forward",
+				"seasons":"18 (1995 - 2013)",
+				"rebounds": 13843,
+				"fieldGoals": 10151,
+				"assists": 5224,
+				"threePoints":173,
+				"blocks": 1970
+			},
+			{
+				"firstname": "Kevin",
+				"lastname": "Love",
+				"number": 42,
+				"datebirth": "09/07/88",
+				"height":"6 ft 10 in",
+				"weight":"260 lb",
+				"position":"Forward",
+				"seasons":"5 (2008 - 2013)",
+				"rebounds": 3490,
+				"fieldGoals": 1668,
+				"assists": 557,
+				"threePoints":250,
+				"blocks": 138
+			}
+		]
+	},
+	{
+		"name": "new-orleans-hornets",
+		"joueurs":
+		[
+			{
+				"firstname": "Chris",
+				"lastname": "Paul",
+				"number": 3,
+				"datebirth": "05/06/85",
+				"height":"6 ft 0 in",
+				"weight":"175 lb",
+				"position":"Guard",
+				"seasons":"8 (2005 - 2013)",
+				"rebounds": 2426,
+				"fieldGoals": 3630,
+				"assists": 5449,
+				"threePoints":534,
+				"blocks": 50
+			},
+			{
+				"firstname": "Anthony",
+				"lastname": "Davis",
+				"number": 23,
+				"datebirth": "03/11/93",
+				"height":"6 ft 10 in",
+				"weight":"220 lb",
+				"position":"Forward Center",
+				"seasons":"1 (2012 - 2013)",
+				"rebounds": 522,
+				"fieldGoals": 349,
+				"assists": 63,
+				"threePoints":6,
+				"blocks": 112
+			}
+		]
+	},
+	{
+		"name": "new-york-knicks",
+		"joueurs":
+		[
+			{
+				"firstname": "Patrick",
+				"lastname": "Ewing",
+				"number": 33,
+				"datebirth": "08/05/62",
+				"height":"7 ft 0 in",
+				"weight":"240 lb",
+				"position":"Center Forward",
+				"seasons":"17 (1985 - 2002)",
+				"rebounds": 11607,
+				"fieldGoals": 9702,
+				"assists": 2215,
+				"threePoints":19,
+				"blocks": 2894
+			},
+			{
+				"firstname": "Carmelo",
+				"lastname": "Anthony",
+				"number": 7,
+				"datebirth": "05/29/84",
+				"height":"6 ft 8 in",
+				"weight":"230 lb",
+				"position":"Forward",
+				"seasons":"10 (2003 - 2013)",
+				"rebounds": 4551,
+				"fieldGoals": 6346,
+				"assists": 2181,
+				"threePoints":688,
+				"blocks": 331
+			}
+		]
+	},
+	{
+		"name": "new-orleans-hornets",
+		"joueurs":
+		[
+			{
+				"firstname": "Chris",
+				"lastname": "Paul",
+				"number": 3,
+				"datebirth": "05/06/85",
+				"height":"6 ft 0 in",
+				"weight":"175 lb",
+				"position":"Guard",
+				"seasons":"8 (2005 - 2013)",
+				"rebounds": 2426,
+				"fieldGoals": 3630,
+				"assists": 5449,
+				"threePoints":534,
+				"blocks": 50
+			},
+			{
+				"firstname": "Anthony",
+				"lastname": "Davis",
+				"number": 23,
+				"datebirth": "03/11/93",
+				"height":"6 ft 10 in",
+				"weight":"220 lb",
+				"position":"Forward Center",
+				"seasons":"1 (2012 - 2013)",
+				"rebounds": 522,
+				"fieldGoals": 349,
+				"assists": 63,
+				"threePoints":6,
+				"blocks": 112
+			}
+		]
+	},
+	{
+		"name": "oklahoma-thunder",
+		"joueurs":
+		[
+			{
+				"firstname": "Kevin",
+				"lastname": "Durant",
+				"number": 35,
+				"datebirth": "09/29/88",
+				"height":"6 ft 9 in",
+				"weight":"215 lb",
+				"position":"Forward",
+				"seasons":"6 (2007 - 2013)",
+				"rebounds": 3153,
+				"fieldGoals": 4127,
+				"assists": 1447,
+				"threePoints":701,
+				"blocks": 470
+			},
+			{
+				"firstname": "Russel",
+				"lastname": "Westbrook",
+				"number": 0,
+				"datebirth": "11/12/88",
+				"height":"6 ft 3 in",
+				"weight":"187 lb",
+				"position":"Guard",
+				"seasons":"5 (2008 - 2013)",
+				"rebounds": 1908,
+				"fieldGoals": 2786,
+				"assists": 2726,
+				"threePoints":251,
+				"blocks": 125
+			}
+		]
+	},
+	{
+		"name": "orlando-magic",
+		"joueurs":
+		[
+			{
+				"firstname": "Dwight",
+				"lastname": "Howard",
+				"number": 12,
+				"datebirth": "12/08/85",
+				"height":"6 ft 11 in",
+				"weight":"240 lb",
+				"position":"Center Forward",
+				"seasons":"9 (2004 - 2013)",
+				"rebounds": 9017,
+				"fieldGoals": 4504,
+				"assists": 1043,
+				"threePoints":2,
+				"blocks": 1530
+			},
+			{
+				"firstname": "Jameer",
+				"lastname": "nelson",
+				"number": 14,
+				"datebirth": "02/09/82",
+				"height":"6 ft 0 in",
+				"weight":"190 lb",
+				"position":"Guard",
+				"seasons":"9 (2004 - 2013)",
+				"rebounds": 1807,
+				"fieldGoals": 2815,
+				"assists": 3025,
+				"threePoints":738,
+				"blocks": 40
+			}
+		]
+	},
+	{
+		"name": "philadelphia-76ers",
+		"joueurs":
+		[
+			{
+				"firstname": "Julius",
+				"lastname": "Erving",
+				"number": 32,
+				"datebirth": "02/22/50",
+				"height":"6 ft 6 in",
+				"weight":"200 lb",
+				"position":"forward guard",
+				"seasons":"16 (1971 - 1987)",
+				"rebounds": 10525,
+				"fieldGoals": 11818,
+				"assists": 5176,
+				"threePoints":134,
+				"blocks": 1941
+			},
+			{
+				"firstname": "Jrue",
+				"lastname": "Holiday",
+				"number": 11,
+				"datebirth": "06/12/90",
+				"height":"6 ft 3 in",
+				"weight":"180 lb",
+				"position":"Guard",
+				"seasons":"4 (2009 - 2013)",
+				"rebounds": 1064,
+				"fieldGoals": 1591,
+				"assists": 1726,
+				"threePoints":299,
+				"blocks": 97
+			}
+		]
+	},
+	{
+		"name": "phoenix-suns",
+		"joueurs":
+		[
+			{
+				"firstname": "Steve",
+				"lastname": "Nash",
+				"number": 13,
+				"datebirth": "02/07/74",
+				"height":"6 ft 3 in",
+				"weight":"195 lb",
+				"position":"Guard",
+				"seasons":"17 (1996 - 2013)",
+				"rebounds": 3613,
+				"fieldGoals": 6285,
+				"assists": 10249,
+				"threePoints":1677,
+				"blocks": 100
+			},
+			{
+				"firstname": "Mickael",
+				"lastname": "Beasley",
+				"number": 0,
+				"datebirth": "01/09/89",
+				"height":"6 ft 9 in",
+				"weight":"235 lb",
+				"position":"Forward",
+				"seasons":"4 (2008 - 2013)",
+				"rebounds": 1835,
+				"fieldGoals": 2012,
+				"assists": 497,
+				"threePoints":204,
+				"blocks": 191
+			}
+		]
+	},
+	{
+		"name": "phoenix-suns",
+		"joueurs":
+		[
+			{
+				"firstname": "Steve",
+				"lastname": "Nash",
+				"number": 13,
+				"datebirth": "02/07/74",
+				"height":"6 ft 3 in",
+				"weight":"195 lb",
+				"position":"Guard",
+				"seasons":"17 (1996 - 2013)",
+				"rebounds": 3613,
+				"fieldGoals": 6285,
+				"assists": 10249,
+				"threePoints":1677,
+				"blocks": 100
+			},
+			{
+				"firstname": "Mickael",
+				"lastname": "Beasley",
+				"number": 0,
+				"datebirth": "01/09/89",
+				"height":"6 ft 9 in",
+				"weight":"235 lb",
+				"position":"Forward",
+				"seasons":"4 (2008 - 2013)",
+				"rebounds": 1835,
+				"fieldGoals": 2012,
+				"assists": 497,
+				"threePoints":204,
+				"blocks": 191
+			}
+		]
+	},
+	{
+		"name": "portland-blazers",
+		"joueurs":
+		[
+			{
+				"firstname": "Clyde",
+				"lastname": "Drexler",
+				"number": 22,
+				"datebirth": "06/22/62",
+				"height":"6 ft 7 in",
+				"weight":"210 lb",
+				"position":"Guard Forward",
+				"seasons":"15 (1983 - 1998)",
+				"rebounds": 6677,
+				"fieldGoals": 8335,
+				"assists": 6125,
+				"threePoints":827,
+				"blocks": 719
+			},
+			{
+				"firstname": "Damian",
+				"lastname": "Lillard",
+				"number": 0,
+				"datebirth": "07/15/90",
+				"height":"6 ft 3 in",
+				"weight":"195 lb",
+				"position":"Guard",
+				"seasons":"1 (2012 - 2013)",
+				"rebounds": 257,
+				"fieldGoals": 553,
+				"assists": 531,
+				"threePoints":185,
+				"blocks": 19
+			}
+		]
+	},
+	{
+		"name": "sacramento-kings",
+		"joueurs":
+		[
+			{
+				"firstname": "Oscar",
+				"lastname": "Robertson",
+				"number": 1,
+				"datebirth": "11/24/38",
+				"height":"6 ft 5 in",
+				"weight":"205 lb",
+				"position":"Guard Forward",
+				"seasons":"14 (1960 - 1974)",
+				"rebounds": 7804,
+				"fieldGoals": 9508,
+				"assists": 9887,
+				"threePoints":0,
+				"blocks": 4
+			},
+			{
+				"firstname": "DeMarcus",
+				"lastname": "Cousins",
+				"number": 15,
+				"datebirth": "08/13/90",
+				"height":"6 ft 11 in",
+				"weight":"270 lb",
+				"position":"Forward",
+				"seasons":"3 (2010 - 2013)",
+				"rebounds": 2148,
+				"fieldGoals": 1362,
+				"assists": 505,
+				"threePoints":9,
+				"blocks": 198
+			}
+		]
+	},
+	{
+		"name": "san-antonio-spurs",
+		"joueurs":
+		[
+			{
+				"firstname": "Tim",
+				"lastname": "Duncan",
+				"number": 21,
+				"datebirth": "04/25/76",
+				"height":"6 ft 11 in",
+				"weight":"248 lb",
+				"position":"Forward Center",
+				"seasons":"16 (1997 - 2013)",
+				"rebounds": 13219,
+				"fieldGoals": 9207,
+				"assists": 3612,
+				"threePoints":28,
+				"blocks": 2652
+			},
+			{
+				"firstname": "Tony",
+				"lastname": "Parker",
+				"number": 9,
+				"datebirth": "05/17/82",
+				"height":"6 ft 2 in",
+				"weight":"180 lb",
+				"position":"Guard",
+				"seasons":"12 (2001 - 2013)",
+				"rebounds": 2645,
+				"fieldGoals": 5911,
+				"assists": 5247,
+				"threePoints":383,
+				"blocks": 66
+			}
+		]
+	},
+	{
+		"name": "toronto-raptors",
+		"joueurs":
+		[
+			{
+				"firstname": "Vince",
+				"lastname": "Carter",
+				"number": 25,
+				"datebirth": "01/26/77",
+				"height":"6 ft 6 in",
+				"weight":"215 lb",
+				"position":"Guard Forward",
+				"seasons":"15 (1998 - 2013)",
+				"rebounds": 5350,
+				"fieldGoals": 8085,
+				"assists": 4030,
+				"threePoints":1663,
+				"blocks": 709
+			},
+			{
+				"firstname": "Demar",
+				"lastname": "Derozan",
+				"number": 10,
+				"datebirth": "08/07/89",
+				"height":"6 ft 7 in",
+				"weight":"220 lb",
+				"position":"Guard",
+				"seasons":"4 (2009 - 2013)",
+				"rebounds": 1069,
+				"fieldGoals": 1723,
+				"assists": 533,
+				"threePoints":67,
+				"blocks": 90
+			}
+		]
+	},
+	{
+		"name": "utah-jazz",
+		"joueurs":
+		[
+			{
+				"firstname": "Karl",
+				"lastname": "Malone",
+				"number": 32,
+				"datebirth": "06/24/63",
+				"height":"6 ft 9 in",
+				"weight":"250 lb",
+				"position":"Forward",
+				"seasons":"19 (1985 - 2004)",
+				"rebounds": 14968,
+				"fieldGoals": 13528,
+				"assists": 5248,
+				"threePoints":85,
+				"blocks": 1145
+			},
+			{
+				"firstname": "Alec",
+				"lastname": "Burks",
+				"number": 10,
+				"datebirth": "06/20/91",
+				"height":"6 ft 6 in",
+				"weight":"195 lb",
+				"position":"Guard",
+				"seasons":"2 (2011 - 2013)",
+				"rebounds": 277,
+				"fieldGoals": 316,
+				"assists": 147,
+				"threePoints":48,
+				"blocks": 18
+			}
+		]
+	},
+	{
+		"name": "washington-wizards",
+		"joueurs":
+		[
+			{
+				"firstname": "Wes",
+				"lastname": "Unseld",
+				"number": 41,
+				"datebirth": "03/14/46",
+				"height":"6 ft 7 in",
+				"weight":"245 lb",
+				"position":"Center Forward",
+				"seasons":"13 (1968 - 1981)",
+				"rebounds": 13769,
+				"fieldGoals": 4369,
+				"assists": 3822,
+				"threePoints":3,
+				"blocks": 367
+			},
+			{
+				"firstname": "Bradley",
+				"lastname": "Beal",
+				"number": 3,
+				"datebirth": "06/28/93",
+				"height":"6 ft 3 in",
+				"weight":"207 lb",
+				"position":"Guard",
+				"seasons":"1 (2012 - 2013)",
+				"rebounds": 211,
+				"fieldGoals": 282,
+				"assists": 137,
+				"threePoints":91,
+				"blocks": 29
+			}
+		]
+	}
+]

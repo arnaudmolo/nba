@@ -517,6 +517,10 @@ textarea {
    Tables
    ========================================================================== */
 
+$red : #b23843;
+$blue: #313249;
+$beige :#ecf0f1;
+
 /**
  * Remove most spacing between table cells.
  */
@@ -525,10 +529,98 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
+.pull-left{
+    float: left
+}
+.pull-right{
+    float: right;
+}
+.arvobold{
+    font-family: 'arvobold';
+}
+h1,h2,h3,h4,h5, p{
+    &.center{
+        text-align: center;
+    }
+    &.uppercase{
+        text-transform: uppercase;
+    }
+}
+.bolder{
+    font-weight: bolder
+}
+strong{
+    color: $red;
+}
+@font-face {
+    font-family: 'arvobold';
+    src: url('/fonts/arvo-bold-webfont.eot');
+    src: url('/fonts/arvo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/arvo-bold-webfont.woff') format('woff'),
+         url('/fonts/arvo-bold-webfont.ttf') format('truetype'),
+         url('/fonts/arvo-bold-webfont.svg#arvobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'arvobold_italic';
+    src: url('/fonts/arvo-bolditalic-webfont.eot');
+    src: url('/fonts/arvo-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/arvo-bolditalic-webfont.woff') format('woff'),
+         url('/fonts/arvo-bolditalic-webfont.ttf') format('truetype'),
+         url('/fonts/arvo-bolditalic-webfont.svg#arvobold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'arvoitalic';
+    src: url('/fonts/arvo-italic-webfont.eot');
+    src: url('/fonts/arvo-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/arvo-italic-webfont.woff') format('woff'),
+         url('/fonts/arvo-italic-webfont.ttf') format('truetype'),
+         url('/fonts/arvo-italic-webfont.svg#arvoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'arvoregular';
+    src: url('/fonts/arvo-regular-webfont.eot');
+    src: url('/fonts/arvo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/arvo-regular-webfont.woff') format('woff'),
+         url('/fonts/arvo-regular-webfont.ttf') format('truetype'),
+         url('/fonts/arvo-regular-webfont.svg#arvoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratbold';
+    src: url('/fonts/montserrat-bold-webfont.eot');
+    src: url('/fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('/fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('/fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratregular';
+    src: url('/fonts/montserrat-regular-webfont.eot');
+    src: url('/fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('/fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('/fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 #map{
+    height: 500px;
+    svg{
+        background-image: url(/img/d_pattern1.png);
+        position: absolute;
+        left: 0;
+    }
     g{
         path{
             &:hover{
@@ -561,45 +653,634 @@ table {
     opacity: 0.5;
 }
 #bottom-bar{
-    height: 300px;
-    background-color: #e2e6e8;
+    .team{
+        width: 130px;
+        height: 130px;
+        margin: 0;
+        padding: 0;
+        background-image: url(/img/logos/sprite-logo.png);
+        background-position-y: -130px;
+    }
+    .boston-celtics{
+        background-position-x: 0px;
+    }
+    .brooklyn-nets{
+        background-position-x: -130px;
+    }
+    .new-york-knicks{
+        background-position-x: -260px;
+    }
+    .philadelphie-76ers{
+        background-position-x: -390px;
+    }
+    .toronto-raptors{
+        background-position-x: -520px;
+    }
+    .atlanta-hawks{
+        background-position-x: -650px;
+    }
+    .charlotte-bobcats{
+        background-position-x: -780px;
+    }
+    .chicago-bulls{
+        background-position-x: -910px;
+    }
+    .cleveland-cavaliers{
+        background-position-x: -1040px;
+    }
+    .dallas-mavericks{
+        background-position-x: -1170px;
+    }
+    .denver-nuggets{
+        background-position-x: -1300px;
+    }
+    .detroit-pistons{
+        background-position-x: -1430px;
+    }
+    .golden-state-warriors{
+        background-position-x: -1560px;
+    }
+    .houston-rockets{
+        background-position-x: -1690px;
+    }
+    .indiana-pacers{
+        background-position-x: -1820px;
+    }
+    .los-angeles-clippers{
+        background-position-x: -1950px;
+    }
+    .los-angeles-lakers{
+        background-position-x: -2080px;
+    }
+    .memphis-grizzlies{
+        background-position-x: -2210px;
+    }
+    .miami-heat{
+        background-position-x: -2340px;
+    }
+    .milwaukee-bucks{
+        background-position-x: -2470px;
+    }
+    .minnesota-timberwolves{
+        background-position-x: -2600px;
+    }
+    .new-orleans-hornets{
+        background-position-x: -2730px;
+    }
+    .oklahoma-city-thunder{
+        background-position-x: -2860px;
+    }
+    .orlando-magic{
+        background-position-x: -2990px;
+    }
+    .phenix-suns{
+        background-position-x: -3120px;
+    }
+    .portland-blazers{
+        background-position-x: -3250px;
+    }
+    .sacramento-kings{
+        background-position-x: -3380px;
+    }
+    .san-antonio-spurs{
+        background-position-x: -3510px;
+    }
+    .utah-jazz{
+        background-position-x: -3640px;
+    }
+    .buffalo-braves{
+        background-position-x: -3370px;
+    }
+}
+#bottom-bar{
+    background-color: #e2e6e8;    
+    a,h1{
+        font-size: 18px;
+        color: $blue;
+        text-align: center
+    }
     a{
         display: inline-block;
         margin-left: 20px;
         width: 0px;
         -webkit-transition: all 1s ease;
-        transition: all 5s ease;
+        transition: all 0.5s ease;
         overflow: hidden;
         &.show{
             width: 160px;
         }
     }
-    #choose{
-        cursor: pointer;
-        float: left;
-        background-color: #313249;
-        width: 50px;
-        height: 100%;
-        color: white;
-        span{
-            -webkit-transform: rotate(90deg);
-            display: block;
+}
+.bottom-bar{
+    height: 324px;
+    margin-top: 60px !important;
+}
+#choose{
+    cursor: pointer;
+    float: left;
+    background-color: #313249;
+    width: 60px;
+    height: 100%;
+    color: white;
+    p{
+        color:white;
+        border:0px solid red;
+        writing-mode:tb-rl;
+        -webkit-transform:rotate(-90deg);
+        -moz-transform:rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        white-space:nowrap;
+        display:block;
+        bottom:0;
+        font-size:24px;
+        font-weight:normal;
+        -webkit-transform-origin: 135px 120px;
+    }
+    span{
+        -webkit-transform: rotate(90deg);
+        display: block;
+    }
+}
+#nba-logo{
+    transition: all 1s ease;
+    overflow: hidden;
+}
+body, html, #main{
+    height: 100%;
+}
+#main{
+    width: 100%;
+}
+body{
+    font-size:18px;
+    font-family:"montserratregular";
+    overflow: hidden;
+    background: $beige;
+    
+}
+section{
+    width:100%;
+    height:100%;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+section#home{
+    color:#ecf0f1;
+    
+    height: 100%;
+
+    background-image: url('../img/pattern_home.png'), url('../img/home_screen.jpg');
+    background-position:left top,right bottom;
+    background-repeat:repeat,no-repeat;
+    -webkit-background-size: auto,100%;
+    -moz-background-size: auto, 100%;
+    -o-background-size: auto, 100%;
+    background-size: auto,100%;
+    box-shadow: 0 0 0 15px $red inset;
+    &.loading{
+        header{
+            height: 0;
+            overflow: hidden;
+        }
+    }
+    header{
+        position:absolute;
+        width:100%;
+        height: 60px;
+        bottom:0;
+        transition: all 0.5s ease;
+        background-color:rgba(49,50,73,0.5);
+        font-family:"montserratbold";
+        border-top:1px solid #191925;
+        nav{
+            text-align:center;
+            &>ul>li{
+                display:inline-block;
+                text-align:center;
+                width: 155px;
+                &:hover ul{
+                    height: 262px;
+                }
+                span{
+                    text-decoration: none;
+                    height: 39px;
+                    border-left: 1px solid #191925;
+                    border-right: 1px solid #393951;
+                    display: block;
+                    font-size: 0.8em;
+                    color: #ecf0f1;
+                    padding-top: 20px;
+                    width: 160px;
+                    cursor:pointer;
+                    &:hover{
+                        background-color:#313249;
+                    }
+                    &:first-child{
+                        border-left: 1px solid #393951;
+                    }
+                    &:last-child{
+                        border-right: 1px solid #191925;
+                    }
+                }
+            }
+        }
+    }
+    .content{
+        width:960px;
+        margin:auto;
+        h1{
+            font-weight:normal;
+            margin:0 20px;
+            font-family:"arvobold";
+            font-size:1.7em;
+            text-transform: uppercase;
+            span{
+                width:100px;
+                height:1px;
+                background-color:white;
+                display: inline-block;
+                margin: 0 10px 10px 10px;
+            }
+        }
+        img{
+            margin-bottom:10px;
+        }
+    }
+    .logo{
+        position: relative;
+        top: 25%;
+        text-align:center;
+    }
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+.detailsmenu ul{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width:100%;
+    margin-bottom:59px;
+    border-top:2px solid #1d1d2c;
+    background-color:#313249;
+    z-index:10;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    // a{
+    //     display: block
+    // }
+}
+.detailsmenu ul li{
+    float: left;
+    width: 188px;
+    height: 227px;
+    text-align: center;
+    padding-top: 33px;
+}
+.detailsmenu ul li:after{
+    content:"";
+    width: 1px;
+    background-color: #606273;
+    height: 180px;
+    float: right;
+    margin-top: -43px;
+}
+.detailsmenu ul li:last-child:after{
+    display:none;
+}
+.detailsmenu ul li:hover{
+   background-color:#923645;
+   cursor:pointer;
+}
+.celtics{
+    background:url(/img/logos/celtics.png) no-repeat;
+    background-position: 50% 96px;
+}
+.brooklyn{
+    background:url(/img/logos/brooklyn.png) no-repeat;
+    background-position: 50% 96px;
+}
+.knicks{
+    background:url(/img/logos/new-york-knicks.png) no-repeat;
+    background-position: 50% 96px;
+}
+.philadelphie{
+    background:url(/img/logos/philadelphie.png) no-repeat;
+    background-position: 50% 96px;
+}
+.toronto{
+    background:url(/img/logos/toronto.png) no-repeat;
+    background-position: 50% 96px;
+}
+
+.detailsmenu ul li p{
+    line-height: 18px;
+}
+.detailsmenu ul li:hover p{
+    color:#313249;
+}
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+#states {
+  fill: #aaa;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+#states .active {
+  fill: $red;
+}
+#states rect {
+    fill: url(/img/pattern_map.png);
+}
+path{
+    transition: all 1s ease;
+}
+.container{
+    width: 980px;
+    margin: 0 auto;
+}
+#stats-style{
+    background-image: url(/img/bg-stats.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#stats{
+    color: white;
+    div{
+        overflow: hidden;
+    }
+    >section>div{
+        display: inline-block;
+        transition: width 1s ease, height 0s ease 1s;
+        width: 100%;
+        vertical-align: top;
+        height: 2000px;
+    }
+    #awards{
+        >div{
+            display: inline-block;
+            width: 32.5%;
+            height: 280px;
+            vertical-align: middle;
+            text-align: center;
+            .bg{
+                transition: all 0.5s ease 0s;
+                background-image: url(/img/sprite-awards.png);
+                background-repeat: no-repeat;
+                height: 200px;
+                width: 200px;
+                margin: 0 auto;
+                background-position-y: -5px;
+                -webkit-transform: scale(1);
+            }
+            &.on{
+                .bg{
+                    background-position-y: -210px;
+                }
+            }
+        }
+        .all-star-mvp{
+            .bg{
+                background-position-x: -400px;
+                transition-delay: 0.5s;
+            }
+        }
+        .defensive-player-of-the-year{
+            .bg{
+                background-position-x: -600px;
+                transition-delay: 1s;
+            }
+        }
+        .sixth-man-of-the-year{
+            .bg{
+                background-position-x: -200px;
+                transition-delay: 1.5s;
+            }
+        }
+        .rookie-of-the-year{
+            .bg{
+                background-position-x: -810px;
+                transition-delay: 2s;
+            }
+        }
+        .nba-champion{
+            .bg{
+                background-position-x: -1020px;
+                transition-delay: 2.5s;
+            }
         }
     }
 }
-#loader {
-    width: 100%;
-    height: 1000px;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMTgwMTE3NDA3MjA2ODExODA4M0EzRUI4RUVGNEI3RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDQzM4RkU0QUMwMTYxMUUyQUIwM0Q4NUNCNEZFMDZCRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDQzM4RkU0OUMwMTYxMUUyQUIwM0Q4NUNCNEZFMDZCRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjc2MTdDQTVFRkVCRUUyMTFBMENGQkE1QTc0MTVCRDA4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4MDgzQTNFQjhFRUY0QjdEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+80WXTwAAABdJREFUeNpi5OER4uUVZgJiBgYGgAADAASGAIhsjgQEAAAAAElFTkSuQmCC);
-    transition: all 1s ease;
-    overflow: hidden;
+.notif{
+    background-color: $red;
+    height: 35px;
+    width: 35px;
+    border-radius: 35px;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    line-height: 35px;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 25px;
 }
-
-#nba-logo{
-    transition: all 1s ease;
-    height: 0;
-    overflow: hidden;
+// .hidden{
+//     width: 0 !important;
+//     height: 0 !important;
+// }
+.team{
+    display: inline-block;
+    width: 200px;
+    font-size: 15px;
+    margin-left: 10px;
+    padding-left: 15px;
+    background-repeat: no-repeat;
+    background-image: url(/img/sprite-legende.png);
+    background-position-y: 3px;
 }
-body{
-    overflow: hidden;
+#teams{
+    color: $blue;
+}
+#legend{
+    .new-york-knicks{
+        background-position-y: 3px;
+    }
+    .san-antonio-spurs{
+        background-position-y: -11px;
+    }
+    .los-angeles-lakers{
+        background-position-y: -26px;
+    }
+    .denver-nuggets{
+        background-position-y: -41px;
+    }
+    .atlanta-hawks{
+        background-position-y: -57px;
+    }
+    .portland-blazers{
+        background-position-y: -72px;
+    }
+    .milwaukee-bucks{
+        background-position-y: -87px;
+    }
+    .buffalo-braves{
+        background-position-y: -101px;
+    }
+    .chicago-bulls{
+        background-position-y: -116px;
+    }
+    .cap{
+        background-position-y: -131px;
+    }
+    .baltimore-bullets{
+        background-position-y: -146px;
+    }
+    .washington-wizards{
+        background-position-y: -161px;
+    }
+    .philadelphie-sixers{
+        background-position-y: -176px;
+    }
+    .houston-rockets{
+        background-position-y: -191px;
+    }
+    .phenix-suns{
+        background-position-y: -206px;
+    }
+    .seattle-supersonics{
+        background-position-y: -221px;
+    }
+    .golden-state-warriors{
+        background-position-y: -236px;
+    }
+    .kansas-city-kings{
+        background-position-y: -251px;
+    }
+    .boston-celtics{
+        background-position-y: -266px;
+    }
+    .cleveland-cavaliers{
+        background-position-y: -281px;
+    }
+    .detroit-pistons{
+        background-position-y: -296px;
+    }
+    .brooklyn-nets{
+        background-position-y: -311px;
+    }
+    .utah-jazz{
+        background-position-y: -326px;
+    }
+    .dallas-mavericks{
+        background-position-y: -341px;
+    }
+    .charlotte-bobcats{
+        background-position-y: -356px;
+    }
+    .indiana-pacers{
+        background-position-y: -371px;
+    }
+    .orlando-magic{
+        background-position-y: -386px;
+    }
+    .miami-heat{
+        background-position-y: -401px;
+    }
+    .toronto-raptors{
+        background-position-y: -416px;
+    }
+    .minnesota-timberwolves{
+        background-position-y: -431px;
+    }
+    .sacramento-kings{
+        background-position-y: -446px;
+    }
+    .new-orleans-hornets{
+        background-position-y: -461px;
+    }
+    .los-angeles-clippers{
+        background-position-y: -476px;
+    }
+    .memphis-grizzlies{
+        background-position-y: -491px;
+    }
+    .oklahoma-city-thunder{
+        background-position-y: -506px;
+    }
+}
+#slider>article{
+    transition: all 1s ease;
+    &.hidden{
+        position: absolute;
+        margin-left: -100%;
+    }
+}
+.transition{
+    .bg{
+        -webkit-transform: scale(0) !important;
+    }
+}
+.dial {
+    width: 19.5%;
+    display: inline-block;
+}
+nav.center{
+    text-align: center;
+}
+#stats>section>div.title.underline{
+    width: 250px;
+    height: 2px;
+    border-top: 1px white solid;
+    margin: 0 auto;
+    display: block;
+}
+#stats>section>h1{
+    margin-bottom: 0;
+}
+#stats>section>nav{
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+nav.navigation a{
+    padding: 5px 24px;
+    &.active{
+        border-bottom: 1px $red solid;
+    }
+}
+#players{
+    nav.navigation a{
+        &.active{
+            background-color: $red;
+        }
+        transition: all 0.5s ease;
+        border-bottom: none;
+    }
+}
+.number{
+    strong{
+        color: white;
+        font-size: 10em;
+    }
+}
+.tiers{
+    width: 33.3330%;
+    display: inline-block;
+}
+.lignes{
+    span{
+        width:90px;
+        height:1px;
+        background-color:white;
+        display: inline-block;
+        margin: 0 10px 5px 10px;
+    }
 }

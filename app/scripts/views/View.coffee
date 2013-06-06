@@ -1,4 +1,4 @@
-define(['text!templates/Application.handlebars', 'backbone', 'two'], (templateString, Backbone, Two) ->
+define(['text!templates/Application.handlebars', 'backbone'], (templateString, Backbone) ->
     class ApplicationView extends Backbone.View
         initialize: ->
         # Called before rendering

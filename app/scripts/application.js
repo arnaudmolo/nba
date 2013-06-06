@@ -4,9 +4,10 @@ requirejs.config({
     handlebars: "framework/handlebars",
     lodash: "framework/lodash",
     jquery: "framework/jquery.min",
-    two: "vendor/two/build/two",
     view: "views/View",
-    goto: "framework/goto"
+    goto: "framework/goto",
+    d3: "framework/d3",
+    jqeasing: "framework/jquery.easing.1.2"
   },
   shim: {
     backbone: {
@@ -15,6 +16,9 @@ requirejs.config({
     },
     goto: {
       deps: ["jquery"]
+    },
+    jqeasing: {
+      deps: ["jqeasing"]
     }
   }
 });
@@ -22,6 +26,7 @@ requirejs.config({
 require(['backbone', 'handlebars', './views/ApplicationView', './collections/TeamCollection', './routes/Router'], function(Backbone, Handlebars, ApplicationView, TeamCollection, Router) {
   window.temp = {};
   window.NBA = new TeamCollection();
+  window.transition = true;
   document.onscroll = function(e) {
     return e.preventDefault();
   };
