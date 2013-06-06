@@ -1,4 +1,4 @@
-define ['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView'], (templateString, Backbone, View, PlayerView)->
+define ['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView', './DataView'], (templateString, Backbone, View, PlayerView, DataView)->
     Handlebars.registerHelper "debug", (optionalValue) ->
         console.log this
         if optionalValue
@@ -25,6 +25,8 @@ define ['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView'], 
             nav.removeClass('active')
             nav[index].classList.add('active')
         data: ->
+            if @dataView is undefined
+                @dataView = new DataView model: @model, el: $("#data")[0]
             @toHide.addClass('hidden').addClass('transition')
             @$el.find('#data').removeClass('hidden').find('.center.navigation a')
             @menuNav(0)

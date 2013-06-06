@@ -1,7 +1,7 @@
 var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView'], function(templateString, Backbone, View, PlayerView) {
+define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView', './DataView'], function(templateString, Backbone, View, PlayerView, DataView) {
   var StatsView, _ref;
 
   Handlebars.registerHelper("debug", function(optionalValue) {
@@ -53,6 +53,12 @@ define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView'], 
     };
 
     StatsView.prototype.data = function() {
+      if (this.dataView === void 0) {
+        this.dataView = new DataView({
+          model: this.model,
+          el: $("#data")[0]
+        });
+      }
       this.toHide.addClass('hidden').addClass('transition');
       this.$el.find('#data').removeClass('hidden').find('.center.navigation a');
       return this.menuNav(0);

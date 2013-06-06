@@ -33,18 +33,23 @@ define ['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapV
                     if e.properties.name is stateName
                         state = e.properties.name
                         window.mainView.map.zoom(e)
+                t.bottomBarElement.classList.add('hidden')
                 _.each @bottomBarModels, (model)->
                     model.bottomBarRemove()
                 _.each window.NBA.where(state:state), (team)->
+                    t.bottomBarElement.classList.remove('hidden')
                     team.bottomBar()
                 window.transition = false
 
             if options.zoom
                 $.scrollTo "#map", 1000, ->
+                    console.log "va dans les stats"
                     next.apply(t)
+                    console.log options.stats
                     if options.stats
                         setTimeout ->
-                            $.scrollTo "#stats", 1000
+                            $.scrollTo "#stats", 1000, ->
+                                console.log 'ici morray', $(@).find('#data').trigger('graphLoaded')
                         , 1000
             else
                 next.apply(t)

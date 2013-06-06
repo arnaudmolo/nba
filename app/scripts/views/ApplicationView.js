@@ -57,22 +57,28 @@ define(['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapV
             return window.mainView.map.zoom(e);
           }
         });
+        t.bottomBarElement.classList.add('hidden');
         _.each(this.bottomBarModels, function(model) {
           return model.bottomBarRemove();
         });
         _.each(window.NBA.where({
           state: state
         }), function(team) {
+          t.bottomBarElement.classList.remove('hidden');
           return team.bottomBar();
         });
         return window.transition = false;
       };
       if (options.zoom) {
         return $.scrollTo("#map", 1000, function() {
+          console.log("va dans les stats");
           next.apply(t);
+          console.log(options.stats);
           if (options.stats) {
             return setTimeout(function() {
-              return $.scrollTo("#stats", 1000);
+              return $.scrollTo("#stats", 1000, function() {
+                return console.log('ici morray', $(this).find('#data').trigger('graphLoaded'));
+              });
             }, 1000);
           }
         });

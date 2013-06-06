@@ -25,7 +25,6 @@ define(['view', 'd3', '../framework/spy'], function(View, ignore) {
         return 1;
       });
       $("#playoffs").on('scrollSpy:enter', function(e) {
-        console.log(this);
         d3.json("haha.json", function(error, datas) {
           return t.render(datas);
         });

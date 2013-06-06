@@ -88,7 +88,6 @@ define ['view', 'd3', '../framework/spy'], (View, ignore)->
             @pie = d3.layout.pie().sort(null).value (d) ->
                 1
             $("#playoffs").on 'scrollSpy:enter', (e)->
-                console.log @
                 d3.json "haha.json", (error, datas) ->
                     t.render(datas)
                 $(@).unbind('scrollSpy:enter')

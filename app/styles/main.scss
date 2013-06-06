@@ -670,7 +670,7 @@ strong{
     .new-york-knicks{
         background-position-x: -260px;
     }
-    .philadelphie-76ers{
+    .philadelphia-76ers{
         background-position-x: -390px;
     }
     .toronto-raptors{
@@ -752,20 +752,43 @@ strong{
         background-position-x: -3370px;
     }
 }
+.solid{
+    position: relative;
+    top: 0;
+    width: 160px;
+}
 #bottom-bar{
+    transition: all 0.5s ease;
+    overflow: hidden;
+    margin: 0;
     background-color: #e2e6e8;    
+    width: 920px;
+    height: 324px;
+    &.hidden{
+        width: 0px;
+    }
     a,h1{
         font-size: 18px;
         color: $blue;
         text-align: center
     }
     a{
+        position: absolute;
         display: inline-block;
         margin-left: 20px;
         width: 0px;
         -webkit-transition: all 1s ease;
         transition: all 0.5s ease;
         overflow: hidden;
+        &:nth-child(1){
+            margin-left: 0px;
+        }&:nth-child(2){
+            margin-left: 160px;
+        }&:nth-child(3){
+            margin-left: 320px;
+        }&:nth-child(4){
+            margin-left: 480px;
+        }
         &.show{
             width: 160px;
         }
@@ -839,7 +862,6 @@ section#home{
     -moz-background-size: auto, 100%;
     -o-background-size: auto, 100%;
     background-size: auto,100%;
-    box-shadow: 0 0 0 15px $red inset;
     &.loading{
         header{
             height: 0;
@@ -1012,6 +1034,7 @@ path{
     background-image: url(/img/bg-stats.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    min-height: 1200px;
 }
 #stats{
     color: white;
@@ -1283,4 +1306,68 @@ nav.navigation a{
         display: inline-block;
         margin: 0 10px 5px 10px;
     }
+}
+ul.legend li span{
+  width:20px;
+    height:15px;
+    display:inline-block;
+}
+ul.legend li.points span{background-color:#b23843}
+ul.legend li.rebounds span{background-color:#1abc9c}
+ul.legend li.fieldsGoalsMade span{background-color:#3498db}
+ul.legend li.assists span{background-color:#9b59b6}
+ul.legend li.freeThrow span{background-color:#34495e}
+ul.legend li.threePointsMade span{background-color:#f1c40f}
+ul.legend li.blocks span{background-color:#e67e22}
+ul.legend li.all span{background-color:white}
+
+.circlestat{width:11px;height:11px;display:inline-block; margin-left:3px;border-radius: 50%;}
+
+.points li{border:2px solid #b23843;}
+.blocks li{border:2px solid #e67e22;}
+.threepointers li{border:2px solid #f1c40f;}
+.fieldgoals li{border:2px solid #3498db;}
+.rebounds li{border:2px solid #1abc9c;}
+.freeThrow li{border:2px solid #34495e;}
+.assists li{border:2px solid #9b59b6;}
+ .points li{background-color: #b23843;}
+.blocks li{background-color: #e67e22;}
+.threepointers li{background-color: #f1c40f;}
+.fieldgoals li{background-color: #3498db;}
+.rebounds li{background-color: #1abc9c;}
+.freeThrow li{background-color: #34495e;}
+.assists li{background-color: #9b59b6;}
+h4{color:white;width:500px;}
+h4 span{float:right;}
+
+div.yearsinfos{
+    position: absolute;
+    right: 50px;
+}
+ul.legend{
+    bottom: 0;
+}
+ul.legend li{
+    cursor:pointer;
+}
+#graph svg g g{
+    cursor:pointer;
+}
+#graph svg>circle:last-child{
+    cursor:pointer;
+}
+#graph svg>circle:last-child:hover{
+    cursor:pointer;
+}
+#graph g g:hover{
+     opacity:0.8;
+}
+.active{
+    
+    opacity:1!important;
+}
+#graph g g{
+    opacity:0.5;
+    -webkit-transition:opacity 0.3s;
+    transition:opacity 0.3s;
 }
