@@ -24,30 +24,40 @@ define(['backbone', 'goto'], function() {
 
     Router.prototype.state = function(name) {
       window.mainView.goTo(name);
-      $.scrollTo("#map", 500);
+      $.scrollTo("#teams", 500, {
+        axis: 'y'
+      });
       return window.transition = true;
     };
 
     Router.prototype.init = function() {};
 
     Router.prototype.stats = function(name) {
+      window.transition = true;
       if (window.transition) {
-        return window.mainView.goTo(window.mainView.stats(name).get('state'), {
+        window.mainView.goTo(window.mainView.stats(name).get('state'), {
           zoom: window.transition,
           stats: true
         });
       } else {
-        $.scrollTo("#stats", 1000);
-        return window.mainView.stats(name);
+        $.scrollTo("#stats", 1000, {
+          axis: 'y'
+        });
+        window.mainView.stats(name);
       }
+      return window.mainView.menu.close();
     };
 
     Router.prototype.map = function() {
-      return $.scrollTo("#teams", 500);
+      return $.scrollTo("#teams", 500, {
+        axis: 'y'
+      });
     };
 
     Router.prototype.playoffs = function() {
-      return $.scrollTo("#playoffs", 500);
+      return $.scrollTo("#playoffs", 500, {
+        axis: 'y'
+      });
     };
 
     Router.prototype.awards = function(name) {

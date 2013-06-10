@@ -35,9 +35,12 @@ define(['text!templates/BottomBar.handlebars', 'backbone', 'view'], function(tem
 
     BottomBarView.prototype.remove = function() {
       this.el.classList.remove('show');
-      return this.el.addEventListener('webkitTransitionEnd', function() {
-        console.log("transitionend");
-        return this.parentNode.removeChild(this);
+      return this.el.addEventListener('webkitTransitionEnd', function(e) {
+        if (e.propertyName === 'width') {
+          try {
+            return this.parentNode.removeChild(this);
+          } catch (_error) {}
+        }
       });
     };
 

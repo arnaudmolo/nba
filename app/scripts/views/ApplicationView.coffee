@@ -1,13 +1,30 @@
-define ['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapView', 'views/PlayoffsView', '../framework/csv'], (templateString, Backbone, View, Map, Playoffs) ->
+define ['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapView', 'views/PlayoffsView', 'views/MenuView', '../framework/csv'], (templateString, Backbone, View, Map, Playoffs, Menu) ->
     class ApplicationView extends View
         bottomBarElement: document.getElementById("bottom-bar")
         bottomBarModels: []
+        toggleMenu: (e)->
+            @menu.toggleMenu()
         initialize: ->
+            @el = document.getElementById 'main'
+            @$el = $ @el
             window.mainView = @
+            @menu = new Menu el: document.getElementById 'menu'
             @map = new Map()
             @map.createMap()
             @map.render()
             @playoffs = new Playoffs()
+
+            t = @
+            @$el.find('.open-menu a').on 'click', (e)->
+                e.preventDefault()
+                t.toggleMenu()
+
+            window.onresize = ->
+                t.map.update()
+                t.playoffs.update()
+            #     console.log window.location.hash
+            #     window.router.navigate window.location.hash, trigger: true
+
             # $.ajax
             #     url: '/temp.json'
             #     dataType: 'json'
@@ -42,15 +59,15 @@ define ['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapV
                 window.transition = false
 
             if options.zoom
-                $.scrollTo "#map", 1000, ->
-                    console.log "va dans les stats"
-                    next.apply(t)
-                    console.log options.stats
-                    if options.stats
-                        setTimeout ->
-                            $.scrollTo "#stats", 1000, ->
-                                console.log 'ici morray', $(@).find('#data').trigger('graphLoaded')
-                        , 1000
+                $.scrollTo "#teams", 1000,
+                    axis: 'y'
+                    onAfter: ->
+                        next.apply(t)
+                        console.log 'ON ADTER BB'
+                        if options.stats
+                            setTimeout ->
+                                $.scrollTo "#stats", 1000, axis: 'y'
+                            , 1500
             else
                 next.apply(t)
         awards: (name)->

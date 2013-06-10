@@ -10,20 +10,25 @@ define ['backbone','goto'], ->
             'players/:name':'players'
         state: (name)->
             window.mainView.goTo(name)
-            $.scrollTo "#map", 500
+            $.scrollTo "#teams", 500, axis: 'y'
             window.transition = true
         init: ->
 
         stats: (name)->
+            window.transition = true
             if window.transition
                 window.mainView.goTo(window.mainView.stats(name).get('state'), zoom: window.transition, stats: true)
             else
-                $.scrollTo "#stats", 1000
-                window.mainView.stats(name)
+                $.scrollTo "#stats", 1000,
+                    axis: 'y'
+                window.mainView.stats name
+            window.mainView.menu.close()
         map:->
-            $.scrollTo "#teams", 500
+            $.scrollTo "#teams", 500,
+                axis: 'y'
         playoffs: ->
-            $.scrollTo "#playoffs", 500
+            $.scrollTo "#playoffs", 500,
+                axis: 'y'
         awards: (name)->
             if window.transition
                 window.mainView.goTo(window.mainView.awards(name).get('state'), zoom: window.transition, stats: true)

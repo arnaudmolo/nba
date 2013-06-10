@@ -18,8 +18,9 @@ define(['text!templates/Data.handlebars', 'view'], function(templateString, View
       this.$el = $(this.el);
       t = this;
       this.render();
-      this.$el.bind('graphLoaded', function() {
-        return t.traceGraph();
+      this.$el.on('scrollSpy:enter', function(e) {
+        t.traceGraph();
+        return $(this).unbind('scrollSpy:enter');
       });
       return this.$el.scrollSpy();
     };

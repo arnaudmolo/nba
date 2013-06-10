@@ -12,15 +12,32 @@ define(['view', 'd3', '../framework/spy'], function(View, ignore) {
       return _ref;
     }
 
-    PlayoffsView.prototype.width = 955;
+    PlayoffsView.prototype.width = function() {
+      return 955;
+    };
 
-    PlayoffsView.prototype.height = 550;
+    PlayoffsView.prototype.height = function() {
+      return 550;
+    };
+
+    PlayoffsView.prototype.taille = function() {
+      console.log('width', this.width());
+      console.log('height', this.height());
+      return (0.7 * this.width()) / this.height();
+    };
+
+    PlayoffsView.prototype.update = function() {
+      return this.svg.attr('transform', 'scale(' + this.taille() + ')');
+    };
 
     PlayoffsView.prototype.initialize = function() {
       var t;
 
       t = this;
-      this.svg = d3.select("#playoffs").append("svg").attr("width", this.width).attr("height", this.height);
+      this.svg = d3.select("#playoffs").append("svg").attr("width", this.width()).attr("height", this.height());
+      this.groupe = this.svg.append('g');
+      this.svg.attr('transform', 'scale(' + this.taille() + ')');
+      console.log(this.width() / this.height());
       this.pie = d3.layout.pie().sort(null).value(function(d) {
         return 1;
       });

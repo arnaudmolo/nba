@@ -1,7 +1,16 @@
 define ['view', 'd3', '../framework/spy'], (View, ignore)->
     class PlayoffsView extends View
-        width: 955
-        height: 550
+        width: ->
+            955
+        height: ->
+            550
+        taille: ->
+            console.log 'width', @width()
+            console.log 'height', @height()
+            (0.7 * @width()) / @height()
+        update: ->
+
+            @svg.attr('transform', 'scale('+@taille()+')');
         initialize: ->
             # colors = 
             #     '#F0822C':'new-york-knicks'
@@ -84,7 +93,10 @@ define ['view', 'd3', '../framework/spy'], (View, ignore)->
 
             #         console.log JSON.stringify(ex)
             t = @
-            @svg = d3.select("#playoffs").append("svg").attr("width", @width).attr("height", @height)
+            @svg = d3.select("#playoffs").append("svg").attr("width", @width()).attr("height", @height())
+            @groupe = @svg.append('g')
+            @svg.attr('transform', 'scale('+@taille()+')')
+            console.log @width()/@height()
             @pie = d3.layout.pie().sort(null).value (d) ->
                 1
             $("#playoffs").on 'scrollSpy:enter', (e)->

@@ -4,8 +4,9 @@ define ['text!templates/Data.handlebars', 'view'], (templateString, View)->
             @$el = $(@el)
             t = @
             @render()
-            @$el.bind 'graphLoaded', ->
+            @$el.on 'scrollSpy:enter', (e)->
                 t.traceGraph()
+                $(@).unbind 'scrollSpy:enter'
             @$el.scrollSpy();
         render: ->
             @onRender()
@@ -46,7 +47,6 @@ define ['text!templates/Data.handlebars', 'view'], (templateString, View)->
                     console.log tabdonneesp[0]
                     d3.selectAll("." + @className).transition().duration(1000).delay(500).ease("elastic").attr "r", (d, i) ->
                         (tabdonneesp[iddonnees][i] * 154) + 69
-            
                 else
                     hideall()
                     showall()

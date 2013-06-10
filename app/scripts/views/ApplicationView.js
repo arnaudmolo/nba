@@ -1,7 +1,7 @@
 var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-define(['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapView', 'views/PlayoffsView', '../framework/csv'], function(templateString, Backbone, View, Map, Playoffs) {
+define(['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapView', 'views/PlayoffsView', 'views/MenuView', '../framework/csv'], function(templateString, Backbone, View, Map, Playoffs, Menu) {
   var ApplicationView, _ref;
 
   return ApplicationView = (function(_super) {
@@ -16,12 +16,32 @@ define(['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapV
 
     ApplicationView.prototype.bottomBarModels = [];
 
+    ApplicationView.prototype.toggleMenu = function(e) {
+      return this.menu.toggleMenu();
+    };
+
     ApplicationView.prototype.initialize = function() {
+      var t;
+
+      this.el = document.getElementById('main');
+      this.$el = $(this.el);
       window.mainView = this;
+      this.menu = new Menu({
+        el: document.getElementById('menu')
+      });
       this.map = new Map();
       this.map.createMap();
       this.map.render();
-      return this.playoffs = new Playoffs();
+      this.playoffs = new Playoffs();
+      t = this;
+      this.$el.find('.open-menu a').on('click', function(e) {
+        e.preventDefault();
+        return t.toggleMenu();
+      });
+      return window.onresize = function() {
+        t.map.update();
+        return t.playoffs.update();
+      };
     };
 
     ApplicationView.prototype.stats = function(name) {
@@ -70,16 +90,18 @@ define(['text!templates/Application.handlebars', 'backbone', 'view', 'views/MapV
         return window.transition = false;
       };
       if (options.zoom) {
-        return $.scrollTo("#map", 1000, function() {
-          console.log("va dans les stats");
-          next.apply(t);
-          console.log(options.stats);
-          if (options.stats) {
-            return setTimeout(function() {
-              return $.scrollTo("#stats", 1000, function() {
-                return console.log('ici morray', $(this).find('#data').trigger('graphLoaded'));
-              });
-            }, 1000);
+        return $.scrollTo("#teams", 1000, {
+          axis: 'y',
+          onAfter: function() {
+            next.apply(t);
+            console.log('ON ADTER BB');
+            if (options.stats) {
+              return setTimeout(function() {
+                return $.scrollTo("#stats", 1000, {
+                  axis: 'y'
+                });
+              }, 1500);
+            }
           }
         });
       } else {

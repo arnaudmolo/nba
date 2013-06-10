@@ -15,6 +15,7 @@ define ['text!templates/BottomBar.handlebars', 'backbone', 'view'], (templateStr
             @el
         remove: ->
             @el.classList.remove('show')
-            @el.addEventListener 'webkitTransitionEnd', ->
-                console.log "transitionend"
-                this.parentNode.removeChild this
+            @el.addEventListener 'webkitTransitionEnd', (e)->
+                if e.propertyName is 'width'
+                    try
+                        this.parentNode.removeChild this
