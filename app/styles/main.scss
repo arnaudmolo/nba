@@ -540,6 +540,7 @@ table {
 }
 h1{
     font-family: 'arvobold';
+    color: $blue;
 }
 h1,h2,h3,h4,h5, p{
     &.center{
@@ -653,21 +654,18 @@ strong{
 .fat path{
     opacity: 0.5;
 }
-body #main header nav li li .bg-equipes{
+.bg-equipes{
     display: block;
     width: 130px;
     height: 130px;
     margin: 0;
     padding: 0;
     background-image: url(/img/logos/sprite-logo.png);
-    background-position-y: 0px;
+    background-position: 0 0px;
     margin: 0 auto;
 }
-body #main header nav li li:hover{
+header li li:hover{
     color: white;
-    .bg-equipes{
-        background-position-y: -130px;
-    }
 }
 #bottom-bar, header nav{
     .team{
@@ -676,100 +674,292 @@ body #main header nav li li:hover{
         margin: 0;
         padding: 0;
         background-image: url(/img/logos/sprite-logo.png);
-        background-position-y: -130px;
+        background-position: 0 -130px;
     }
-    .boston-celtics, .boston-celtics .bg-equipes{
-        background-position-x: 0px;
+}
+#bottom-bar{
+    .boston-celtics{
+        background-position: 0px -130px;
     }
-    .brooklyn-nets, .brooklyn-nets .bg-equipes{
-        background-position-x: -130px;
+    .brooklyn-nets{
+        background-position: -130px -130px;
     }
-    .new-york-knicks, .new-york-knicks .bg-equipes{
-        background-position-x: -260px;
+    .new-york-knicks{
+        background-position: -260px -130px;
     }
-    .philadelphia-76ers, .philadelphia-76ers .bg-equipes{
-        background-position-x: -390px;
+    .philadelphia-76ers{
+        background-position: -390px -130px;
     }
-    .toronto-raptors, .toronto-raptors .bg-equipes{
-        background-position-x: -520px;
+    .toronto-raptors{
+        background-position: -520px -130px;
     }
-    .atlanta-hawks, .atlanta-hawks .bg-equipes{
-        background-position-x: -650px;
+    .atlanta-hawks{
+        background-position: -650px -130px;
     }
-    .charlotte-bobcats, .charlotte-bobcats .bg-equipes{
-        background-position-x: -780px;
+    .charlotte-bobcats{
+        background-position: -780px -130px;
     }
-    .chicago-bulls, .chicago-bulls .bg-equipes{
-        background-position-x: -910px;
+    .chicago-bulls{
+        background-position: -910px -130px;
     }
-    .cleveland-cavaliers, .cleveland-cavaliers .bg-equipes{
-        background-position-x: -1040px;
+    .cleveland-cavaliers{
+        background-position: -1040px -130px;
     }
-    .dallas-mavericks, .dallas-mavericks .bg-equipes{
-        background-position-x: -1170px;
+    .dallas-mavericks{
+        background-position: -1170px -130px;
     }
-    .denver-nuggets, .denver-nuggets .bg-equipes{
-        background-position-x: -1300px;
+    .denver-nuggets{
+        background-position: -1300px -130px;
     }
-    .detroit-pistons, .detroit-pistons .bg-equipes{
-        background-position-x: -1430px;
+    .detroit-pistons{
+        background-position: -1430px -130px;
     }
-    .golden-state-warriors, .golden-state-warriors .bg-equipes{
-        background-position-x: -1560px;
+    .golden-state-warriors{
+        background-position: -1560px -130px;
     }
-    .houston-rockets, .houston-rockets .bg-equipes{
-        background-position-x: -1690px;
+    .houston-rockets{
+        background-position: -1690px -130px;
     }
-    .indiana-pacers, .indiana-pacers .bg-equipes{
-        background-position-x: -1820px;
+    .indiana-pacers{
+        background-position: -1820px -130px;
     }
-    .los-angeles-clippers, .los-angeles-clippers .bg-equipes{
-        background-position-x: -1950px;
+    .los-angeles-clippers{
+        background-position: -1950px -130px;
     }
-    .los-angeles-lakers, .los-angeles-lakers .bg-equipes{
-        background-position-x: -2080px;
+    .los-angeles-lakers{
+        background-position: -2080px -130px;
     }
-    .memphis-grizzlies, .memphis-grizzlies .bg-equipes{
-        background-position-x: -2210px;
+    .memphis-grizzlies{
+        background-position: -2210px -130px;
     }
-    .miami-heat, .miami-heat .bg-equipes{
-        background-position-x: -2340px;
+    .miami-heat{
+        background-position: -2340px -130px;
     }
-    .milwaukee-bucks, .milwaukee-bucks .bg-equipes{
-        background-position-x: -2470px;
+    .milwaukee-bucks{
+        background-position: -2470px -130px;
     }
-    .minnesota-timberwolves, .minnesota-timberwolves .bg-equipes{
-        background-position-x: -2600px;
+    .minnesota-timberwolves{
+        background-position: -2600px -130px;
     }
-    .new-orleans-hornets, .new-orleans-hornets .bg-equipes{
-        background-position-x: -2730px;
+    .new-orleans-hornets{
+        background-position: -2730px -130px;
     }
-    .oklahoma-city-thunder, .oklahoma-city-thunder .bg-equipes{
-        background-position-x: -2860px;
+    .oklahoma-thunder{
+        background-position: -2860px -130px;
     }
-    .orlando-magic, .orlando-magic .bg-equipes{
-        background-position-x: -2990px;
+    .orlando-magic{
+        background-position: -2990px -130px;
     }
-    .phenix-suns, .phenix-suns .bg-equipes{
-        background-position-x: -3120px;
+    .phoenix-suns{
+        background-position: -3120px -130px;
     }
-    .portland-blazers, .portland-blazers .bg-equipes{
-        background-position-x: -3250px;
+    .portland-blazers{
+        background-position: -3250px -130px;
     }
-    .sacramento-kings, .sacramento-kings .bg-equipes{
-        background-position-x: -3380px;
+    .sacramento-kings{
+        background-position: -3380px -130px;
     }
-    .san-antonio-spurs, .san-antonio-spurs .bg-equipes{
-        background-position-x: -3510px;
+    .san-antonio-spurs{
+        background-position: -3510px -130px;
     }
-    .utah-jazz, .utah-jazz .bg-equipes{
-        background-position-x: -3640px;
+    .utah-jazz{
+        background-position: -3640px -130px;
     }
-    .buffalo-braves, .buffalo-braves .bg-equipes{
-        background-position-x: -3370px;
+    .buffalo-braves{
+        background-position: -3370px -130px;
     }
-    .washington-wizards, .washington-wizards .bg-equipes{
-        background-position-x: -3770px;
+    .washington-wizards{
+        background-position: -3770px -130px;
+    }
+}
+header nav{
+    .boston-celtics .bg-equipes{
+        background-position: 0px 0px;
+    }
+    .brooklyn-nets .bg-equipes{
+        background-position: -130px 0px;
+    }
+    .new-york-knicks .bg-equipes{
+        background-position: -260px 0px;
+    }
+    .philadelphia-76ers .bg-equipes{
+        background-position: -390px 0px;
+    }
+    .toronto-raptors .bg-equipes{
+        background-position: -520px 0px;
+    }
+    .atlanta-hawks .bg-equipes{
+        background-position: -650px 0px;
+    }
+    .charlotte-bobcats .bg-equipes{
+        background-position: -780px 0px;
+    }
+    .chicago-bulls .bg-equipes{
+        background-position: -910px 0px;
+    }
+    .cleveland-cavaliers .bg-equipes{
+        background-position: -1040px 0px;
+    }
+    .dallas-mavericks .bg-equipes{
+        background-position: -1170px 0px;
+    }
+    .denver-nuggets .bg-equipes{
+        background-position: -1300px 0px;
+    }
+    .detroit-pistons .bg-equipes{
+        background-position: -1430px 0px;
+    }
+    .golden-state-warriors .bg-equipes{
+        background-position: -1560px 0px;
+    }
+    .houston-rockets .bg-equipes{
+        background-position: -1690px 0px;
+    }
+    .indiana-pacers .bg-equipes{
+        background-position: -1820px 0px;
+    }
+    .los-angeles-clippers .bg-equipes{
+        background-position: -1950px 0px;
+    }
+    .los-angeles-lakers .bg-equipes{
+        background-position: -2080px 0px;
+    }
+    .memphis-grizzlies .bg-equipes{
+        background-position: -2210px 0px;
+    }
+    .miami-heat .bg-equipes{
+        background-position: -2340px 0px;
+    }
+    .milwaukee-bucks .bg-equipes{
+        background-position: -2470px 0px;
+    }
+    .minnesota-timberwolves .bg-equipes{
+        background-position: -2600px 0px;
+    }
+    .new-orleans-hornets .bg-equipes{
+        background-position: -2730px 0px;
+    }
+    .oklahoma-thunder .bg-equipes{
+        background-position: -2860px 0px;
+    }
+    .orlando-magic .bg-equipes{
+        background-position: -2990px 0px;
+    }
+    .phenix-suns .bg-equipes{
+        background-position: -3120px 0px;
+    }
+    .portland-blazers .bg-equipes{
+        background-position: -3250px 0px;
+    }
+    .sacramento-kings .bg-equipes{
+        background-position: -3380px 0px;
+    }
+    .san-antonio-spurs .bg-equipes{
+        background-position: -3510px 0px;
+    }
+    .utah-jazz .bg-equipes{
+        background-position: -3640px 0px;
+    }
+    .buffalo-braves .bg-equipes{
+        background-position: -3370px 0px;
+    }
+    .washington-wizards .bg-equipes{
+        background-position: -3770px 0px;
+    }
+    li li:hover{
+        &.boston-celtics .bg-equipes{
+            background-position: 0px -130px;
+        }
+        &.brooklyn-nets .bg-equipes{
+            background-position: -130px -130px;
+        }
+        &.new-york-knicks .bg-equipes{
+            background-position: -260px -130px;
+        }
+        &.philadelphia-76ers .bg-equipes{
+            background-position: -390px -130px;
+        }
+        &.toronto-raptors .bg-equipes{
+            background-position: -520px -130px;
+        }
+        &.atlanta-hawks .bg-equipes{
+            background-position: -650px -130px;
+        }
+        &.charlotte-bobcats .bg-equipes{
+            background-position: -780px -130px;
+        }
+        &.chicago-bulls .bg-equipes{
+            background-position: -910px -130px;
+        }
+        &.cleveland-cavaliers .bg-equipes{
+            background-position: -1040px -130px;
+        }
+        &.dallas-mavericks .bg-equipes{
+            background-position: -1170px -130px;
+        }
+        &.denver-nuggets .bg-equipes{
+            background-position: -1300px -130px;
+        }
+        &.detroit-pistons .bg-equipes{
+            background-position: -1430px -130px;
+        }
+        &.golden-state-warriors .bg-equipes{
+            background-position: -1560px -130px;
+        }
+        &.houston-rockets .bg-equipes{
+            background-position: -1690px -130px;
+        }
+        &.indiana-pacers .bg-equipes{
+            background-position: -1820px -130px;
+        }
+        &.los-angeles-clippers .bg-equipes{
+            background-position: -1950px -130px;
+        }
+        &.los-angeles-lakers .bg-equipes{
+            background-position: -2080px -130px;
+        }
+        &.memphis-grizzlies .bg-equipes{
+            background-position: -2210px -130px;
+        }
+        &.miami-heat .bg-equipes{
+            background-position: -2340px -130px;
+        }
+        &.milwaukee-bucks .bg-equipes{
+            background-position: -2470px -130px;
+        }
+        &.minnesota-timberwolves .bg-equipes{
+            background-position: -2600px -130px;
+        }
+        &.new-orleans-hornets .bg-equipes{
+            background-position: -2730px -130px;
+        }
+        &.oklahoma-city-thunder .bg-equipes{
+            background-position: -2860px -130px;
+        }
+        &.orlando-magic .bg-equipes{
+            background-position: -2990px -130px;
+        }
+        &.phenix-suns .bg-equipes{
+            background-position: -3120px -130px;
+        }
+        &.portland-blazers .bg-equipes{
+            background-position: -3250px -130px;
+        }
+        &.sacramento-kings .bg-equipes{
+            background-position: -3380px -130px;
+        }
+        &.san-antonio-spurs .bg-equipes{
+            background-position: -3510px -130px;
+        }
+        &.utah-jazz .bg-equipes{
+            background-position: -3640px -130px;
+        }
+        &.buffalo-braves .bg-equipes{
+            background-position: -3370px -130px;
+        }
+        &.washington-wizards .bg-equipes{
+            background-position: -3770px -130px;
+        }
     }
 }
 .solid{
@@ -818,15 +1008,6 @@ body #main header nav li li:hover{
         &:last-child{
             border: none;
         }
-        // &:nth-child(1){
-        //     margin-left: 0px;
-        // }&:nth-child(2){
-        //     margin-left: 160px;
-        // }&:nth-child(3){
-        //     margin-left: 320px;
-        // }&:nth-child(4){
-        //     margin-left: 480px;
-        // }
         &.show{
             padding-top: 0;
             padding-bottom: 0;
@@ -839,9 +1020,10 @@ body #main header nav li li:hover{
         }
     }
 }
-.bottom-bar{
+body .bottom-bar{
     height: 332px;
-    margin-top: 60px !important;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 #choose{
     cursor: pointer;
@@ -887,7 +1069,6 @@ body, html, #main{
 }
 #main{
     width: 100%;
-    transition: all 1s ease;
     &.open{
         margin-left: -330px;
     }
@@ -896,8 +1077,12 @@ body, html, #main{
     }
 }
 #menu{
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    top: 100%;
     width: 0;
-    height: 100%;
+    color: white;
     transition: all 1s ease;
     background: rgb(42,44,63); /* Old browsers */
     background: -moz-linear-gradient(left,  rgba(42,44,63,1) 0%, rgba(49,51,72,1) 24%, rgba(49,51,72,1) 100%); /* FF3.6+ */
@@ -907,22 +1092,37 @@ body, html, #main{
     background: -ms-linear-gradient(left,  rgba(42,44,63,1) 0%,rgba(49,51,72,1) 24%,rgba(49,51,72,1) 100%); /* IE10+ */
     background: linear-gradient(to right,  rgba(42,44,63,1) 0%,rgba(49,51,72,1) 24%,rgba(49,51,72,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2c3f', endColorstr='#313348',GradientType=1 ); /* IE6-9 */
-
+    z-index: 1000;
+    h2{
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        border-bottom: 1px solid white;
+    }
+    img{
+        border: 3px solid #202231;
+    }
+    p{
+        margin: 10px 0;
+    }
+    article{
+        border-bottom: 1px solid #606272;
+        padding-bottom: 15px;
+        padding-top: 30px;
+    }
     &.open{
         width: 330px;
+        padding: 0 30px;
+        padding-bottom: 9px;
     }
-    >ul{
-        position: fixed;
-        background: rgb(42,44,63); /* Old browsers */
-        background: -moz-linear-gradient(left,  rgba(42,44,63,1) 0%, rgba(49,51,72,1) 12%, rgba(49,51,72,1) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(42,44,63,1)), color-stop(12%,rgba(49,51,72,1)), color-stop(100%,rgba(49,51,72,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(left,  rgba(42,44,63,1) 0%,rgba(49,51,72,1) 12%,rgba(49,51,72,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(42,44,63,1) 0%,rgba(49,51,72,1) 12%,rgba(49,51,72,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(left,  rgba(42,44,63,1) 0%,rgba(49,51,72,1) 12%,rgba(49,51,72,1) 100%); /* IE10+ */
-        background: linear-gradient(to right,  rgba(42,44,63,1) 0%,rgba(49,51,72,1) 12%,rgba(49,51,72,1) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a2c3f', endColorstr='#313348',GradientType=1 ); /* IE6-9 */
-        height: 100%;
-        width: 100%;
+    .hidden{
+        display: none;
+    }
+    section{
+        margin-top: 5%;
+        overflow: hidden;
+    }
+    >div{
+        width: 340px;
         >li{
             height: 60px;
             width: 100%;
@@ -987,18 +1187,19 @@ a{
     color: white;
     text-decoration: none;
 }
-section#home{
+#home{
     color:#ecf0f1;
     
     height: 100%;
 
     background-image: url('../img/pattern_home.png'), url('../img/home_screen.jpg');
     background-position:left top,right bottom;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    background-size: auto, cover;
     background-repeat:repeat,no-repeat;
-    -webkit-background-size: auto;
-    -moz-background-size: auto;
-    -o-background-size: auto;
-    background-size: auto;
+    overflow: hidden;
     &.loading{
         header{
             height: 0;
@@ -1014,6 +1215,7 @@ section#home{
         background-color:rgba(49,50,73,0.5);
         font-family:"montserratbold";
         border-top:1px solid #191925;
+        padding: 0;
         nav{
             text-align:center;
             &>ul>li{
@@ -1065,12 +1267,13 @@ section#home{
             }
         }
         img{
+            width: 70%;
             margin-bottom:10px;
         }
     }
     .logo{
         position: relative;
-        top: 3%;
+        top: 15%;
         text-align:center;
     }
 }
@@ -1151,38 +1354,52 @@ path{
     background-image: url(/img/bg-stats.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    min-height: 0;
     background-color: $blue;
     -webkit-background-size: cover;
     background-size: cover;
+    min-height: 0;
+    &.show{
+        max-height: 0%;
+        transition: all 1s ease;
+    }
+    &.rendered{
+        max-height: 300%;
+        min-height: 100%;
+    }
+    &.noheight{
+        height: auto;
+        transition: height 0s;
+    }
     >section{
         min-height: 0;
-        padding-top: 60px;
     }
 }
 #stats{
     color: white;
+    h1{
+        color: white;
+    }
     div{
         overflow: hidden;
     }
     >section{
         min-height: 100%;
         transition: all 1s ease 1s;
-        &>div{
-            display: inline-block;
-            transition: width 1s ease, height 0s ease 1s;
-            width: 100%;
-            vertical-align: top;
-            height: 2000px;
-        }
     }
     #awards{
+        &.hidden{
+            .bg, .notif{
+                -webkit-transform: scale(0) !important;
+                transition-delay: 0s !important;
+            }
+        }
         >div{
             display: inline-block;
             width: 32.5%;
             height: 280px;
             vertical-align: middle;
             text-align: center;
+            margin-bottom: 50px;
             .bg{
                 transition: all 0.5s ease 0s;
                 background-image: url(/img/sprite-awards.png);
@@ -1190,46 +1407,105 @@ path{
                 height: 200px;
                 width: 200px;
                 margin: 0 auto;
-                background-position-y: -5px;
+                background-position: 0 -5px;
                 -webkit-transform: scale(1);
             }
-            &.on{
+        }
+        .mvp{
+            &.show{
                 .bg{
-                    background-position-y: -210px;
+                    background-position: 0 -210px;
                 }
+            }
+            .bg{
+                background-position: 0 -10px;
             }
         }
         .all-star-mvp{
+            &.show{
+                .bg{
+                    background-position: -400px -210px;
+                }
+            }
             .bg{
-                background-position-x: -400px;
+                background-position: -400px -10px;
                 transition-delay: 0.5s;
+            }
+            .notif{
+                transition-delay: 0.75s;
             }
         }
         .defensive-player-of-the-year{
+            &.show{
+                .bg{
+                    background-position: -600px -210px;
+                }
+            }
             .bg{
-                background-position-x: -600px;
+                background-position: -600px -10px;
                 transition-delay: 1s;
+            }
+            .notif{
+                transition-delay: 1.25s;
             }
         }
         .sixth-man-of-the-year{
+            &.show{
+                .bg{
+                    background-position: -200px -210px;
+                }
+            }
             .bg{
-                background-position-x: -200px;
+                background-position: -200px -10px;
                 transition-delay: 1.5s;
+            }
+            .notif{
+                transition-delay: 1.75s;
             }
         }
         .rookie-of-the-year{
+            &.show{
+                .bg{
+                    background-position: -810px -210px;
+                }
+            }
             .bg{
-                background-position-x: -810px;
+                background-position: -810px -10px;
                 transition-delay: 2s;
+            }
+            .notif{
+                transition-delay: 2.25s;
             }
         }
         .nba-champion{
+            &.show{
+                .bg{
+                    background-position: -1020px -210px;
+                }
+            }
             .bg{
-                background-position-x: -1020px;
+                background-position: -1020px -10px;
                 transition-delay: 2.5s;
+            }
+            .notif{
+                transition-delay: 2.75s;
             }
         }
     }
+}
+#valuehover{
+    background-color:black;
+    width:300px;
+    height:80px;
+}
+#valuehover p{
+    width:80px;
+    height:80px;
+    background-color:rgb(119,124,175);
+}
+#compare svg{
+    position:absolute;
+    left: 0;
 }
 .notif{
     background-color: $red;
@@ -1243,6 +1519,8 @@ path{
     position: absolute;
     margin-left: 200px;
     margin-top: 25px;
+    z-index: 35;
+    transition: all 0.5s ease;
 }
 // .hidden{
 //     width: 0 !important;
@@ -1256,116 +1534,116 @@ path{
     padding-left: 15px;
     background-repeat: no-repeat;
     background-image: url(/img/sprite-legende.png);
-    background-position-y: 3px;
+    background-position: 0 3px;
 }
 #teams{
     color: $blue;
 }
 #legend{
     .new-york-knicks{
-        background-position-y: 3px;
+        background-position: 0 3px;
     }
     .san-antonio-spurs{
-        background-position-y: -11px;
+        background-position: 0 -11px;
     }
     .los-angeles-lakers{
-        background-position-y: -26px;
+        background-position: 0 -26px;
     }
     .denver-nuggets{
-        background-position-y: -41px;
+        background-position: 0 -41px;
     }
     .atlanta-hawks{
-        background-position-y: -57px;
+        background-position: 0 -57px;
     }
     .portland-blazers{
-        background-position-y: -72px;
+        background-position: 0 -72px;
     }
     .milwaukee-bucks{
-        background-position-y: -87px;
+        background-position: 0 -87px;
     }
     .buffalo-braves{
-        background-position-y: -101px;
+        background-position: 0 -101px;
     }
     .chicago-bulls{
-        background-position-y: -116px;
+        background-position: 0 -116px;
     }
     .cap{
-        background-position-y: -131px;
+        background-position: 0 -131px;
     }
     .baltimore-bullets{
-        background-position-y: -146px;
+        background-position: 0 -146px;
     }
     .washington-wizards{
-        background-position-y: -161px;
+        background-position: 0 -161px;
     }
     .philadelphie-sixers{
-        background-position-y: -176px;
+        background-position: 0 -176px;
     }
     .houston-rockets{
-        background-position-y: -191px;
+        background-position: 0 -191px;
     }
     .phenix-suns{
-        background-position-y: -206px;
+        background-position: 0 -206px;
     }
     .seattle-supersonics{
-        background-position-y: -221px;
+        background-position: 0 -221px;
     }
     .golden-state-warriors{
-        background-position-y: -236px;
+        background-position: 0 -236px;
     }
     .kansas-city-kings{
-        background-position-y: -251px;
+        background-position: 0 -251px;
     }
     .boston-celtics{
-        background-position-y: -266px;
+        background-position: 0 -266px;
     }
     .cleveland-cavaliers{
-        background-position-y: -281px;
+        background-position: 0 -281px;
     }
     .detroit-pistons{
-        background-position-y: -296px;
+        background-position: 0 -296px;
     }
     .brooklyn-nets{
-        background-position-y: -311px;
+        background-position: 0 -311px;
     }
     .utah-jazz{
-        background-position-y: -326px;
+        background-position: 0 -326px;
     }
     .dallas-mavericks{
-        background-position-y: -341px;
+        background-position: 0 -341px;
     }
     .charlotte-bobcats{
-        background-position-y: -356px;
+        background-position: 0 -356px;
     }
     .indiana-pacers{
-        background-position-y: -371px;
+        background-position: 0 -371px;
     }
     .orlando-magic{
-        background-position-y: -386px;
+        background-position: 0 -386px;
     }
     .miami-heat{
-        background-position-y: -401px;
+        background-position: 0 -401px;
     }
     .toronto-raptors{
-        background-position-y: -416px;
+        background-position: 0 -416px;
     }
     .minnesota-timberwolves{
-        background-position-y: -431px;
+        background-position: 0 -431px;
     }
     .sacramento-kings{
-        background-position-y: -446px;
+        background-position: 0 -446px;
     }
     .new-orleans-hornets{
-        background-position-y: -461px;
+        background-position: 0 -461px;
     }
     .los-angeles-clippers{
-        background-position-y: -476px;
+        background-position: 0 -476px;
     }
     .memphis-grizzlies{
-        background-position-y: -491px;
+        background-position: 0 -491px;
     }
     .oklahoma-city-thunder{
-        background-position-y: -506px;
+        background-position: 0 -506px;
     }
 }
 #slider>article{
@@ -1375,11 +1653,6 @@ path{
         margin-left: -100%;
     }
 }
-.transition{
-    .bg{
-        -webkit-transform: scale(0) !important;
-    }
-}
 .dial {
     width: 19.5%;
     display: inline-block;
@@ -1387,23 +1660,16 @@ path{
 nav.center{
     text-align: center;
 }
-#stats>section>div.title.underline{
-    width: 250px;
-    height: 2px;
-    border-top: 1px white solid;
-    margin: 0 auto;
-    display: block;
-}
 #stats>section>h1{
     margin-bottom: 14px;
     font-size: 1.35em;
 }
 #stats>section>nav{
-    margin-top: 25px;
     margin-bottom: 45px;
 }
 nav.navigation a{
-    padding: 5px 24px;
+    padding: 5px 22px;
+    font-size: 16px;
     &.active{
         border-bottom: 1px $red solid;
     }
@@ -1424,13 +1690,13 @@ nav.navigation a{
     }
 }
 .tiers{
-    width: 33.3330%;
+    width: 32.99%;
     display: inline-block;
     vertical-align: top;
 }
 .lignes{
     span{
-        width:90px;
+        width:94px;
         height:1px;
         background-color:white;
         display: inline-block;
@@ -1467,22 +1733,33 @@ ul.legend li.all span{background-color:white}
 .rebounds li{background-color: #1abc9c;}
 .freeThrow li{background-color: #34495e;}
 .assists li{background-color: #9b59b6;}
-h4{color:white;width:500px;}
+
 h4 span{float:right;}
 
 div.yearsinfos{
     display: inline-block;
     width: 300px;
     float: right;
+    h4{
+        font-size: 1em;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+    p{
+        font-size: 0.8em;
+        font-weight: 100;
+    }
 }
 ul.legend{
     bottom: 0;
     display: inline-block;
-    margin-top: 50px
+    margin-top: 8%;
+    margin-bottom: 5%;
 }
 ul.legend li{
     cursor:pointer;
     display: inline-block;
+    margin-left: 17px;
 }
 #graph {
     display: inline-block;    
@@ -1500,7 +1777,6 @@ ul.legend li{
      opacity:0.8;
 }
 .active{
-    
     opacity:1!important;
 }
 #graph g g{
@@ -1509,9 +1785,13 @@ ul.legend li{
     transition:opacity 0.3s;
 }
 .open-menu{
-    position: fixed;
+    position: absolute;
     right: 25px;
-    top: 25px;
+    margin-top: 25px;
+    text-transform: none !important;
+}
+.blanc .open-menu a{
+    color: $blue;
 }
 @media (min-width: 979px) {
     #map svg{
@@ -1522,5 +1802,192 @@ ul.legend li{
 @media (max-width: 980px) {
     body{
         overflow: auto;
+    }
+}
+#overlay{
+    transition: opacity 0.5s ease, z-index 0s ease 0.5s;
+    background-color: rgb(49,49,73);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    &.show{
+        opacity: 0.8;
+        transition: opacity 0.5s ease, z-index 0s ease;
+        z-index: 999;
+    }
+}
+.square{
+    width: 40px;
+    height: 40px;
+    background-color: $red;
+    margin: 10px 0;
+    display: block;
+}
+#arrows{
+    position: fixed;
+    z-index: 998;
+    top: 38%;
+    left: 0;
+    .prev{
+        background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAOCAYAAADjXQYbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjQ3N0FBQjdENDFCMTFFMjk3OUFERUU0RERDRTU1NjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjQ3N0FBQjhENDFCMTFFMjk3OUFERUU0RERDRTU1NjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCNDc3QUFCNUQ0MUIxMUUyOTc5QURFRTRERENFNTU2MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCNDc3QUFCNkQ0MUIxMUUyOTc5QURFRTRERENFNTU2MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlNWLVgAAABhSURBVHjaYnzz4SMDFIgC8WIgjgXi1yABJqgEFxBvBmJ3KM0Fk2QG4uVAbA5VaA7lM4MkJwKxHwMqAPEnMyLZCQL/gZgRxmFiwAMY////D2a8/fgJRacwPx9+nUNLEiDAAK/5FPRQSSOmAAAAAElFTkSuQmCC);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .next{
+        background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAOCAYAAADjXQYbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTNBRUMzNTNENDFDMTFFMkIyRkZFQjRGNzU5ODYxRTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTNBRUMzNTRENDFDMTFFMkIyRkZFQjRGNzU5ODYxRTUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1M0FFQzM1MUQ0MUMxMUUyQjJGRkVCNEY3NTk4NjFFNSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1M0FFQzM1MkQ0MUMxMUUyQjJGRkVCNEY3NTk4NjFFNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnwDtdMAAABfSURBVHjaYvz//z/D24+fGKDgPxAzCvPzgTlMDHjA0JJkfPPhIzIf7E+ijW2H6viPpBuE20HGgoxZBcQhSJrWA3EwE1RVPBCfhEqA6BiQOMzOb0DsC8Q7oDSIzwAQYADRzhxFlID6IAAAAABJRU5ErkJggg==);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+circle{
+    cursor: pointer;
+}
+.infos-stats{
+    p{
+        text-align: center;
+    }
+}
+.points{
+    h1{
+        text-align: center;
+        strong{
+            font-size: 2em;
+        }
+    }
+    .lignes{
+        span{
+            width: 104px;
+        }
+    }
+}
+.infos{
+    .lignes{
+        span{
+            width: 112px;
+        }
+    }
+}
+.white{
+    color: white;
+}
+#the-team{
+    color: white;
+    background-image: url(/img/bg_team.jpg);
+    background-position:left top,right bottom;
+    background-repeat:repeat,no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    >div{
+        >a{
+            display: block;
+            text-transform: uppercase;
+            display: inline-block;
+            width: 170px;
+            margin: 0 11px;
+            aside{
+                color: $red;
+                font-size: 30px;
+                font-family: 'montserratbold';
+            }
+            h2{
+                font-family: 'arvobold';
+            }
+            p{
+                font-size: 11px;
+            }
+            .bg{
+                height: 170px;
+                width: 170px;
+                background-image: url(/img/sprite-team.png);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .thierry{
+        .bg{
+            background-position: -2px 1px;
+        }
+    }
+    .pierre{
+        .bg{
+            background-position: -192px 1px;
+        }
+    }
+    .arnaud{
+        .bg{
+            background-position: -382px 1px;
+        }
+    }
+    .sam{
+        .bg{
+            background-position: -572px 1px;
+        }
+    }
+    .anthony{
+        .bg{
+            background-position: -762px 1px;
+        }
+    }
+    .margin-top{
+        margin-top: 60px;
+    }
+    footer{
+        margin-top: 120px;
+    }
+}
+.title.underline{
+    width: 250px;
+    height: 2px;
+    border-top: 1px white solid;
+    margin: 0 auto;
+    display: block;
+}
+.blanc .title.underline{
+    border-top: 1px $blue solid;
+}
+.btn{
+    padding: 15px;
+    &.red{
+        background-color: $red;
+    }
+}
+footer{
+    text-align: center;
+}
+header{
+    padding: 60px 0 30px 0;
+    h1{
+        margin-bottom: 20px;
+    }
+}
+
+#compare{
+    min-height: 900px;
+    li{
+        display: inline-block;
+        margin: 19px;
+    }
+    select{
+        background-color: $blue;
+        border: none;
+        color: white;
+        text-align: center;
+        -webkit-appearance: none;
+        padding: 14px 0px 14px 40px;
+    }
+    option{
+        background-color: $blue;
+        color: white;
+        padding: 5px 5px;
+        text-transform: capitalize;
+    }
+    >div{
+        width: 457px;
+        margin: 0 auto;
     }
 }

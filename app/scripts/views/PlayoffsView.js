@@ -21,8 +21,6 @@ define(['view', 'd3', '../framework/spy'], function(View, ignore) {
     };
 
     PlayoffsView.prototype.taille = function() {
-      console.log('width', this.width());
-      console.log('height', this.height());
       return (0.7 * this.width()) / this.height();
     };
 
@@ -34,20 +32,26 @@ define(['view', 'd3', '../framework/spy'], function(View, ignore) {
       var t;
 
       t = this;
+      this.$el = $("#playoffs");
+      this.el = this.$el[0];
+      window.lol = this.$el;
       this.svg = d3.select("#playoffs").append("svg").attr("width", this.width()).attr("height", this.height());
       this.groupe = this.svg.append('g');
       this.svg.attr('transform', 'scale(' + this.taille() + ')');
-      console.log(this.width() / this.height());
       this.pie = d3.layout.pie().sort(null).value(function(d) {
         return 1;
       });
-      $("#playoffs").on('scrollSpy:enter', function(e) {
-        d3.json("haha.json", function(error, datas) {
-          return t.render(datas);
-        });
-        return $(this).unbind('scrollSpy:enter');
+      return $(document).on('scroll', function(e, i) {
+        var showAt;
+
+        showAt = t.$el.position().top - t.$el.width() / 2;
+        if (window.mainView.$body.scrollTop() > showAt) {
+          $(document).unbind('scroll');
+          return d3.json("haha.json", function(error, datas) {
+            return t.render(datas);
+          });
+        }
       });
-      return $('#playoffs').scrollSpy();
     };
 
     PlayoffsView.prototype.render = function(datas) {
@@ -113,9 +117,9 @@ define(['view', 'd3', '../framework/spy'], function(View, ignore) {
       lignes = this.svg.append('g').attr('id', 'playoffs-lignes');
       i = 0;
       while (i < 44) {
-        lignes.append('path').attr('d', line(nullArray)).attr('opacity', 0.5).attr('transform', 'rotate(' + i * 4.0909090909090909090909090909091 + ', 480, 500)').style("stroke", "grey").transition().duration(2000).delay(200).attr('d', line(array));
+        lignes.append('path').attr('d', line(nullArray)).attr('opacity', 0.5).attr('transform', 'rotate(' + i * 4.0909090909090909090909090909091 + ', 480, 500)').style("stroke", "grey").transition().duration(2000).delay(0).attr('d', line(array));
         group = texts.append('g');
-        group.attr('transform', 'translate(470,0),rotate(0,470,0)').attr('opacity', 0).transition().duration(1000).delay(200).attr('transform', 'rotate(' + i * 4.0909090909090909090909090909091 + ', 470, 0)').attr('opacity', 1);
+        group.attr('transform', 'translate(470,0),rotate(0,470,0)').attr('opacity', 0).transition().duration(1000).delay(0).attr('transform', 'rotate(' + i * 4.0909090909090909090909090909091 + ', 470, 0)').attr('opacity', 1);
         text = group.append('text');
         text.text(1970 + i).attr("color", "red").attr("font-size", "12px");
         if (i > 23) {

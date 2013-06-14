@@ -12,11 +12,13 @@
         <link rel="stylesheet" href="styles/main.css"/>
     </head>
     <body>
-        <div id="main" class="pull-left">
-            <section id="home" class="loading">
-                <div class="open-menu">
-                    <a href="">Menu</a>
-                </div>
+        <div id="overlay"></div>
+        <div id="main">
+            <nav id="arrows">
+                <a href="#/" class="prev square"></a>
+                <a href="#/map" class="next square"></a>
+            </nav>
+            <section id="home" class="loading" data-url="/">
                 <div class="content logo">
                     <img src="./img/NBA_logo.png" alt="logo nba" id="nba-logo">
                 </div> 
@@ -27,24 +29,24 @@
                                 <ul>
                                     <nav class="content">
                                         <li class="boston-celtics"><a href="#/stats/boston-celtics">
-                                          <p>Boston Celtics</p>
-                                          <span class="bg-equipes"></span>
+                                            <p>Boston Celtics</p>
+                                            <span class="bg-equipes"></span>
                                         </a></li>
                                         <li class="brooklyn-nets"><a href="#/stats/brooklyn-nets">
-                                          <p>Brooklyn Nets</p>
-                                          <span class="bg-equipes"></span>
+                                            <p>Brooklyn Nets</p>
+                                            <span class="bg-equipes"></span>
                                         </a></li>
                                         <li class="new-york-knicks"><a href="#/stats/new-york-knicks">
-                                          <p>New York Knicks</p>
-                                          <span class="bg-equipes"></span>
+                                            <p>New York Knicks</p>
+                                            <span class="bg-equipes"></span>
                                         </a></li>
                                         <li class="philadelphia-76ers"><a href="#/stats/philadelphia-76ers">
-                                          <p>Philadelphie 76ers</p>
-                                          <span class="bg-equipes"></span>
+                                            <p>Philadelphie 76ers</p>
+                                            <span class="bg-equipes"></span>
                                         </a></li>
                                         <li class="toronto-raptors"><a href="#/stats/toronto-raptors">
-                                          <p>Toronto Raptors</p>
-                                          <span class="bg-equipes"></span>
+                                            <p>Toronto Raptors</p>
+                                            <span class="bg-equipes"></span>
                                         </a></li>
                                     </nav>
                                 </ul>
@@ -53,50 +55,53 @@
                                 <ul>
                                     <nav class="content">
                                         <li class="chicago-bulls">
-                                          <a href="#/stats/chicago-bulls"><p>Chicago Bulls</p>
-                                            <span class="bg-equipes"></span>
-                                          </a></li>
+                                            <a href="#/stats/chicago-bulls"><p>Chicago Bulls</p>
+                                                <span class="bg-equipes"></span>
+                                            </a></li>
                                         <li class="cleveland-cavaliers">
-                                          <a href="#/stats/cleveland-cavaliers"><p>Cleveland Cavaliers</p>
-                                            <span class="bg-equipes"></span>
-                                          </a></li>
+                                            <a href="#/stats/cleveland-cavaliers"><p>Cleveland Cavaliers</p>
+                                               <span class="bg-equipes"></span>
+                                            </a></li>
                                         <li class="detroit-pistons">
-                                          <a href="#/stats/detroit-pistons"><p>Detroit Pistons</p>
-                                            <span class="bg-equipes"></span>
-                                          </a></li>
+                                            <a href="#/stats/detroit-pistons"><p>Detroit Pistons</p>
+                                               <span class="bg-equipes"></span>
+                                            </a>
+                                        </li>
                                         <li class="indiana-pacers">
-                                          <a href="#/stats/indiana-pacers"><p>Indiana Pacers</p>
-                                            <span class="bg-equipes"></span>
-                                          </a></li>
+                                            <a href="#/stats/indiana-pacers"><p>Indiana Pacers</p>
+                                                <span class="bg-equipes"></span>
+                                            </a>
+                                        </li>
                                         <li class="milwaukee-bucks">
-                                          <a href="#/stats/milwaukee-bucks"><p>Milwaukee Bucks</p>
-                                            <span class="bg-equipes"></span>
-                                          </a></li>
+                                            <a href="#/stats/milwaukee-bucks"><p>Milwaukee Bucks</p>
+                                                <span class="bg-equipes"></span>
+                                            </a>
+                                        </li>
                                     </nav>
                                 </ul>
                             </li>
                             <li class="detailsmenu"><span><a href="#/map">Southeast</a></span>
                               <ul>
                                 <nav class="content">
-                                  <li class="atlanta-hawks"><a href="#/stats/atlanta-hawks">
-                                      <p>Atlanta Hawks</p>
-                                      <span class="bg-equipes"></span>
+                                    <li class="atlanta-hawks"><a href="#/stats/atlanta-hawks">
+                                        <p>Atlanta Hawks</p>
+                                        <span class="bg-equipes"></span>
                                     </a></li>
-                                  <li class="charlotte-bobcats"><a href="#/stats/charlotte-bobcats">
-                                      <p>Charlotte Bobcats</p>
-                                      <span class="bg-equipes"></span>
+                                    <li class="charlotte-bobcats"><a href="#/stats/charlotte-bobcats">
+                                        <p>Charlotte Bobcats</p>
+                                        <span class="bg-equipes"></span>
+                                     </a></li>
+                                    <li class="miami-heat"><a href="#/stats/miami-heat">
+                                        <p>Miami Heat</p>
+                                        <span class="bg-equipes"></span>
                                     </a></li>
-                                  <li class="miami-heat"><a href="#/stats/miami-heat">
-                                      <p>Miami Heat</p>
-                                      <span class="bg-equipes"></span>
+                                    <li class="orlando-magic"><a href="#/stats/orlando-magic">
+                                        <p>Orlando Magic</p>
+                                        <span class="bg-equipes"></span>
                                     </a></li>
-                                  <li class="orlando-magic"><a href="#/stats/orlando-magic">
-                                      <p>Orlando Magic</p>
-                                      <span class="bg-equipes"></span>
-                                    </a></li>
-                                  <li class="washington-wizards"><a href="#/stats/washington-wizards">
-                                      <p>Washington Wizards</p>
-                                      <span class="bg-equipes"></span>
+                                    <li class="washington-wizards"><a href="#/stats/washington-wizards">
+                                        <p>Washington Wizards</p>
+                                        <span class="bg-equipes"></span>
                                     </a></li>
                                 </nav>
                               </ul>
@@ -142,7 +147,7 @@
                                       <p>portland blazers</p>
                                       <span class="bg-equipes"></span>
                                     </a></li>
-                                  <li class="oklahoma-city-thunder"><a href="#/stats/oklahoma-city-thunder">
+                                  <li class="oklahoma-thunder"><a href="#/stats/oklahoma-thunder">
                                       <p>oklahoma city thunder</p>
                                       <span class="bg-equipes"></span>
                                     </a></li>
@@ -153,7 +158,7 @@
                                 </nav>
                               </ul>
                             </li>
-                            <li class="detailsmenu"><span><a href="#/map">Nortwest</a></span>
+                            <li class="detailsmenu"><span><a href="#/map">Pacific</a></span>
                               <ul>
                                 <nav class="content">
                                   <li class="golden-state-warriors"><a href="#/stats/golden-state-warriors">
@@ -168,7 +173,7 @@
                                       <p>los angeles lakers</p>
                                       <span class="bg-equipes"></span>
                                     </a></li>
-                                  <li class="phenix-suns"><a href="#/stats/phenix-suns">
+                                  <li class="phenix-suns"><a href="#/stats/phoenix-suns">
                                       <p>phœnix suns</p>
                                       <span class="bg-equipes"></span>
                                     </a></li>
@@ -183,8 +188,14 @@
                     </nav>
                 </header>
             </section>
-            <section id="teams">
-                <h1 class="arvobold center uppercase">Where would you like to <strong>go</strong> ?</h1>
+            <section id="teams" data-url="map" class="blanc">
+                <div class="open-menu">
+                    <a href="">Help</a>
+                </div>
+                <header>
+                    <h1 class="arvobold center uppercase">Where would you like to <strong>go</strong> ?</h1>
+                    <div class="title underline"></div>
+                </header>
                 <div id="map" class="container" ></div>
                 <div class="bottom-bar container">
                     <div id="choose">
@@ -195,12 +206,22 @@
                 </div>
             </section>
             
-            <section id="stats-style">
+            <section id="stats-style" data-url="">
+                <div class="open-menu">
+                    <a href="">Help</a>
+                </div>
                 <section id="stats" class="container">
                     
                 </section>
             </section>
-            <section class="container">
+            <section id="playoffs-style" class="container playoffs blanc" data-url="playoffs">
+                <div class="open-menu">
+                    <a href="">Help</a>
+                </div>
+                <header>
+                    <h1 class="arvobold center uppercase">NBA <strong>Playoffs</strong> since 1970</h1>
+                    <div class="title underline"></div>
+                </header>
                 <div id="playoffs"></div>
                 <div id="legend" class="">
                     <div class="team new-york-knicks"><span>New York Knicks</span></div>
@@ -240,73 +261,115 @@
                     <div class="team oklahoma-city-thunder"><span>Oklahoma City Thunder</span></div>
                 </div>
             </section>
+            <section id="the-team" data-url="the-team" class="black">
+                <header class="container">
+                    <h1 class="arvobold center uppercase white">We are <strong>NBAllstats</strong></h1>
+                    <div class="title underline"></div>
+                </header>
+                <div class="container margin-top">
+                    <a href="http://cargocollective.com/az7" target="_blank" class="thierry">
+                        <div class="bg"></div>
+                        <h2>Thierry Zulficar</h2>
+                        <p>Project Leader</p>
+                        <aside>#0</aside>
+                    </a>
+                    <a href="http://pierreotmanine.fr/" target="_blank" class="pierre">
+                        <div class="bg"></div>
+                        <h2>Pierre Otmanine</h2>
+                        <p>Statistics</p>
+                        <aside>#9</aside>
+                    </a>
+                    <a href="http://www.onesime.fr" target="_blank" class="arnaud">
+                        <div class="bg"></div>
+                        <h2>Arnaud Pichon</h2>
+                        <p>Developer</p>
+                        <aside>#3</aside>
+                    </a>
+                    <a href="http://samuel-leroux.fr/" target="_blank" class="sam">
+                        <div class="bg"></div>
+                        <h2>Samuel Leroux</h2>
+                        <p>Developer</p>
+                        <aside>#1</aside>
+                    </a>
+                    <a href="http://www.anthonyzaccardi.com/" target="_blank" class="anthony">
+                        <div class="bg"></div>
+                        <h2>Anthony Zaccardi</h2>
+                        <p>Designer</p>
+                        <aside>#7</aside>
+                    </a>
+                </div>
+                <article class="container">
+                  <h2>Do you like our graphics ?</h2>
+                  <p>Yep. We too.</p>
+                  <p>But you know what ?</p>
+                  <h2>Our data are mostly <strong>false</strong>.</h2>
+                  <h3>We do not ask money.</h3>
+                  <h2>We just want Datas.</h2>
+                  <h1 class="white">Please. <strong>Open your APIs</strong></h1>
+                  <h2>For free !</h2>
+                </article>
+                <footer class="container">
+                    <a href="mainto:hi@nballstats.com" class="btn red">hi@nballstats.com</a>
+                </footer>
+            </section>
         </div>
-       <div id="menu" class="pull-left">
-           <ul>
-               <li>
-                   <a href="" class="uppercase arvobold">Atlantic</a>
-                   <ul>
-                       <li><a href="#/stats/dallas-mavericks">Dallas Mavericks</a></li>
-                       <li><a href="#/stats/houston-rockets">Houston Rockets</a></li>
-                       <li><a href="#/stats/memphis-grizzlies">Memphis Grizzlies</a></li>
-                       <li><a href="#/stats/new-orleans-pelicans">New Orlean Pelicans</a></li>
-                       <li><a href="#/stats/san-antonio-spurs">San Antonio Spurs</a></li>
-                   </ul>
-               </li>
-               <li>
-                   <a href="" class="uppercase arvobold">Central</a>
-                   <ul>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                   </ul>
-               </li>
-               <li>
-                   <a href="" class="uppercase arvobold">Southeast</a>
-                   <ul>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                   </ul>
-               </li>
-               <li>
-                   <a href="" class="uppercase arvobold">Southwest</a>
-                   <ul>
-                       <li><a href="#/stats/dallas-mavericks">Dallas Mavericks</a></li>
-                       <li><a href="#/stats/houston-rockets">Houston Rockets</a></li>
-                       <li><a href="#/stats/memphis-grizzlies">Memphis Grizzlies</a></li>
-                       <li><a href="#/stats/new-orleans-pelicans">New Orlean Pelicans</a></li>
-                       <li><a href="#/stats/san-antonio-spurs">San Antonio Spurs</a></li>
-                   </ul>
-               </li>
-               <li>
-                   <a href="" class="uppercase arvobold">Nothwest</a>
-                   <ul>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                   </ul>
-               </li>
-               <li>
-                   <a href="" class="uppercase arvobold">Pacific</a>
-                   <ul>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                       <li><a href=""></a></li>
-                   </ul>
-               </li>
-           </ul>
-       </div> 
+       <div id="menu">
+           <div>
+              <section>
+                <article>
+                  <h2>Informations</h2>
+                  <img src="/img/demo-map.png" alt="Demonstration of the map">
+                  <p>Click on a <strong>state</strong> to select it</p>
+                  <p>Click outside to <strong>zoom out</strong></p>
+                </article>
+                <article>
+                  <img src="/img/demo-teams.png" alt="Demonstration of the teams">
+                  <p>Select a <strong>team</strong> in one click</p>
+                </article>
+              </section>
+              <section>
+                <div class="stats-hide">
+                    <article>
+                      <h2>Informations</h2>
+                      <img src="/img/demo-datas.png" alt="Demonstration of the datas">
+                      <p>You can click to see more details in each <strong>categories</strong></p>
+                    </article>
+                    <article>
+                      <img src="/img/demo-years.png" alt="Demonstration of the years">
+                      <p>Click on the <strong>shelves</strong> for more details</p>
+                    </article>
+                    <article>
+                      <img src="/img/demo-middle.png" alt="Demonstration of the middle">
+                      <p>And click in the middle to <strong>restore</strong> datas</p>
+                    </article>
+                </div>
+                <div class="hidden players-hide">
+                    <article>
+                        <h2>Informations</h2>
+                        <img src="/img/demo-players.jpg" alt="Demonstration of the players">
+                        <p>On the <strong>left</strong> there is the best player of all time of the selected team</p>
+                        <p>On the <strong>right</strong> there is the best current player of the selected team</p>
+                    </article>
+                    <article>
+                        <img src="/img/demo-bests.jpg" alt="Demonstration of the best stats">
+                        <p>Names below each circles represent <strong>specialists</strong> in each field. They’re the best</p>
+                    </article>
+                </div>
+
+              </section>
+              <section>
+                <article>
+                  <h2>Informations</h2>
+                  <img src="/img/demo-playoffs.png" alt="Demonstration of the playoffs">
+                  <p>Try to get you cursor <strong>hover</strong> the name of the teams</p>
+                </article>
+              </section>
+           </div>
+       </div>
+       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/framework/require.js" data-main="scripts/application"></script>
         <!-- endbuild -->
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-41731497-1', 'nballstats.com');ga('send', 'pageview');</script>
     </body>
 </html>

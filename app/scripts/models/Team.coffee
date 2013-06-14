@@ -33,18 +33,20 @@ define ['backbone', '.././views/BottomBarView', '.././views/StatsView'], (Backbo
         bottomBarRemove: ->
             @bottomBarView.remove()
         render: ->
-            @statsView = new StatsView model:@
-            $("#stats").empty().prepend @statsView.render()
+            if @get('sluggedName') isnt window.temp.showedTeam
+                window.temp.showedTeam = @get('sluggedName')
+                @statsView = new StatsView model:@
+                $("#stats").empty().prepend @statsView.render()
         stats: ->
-            if @statsView is null
-                @render()
+            @render()
             @statsView.data()
             return @
         awards: ->
-            if @statsView is null
-                @render()
+            @render()
             @statsView.awards()
         players: ->
-            if @statsView is null
-                @render()
+            @render()
             @statsView.players()
+        compare: ->
+            @render()
+            @statsView.compare()

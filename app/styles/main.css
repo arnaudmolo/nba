@@ -566,23 +566,24 @@ table {
 /* line 541, main.scss */
 h1 {
   font-family: 'arvobold';
+  color: #313249;
 }
 
-/* line 545, main.scss */
+/* line 546, main.scss */
 h1.center, h2.center, h3.center, h4.center, h5.center, p.center {
   text-align: center;
 }
-/* line 548, main.scss */
+/* line 549, main.scss */
 h1.uppercase, h2.uppercase, h3.uppercase, h4.uppercase, h5.uppercase, p.uppercase {
   text-transform: uppercase;
 }
 
-/* line 552, main.scss */
+/* line 553, main.scss */
 .bolder {
   font-weight: bolder;
 }
 
-/* line 555, main.scss */
+/* line 556, main.scss */
 strong {
   color: #b23843;
 }
@@ -635,25 +636,25 @@ strong {
   font-style: normal;
 }
 
-/* line 620, main.scss */
+/* line 621, main.scss */
 #map {
   height: 360px;
 }
-/* line 622, main.scss */
+/* line 623, main.scss */
 #map svg {
   background-image: url(/img/d_pattern1.png);
 }
-/* line 627, main.scss */
+/* line 628, main.scss */
 #map g path:hover {
   fill: #b33944;
   opacity: 1 !important;
 }
-/* line 633, main.scss */
+/* line 634, main.scss */
 #map g :hover path {
   opacity: 0.5;
 }
 
-/* line 639, main.scss */
+/* line 640, main.scss */
 #map path, #map g {
   transition: all 1s ease;
   position: relative;
@@ -661,179 +662,425 @@ strong {
   z-index: 10;
 }
 
-/* line 645, main.scss */
+/* line 646, main.scss */
 .fat {
   transition: all 1s ease;
   -webkit-transform: scale(5);
 }
 
-/* line 649, main.scss */
+/* line 650, main.scss */
 .zoomed, .zoomed path {
   fill: #b33944 !important;
   opacity: 1 !important;
 }
 
-/* line 653, main.scss */
+/* line 654, main.scss */
 .fat path {
   opacity: 0.5;
 }
 
-/* line 656, main.scss */
-body #main header nav li li .bg-equipes {
+/* line 657, main.scss */
+.bg-equipes {
   display: block;
   width: 130px;
   height: 130px;
   margin: 0;
   padding: 0;
   background-image: url(/img/logos/sprite-logo.png);
-  background-position-y: 0px;
+  background-position: 0 0px;
   margin: 0 auto;
 }
 
-/* line 666, main.scss */
-body #main header nav li li:hover {
+/* line 667, main.scss */
+header li li:hover {
   color: white;
 }
-/* line 668, main.scss */
-body #main header nav li li:hover .bg-equipes {
-  background-position-y: -130px;
-}
 
-/* line 673, main.scss */
+/* line 671, main.scss */
 #bottom-bar .team, header nav .team {
   width: 130px;
   height: 130px;
   margin: 0;
   padding: 0;
   background-image: url(/img/logos/sprite-logo.png);
-  background-position-y: -130px;
-}
-/* line 681, main.scss */
-#bottom-bar .boston-celtics, #bottom-bar .boston-celtics .bg-equipes, header nav .boston-celtics, header nav .boston-celtics .bg-equipes {
-  background-position-x: 0px;
-}
-/* line 684, main.scss */
-#bottom-bar .brooklyn-nets, #bottom-bar .brooklyn-nets .bg-equipes, header nav .brooklyn-nets, header nav .brooklyn-nets .bg-equipes {
-  background-position-x: -130px;
-}
-/* line 687, main.scss */
-#bottom-bar .new-york-knicks, #bottom-bar .new-york-knicks .bg-equipes, header nav .new-york-knicks, header nav .new-york-knicks .bg-equipes {
-  background-position-x: -260px;
-}
-/* line 690, main.scss */
-#bottom-bar .philadelphia-76ers, #bottom-bar .philadelphia-76ers .bg-equipes, header nav .philadelphia-76ers, header nav .philadelphia-76ers .bg-equipes {
-  background-position-x: -390px;
-}
-/* line 693, main.scss */
-#bottom-bar .toronto-raptors, #bottom-bar .toronto-raptors .bg-equipes, header nav .toronto-raptors, header nav .toronto-raptors .bg-equipes {
-  background-position-x: -520px;
-}
-/* line 696, main.scss */
-#bottom-bar .atlanta-hawks, #bottom-bar .atlanta-hawks .bg-equipes, header nav .atlanta-hawks, header nav .atlanta-hawks .bg-equipes {
-  background-position-x: -650px;
-}
-/* line 699, main.scss */
-#bottom-bar .charlotte-bobcats, #bottom-bar .charlotte-bobcats .bg-equipes, header nav .charlotte-bobcats, header nav .charlotte-bobcats .bg-equipes {
-  background-position-x: -780px;
-}
-/* line 702, main.scss */
-#bottom-bar .chicago-bulls, #bottom-bar .chicago-bulls .bg-equipes, header nav .chicago-bulls, header nav .chicago-bulls .bg-equipes {
-  background-position-x: -910px;
-}
-/* line 705, main.scss */
-#bottom-bar .cleveland-cavaliers, #bottom-bar .cleveland-cavaliers .bg-equipes, header nav .cleveland-cavaliers, header nav .cleveland-cavaliers .bg-equipes {
-  background-position-x: -1040px;
-}
-/* line 708, main.scss */
-#bottom-bar .dallas-mavericks, #bottom-bar .dallas-mavericks .bg-equipes, header nav .dallas-mavericks, header nav .dallas-mavericks .bg-equipes {
-  background-position-x: -1170px;
-}
-/* line 711, main.scss */
-#bottom-bar .denver-nuggets, #bottom-bar .denver-nuggets .bg-equipes, header nav .denver-nuggets, header nav .denver-nuggets .bg-equipes {
-  background-position-x: -1300px;
-}
-/* line 714, main.scss */
-#bottom-bar .detroit-pistons, #bottom-bar .detroit-pistons .bg-equipes, header nav .detroit-pistons, header nav .detroit-pistons .bg-equipes {
-  background-position-x: -1430px;
-}
-/* line 717, main.scss */
-#bottom-bar .golden-state-warriors, #bottom-bar .golden-state-warriors .bg-equipes, header nav .golden-state-warriors, header nav .golden-state-warriors .bg-equipes {
-  background-position-x: -1560px;
-}
-/* line 720, main.scss */
-#bottom-bar .houston-rockets, #bottom-bar .houston-rockets .bg-equipes, header nav .houston-rockets, header nav .houston-rockets .bg-equipes {
-  background-position-x: -1690px;
-}
-/* line 723, main.scss */
-#bottom-bar .indiana-pacers, #bottom-bar .indiana-pacers .bg-equipes, header nav .indiana-pacers, header nav .indiana-pacers .bg-equipes {
-  background-position-x: -1820px;
-}
-/* line 726, main.scss */
-#bottom-bar .los-angeles-clippers, #bottom-bar .los-angeles-clippers .bg-equipes, header nav .los-angeles-clippers, header nav .los-angeles-clippers .bg-equipes {
-  background-position-x: -1950px;
-}
-/* line 729, main.scss */
-#bottom-bar .los-angeles-lakers, #bottom-bar .los-angeles-lakers .bg-equipes, header nav .los-angeles-lakers, header nav .los-angeles-lakers .bg-equipes {
-  background-position-x: -2080px;
-}
-/* line 732, main.scss */
-#bottom-bar .memphis-grizzlies, #bottom-bar .memphis-grizzlies .bg-equipes, header nav .memphis-grizzlies, header nav .memphis-grizzlies .bg-equipes {
-  background-position-x: -2210px;
-}
-/* line 735, main.scss */
-#bottom-bar .miami-heat, #bottom-bar .miami-heat .bg-equipes, header nav .miami-heat, header nav .miami-heat .bg-equipes {
-  background-position-x: -2340px;
-}
-/* line 738, main.scss */
-#bottom-bar .milwaukee-bucks, #bottom-bar .milwaukee-bucks .bg-equipes, header nav .milwaukee-bucks, header nav .milwaukee-bucks .bg-equipes {
-  background-position-x: -2470px;
-}
-/* line 741, main.scss */
-#bottom-bar .minnesota-timberwolves, #bottom-bar .minnesota-timberwolves .bg-equipes, header nav .minnesota-timberwolves, header nav .minnesota-timberwolves .bg-equipes {
-  background-position-x: -2600px;
-}
-/* line 744, main.scss */
-#bottom-bar .new-orleans-hornets, #bottom-bar .new-orleans-hornets .bg-equipes, header nav .new-orleans-hornets, header nav .new-orleans-hornets .bg-equipes {
-  background-position-x: -2730px;
-}
-/* line 747, main.scss */
-#bottom-bar .oklahoma-city-thunder, #bottom-bar .oklahoma-city-thunder .bg-equipes, header nav .oklahoma-city-thunder, header nav .oklahoma-city-thunder .bg-equipes {
-  background-position-x: -2860px;
-}
-/* line 750, main.scss */
-#bottom-bar .orlando-magic, #bottom-bar .orlando-magic .bg-equipes, header nav .orlando-magic, header nav .orlando-magic .bg-equipes {
-  background-position-x: -2990px;
-}
-/* line 753, main.scss */
-#bottom-bar .phenix-suns, #bottom-bar .phenix-suns .bg-equipes, header nav .phenix-suns, header nav .phenix-suns .bg-equipes {
-  background-position-x: -3120px;
-}
-/* line 756, main.scss */
-#bottom-bar .portland-blazers, #bottom-bar .portland-blazers .bg-equipes, header nav .portland-blazers, header nav .portland-blazers .bg-equipes {
-  background-position-x: -3250px;
-}
-/* line 759, main.scss */
-#bottom-bar .sacramento-kings, #bottom-bar .sacramento-kings .bg-equipes, header nav .sacramento-kings, header nav .sacramento-kings .bg-equipes {
-  background-position-x: -3380px;
-}
-/* line 762, main.scss */
-#bottom-bar .san-antonio-spurs, #bottom-bar .san-antonio-spurs .bg-equipes, header nav .san-antonio-spurs, header nav .san-antonio-spurs .bg-equipes {
-  background-position-x: -3510px;
-}
-/* line 765, main.scss */
-#bottom-bar .utah-jazz, #bottom-bar .utah-jazz .bg-equipes, header nav .utah-jazz, header nav .utah-jazz .bg-equipes {
-  background-position-x: -3640px;
-}
-/* line 768, main.scss */
-#bottom-bar .buffalo-braves, #bottom-bar .buffalo-braves .bg-equipes, header nav .buffalo-braves, header nav .buffalo-braves .bg-equipes {
-  background-position-x: -3370px;
-}
-/* line 771, main.scss */
-#bottom-bar .washington-wizards, #bottom-bar .washington-wizards .bg-equipes, header nav .washington-wizards, header nav .washington-wizards .bg-equipes {
-  background-position-x: -3770px;
+  background-position: 0 -130px;
 }
 
-/* line 775, main.scss */
+/* line 681, main.scss */
+#bottom-bar .boston-celtics {
+  background-position: 0px -130px;
+}
+/* line 684, main.scss */
+#bottom-bar .brooklyn-nets {
+  background-position: -130px -130px;
+}
+/* line 687, main.scss */
+#bottom-bar .new-york-knicks {
+  background-position: -260px -130px;
+}
+/* line 690, main.scss */
+#bottom-bar .philadelphia-76ers {
+  background-position: -390px -130px;
+}
+/* line 693, main.scss */
+#bottom-bar .toronto-raptors {
+  background-position: -520px -130px;
+}
+/* line 696, main.scss */
+#bottom-bar .atlanta-hawks {
+  background-position: -650px -130px;
+}
+/* line 699, main.scss */
+#bottom-bar .charlotte-bobcats {
+  background-position: -780px -130px;
+}
+/* line 702, main.scss */
+#bottom-bar .chicago-bulls {
+  background-position: -910px -130px;
+}
+/* line 705, main.scss */
+#bottom-bar .cleveland-cavaliers {
+  background-position: -1040px -130px;
+}
+/* line 708, main.scss */
+#bottom-bar .dallas-mavericks {
+  background-position: -1170px -130px;
+}
+/* line 711, main.scss */
+#bottom-bar .denver-nuggets {
+  background-position: -1300px -130px;
+}
+/* line 714, main.scss */
+#bottom-bar .detroit-pistons {
+  background-position: -1430px -130px;
+}
+/* line 717, main.scss */
+#bottom-bar .golden-state-warriors {
+  background-position: -1560px -130px;
+}
+/* line 720, main.scss */
+#bottom-bar .houston-rockets {
+  background-position: -1690px -130px;
+}
+/* line 723, main.scss */
+#bottom-bar .indiana-pacers {
+  background-position: -1820px -130px;
+}
+/* line 726, main.scss */
+#bottom-bar .los-angeles-clippers {
+  background-position: -1950px -130px;
+}
+/* line 729, main.scss */
+#bottom-bar .los-angeles-lakers {
+  background-position: -2080px -130px;
+}
+/* line 732, main.scss */
+#bottom-bar .memphis-grizzlies {
+  background-position: -2210px -130px;
+}
+/* line 735, main.scss */
+#bottom-bar .miami-heat {
+  background-position: -2340px -130px;
+}
+/* line 738, main.scss */
+#bottom-bar .milwaukee-bucks {
+  background-position: -2470px -130px;
+}
+/* line 741, main.scss */
+#bottom-bar .minnesota-timberwolves {
+  background-position: -2600px -130px;
+}
+/* line 744, main.scss */
+#bottom-bar .new-orleans-hornets {
+  background-position: -2730px -130px;
+}
+/* line 747, main.scss */
+#bottom-bar .oklahoma-thunder {
+  background-position: -2860px -130px;
+}
+/* line 750, main.scss */
+#bottom-bar .orlando-magic {
+  background-position: -2990px -130px;
+}
+/* line 753, main.scss */
+#bottom-bar .phoenix-suns {
+  background-position: -3120px -130px;
+}
+/* line 756, main.scss */
+#bottom-bar .portland-blazers {
+  background-position: -3250px -130px;
+}
+/* line 759, main.scss */
+#bottom-bar .sacramento-kings {
+  background-position: -3380px -130px;
+}
+/* line 762, main.scss */
+#bottom-bar .san-antonio-spurs {
+  background-position: -3510px -130px;
+}
+/* line 765, main.scss */
+#bottom-bar .utah-jazz {
+  background-position: -3640px -130px;
+}
+/* line 768, main.scss */
+#bottom-bar .buffalo-braves {
+  background-position: -3370px -130px;
+}
+/* line 771, main.scss */
+#bottom-bar .washington-wizards {
+  background-position: -3770px -130px;
+}
+
+/* line 776, main.scss */
+header nav .boston-celtics .bg-equipes {
+  background-position: 0px 0px;
+}
+/* line 779, main.scss */
+header nav .brooklyn-nets .bg-equipes {
+  background-position: -130px 0px;
+}
+/* line 782, main.scss */
+header nav .new-york-knicks .bg-equipes {
+  background-position: -260px 0px;
+}
+/* line 785, main.scss */
+header nav .philadelphia-76ers .bg-equipes {
+  background-position: -390px 0px;
+}
+/* line 788, main.scss */
+header nav .toronto-raptors .bg-equipes {
+  background-position: -520px 0px;
+}
+/* line 791, main.scss */
+header nav .atlanta-hawks .bg-equipes {
+  background-position: -650px 0px;
+}
+/* line 794, main.scss */
+header nav .charlotte-bobcats .bg-equipes {
+  background-position: -780px 0px;
+}
+/* line 797, main.scss */
+header nav .chicago-bulls .bg-equipes {
+  background-position: -910px 0px;
+}
+/* line 800, main.scss */
+header nav .cleveland-cavaliers .bg-equipes {
+  background-position: -1040px 0px;
+}
+/* line 803, main.scss */
+header nav .dallas-mavericks .bg-equipes {
+  background-position: -1170px 0px;
+}
+/* line 806, main.scss */
+header nav .denver-nuggets .bg-equipes {
+  background-position: -1300px 0px;
+}
+/* line 809, main.scss */
+header nav .detroit-pistons .bg-equipes {
+  background-position: -1430px 0px;
+}
+/* line 812, main.scss */
+header nav .golden-state-warriors .bg-equipes {
+  background-position: -1560px 0px;
+}
+/* line 815, main.scss */
+header nav .houston-rockets .bg-equipes {
+  background-position: -1690px 0px;
+}
+/* line 818, main.scss */
+header nav .indiana-pacers .bg-equipes {
+  background-position: -1820px 0px;
+}
+/* line 821, main.scss */
+header nav .los-angeles-clippers .bg-equipes {
+  background-position: -1950px 0px;
+}
+/* line 824, main.scss */
+header nav .los-angeles-lakers .bg-equipes {
+  background-position: -2080px 0px;
+}
+/* line 827, main.scss */
+header nav .memphis-grizzlies .bg-equipes {
+  background-position: -2210px 0px;
+}
+/* line 830, main.scss */
+header nav .miami-heat .bg-equipes {
+  background-position: -2340px 0px;
+}
+/* line 833, main.scss */
+header nav .milwaukee-bucks .bg-equipes {
+  background-position: -2470px 0px;
+}
+/* line 836, main.scss */
+header nav .minnesota-timberwolves .bg-equipes {
+  background-position: -2600px 0px;
+}
+/* line 839, main.scss */
+header nav .new-orleans-hornets .bg-equipes {
+  background-position: -2730px 0px;
+}
+/* line 842, main.scss */
+header nav .oklahoma-thunder .bg-equipes {
+  background-position: -2860px 0px;
+}
+/* line 845, main.scss */
+header nav .orlando-magic .bg-equipes {
+  background-position: -2990px 0px;
+}
+/* line 848, main.scss */
+header nav .phenix-suns .bg-equipes {
+  background-position: -3120px 0px;
+}
+/* line 851, main.scss */
+header nav .portland-blazers .bg-equipes {
+  background-position: -3250px 0px;
+}
+/* line 854, main.scss */
+header nav .sacramento-kings .bg-equipes {
+  background-position: -3380px 0px;
+}
+/* line 857, main.scss */
+header nav .san-antonio-spurs .bg-equipes {
+  background-position: -3510px 0px;
+}
+/* line 860, main.scss */
+header nav .utah-jazz .bg-equipes {
+  background-position: -3640px 0px;
+}
+/* line 863, main.scss */
+header nav .buffalo-braves .bg-equipes {
+  background-position: -3370px 0px;
+}
+/* line 866, main.scss */
+header nav .washington-wizards .bg-equipes {
+  background-position: -3770px 0px;
+}
+/* line 870, main.scss */
+header nav li li:hover.boston-celtics .bg-equipes {
+  background-position: 0px -130px;
+}
+/* line 873, main.scss */
+header nav li li:hover.brooklyn-nets .bg-equipes {
+  background-position: -130px -130px;
+}
+/* line 876, main.scss */
+header nav li li:hover.new-york-knicks .bg-equipes {
+  background-position: -260px -130px;
+}
+/* line 879, main.scss */
+header nav li li:hover.philadelphia-76ers .bg-equipes {
+  background-position: -390px -130px;
+}
+/* line 882, main.scss */
+header nav li li:hover.toronto-raptors .bg-equipes {
+  background-position: -520px -130px;
+}
+/* line 885, main.scss */
+header nav li li:hover.atlanta-hawks .bg-equipes {
+  background-position: -650px -130px;
+}
+/* line 888, main.scss */
+header nav li li:hover.charlotte-bobcats .bg-equipes {
+  background-position: -780px -130px;
+}
+/* line 891, main.scss */
+header nav li li:hover.chicago-bulls .bg-equipes {
+  background-position: -910px -130px;
+}
+/* line 894, main.scss */
+header nav li li:hover.cleveland-cavaliers .bg-equipes {
+  background-position: -1040px -130px;
+}
+/* line 897, main.scss */
+header nav li li:hover.dallas-mavericks .bg-equipes {
+  background-position: -1170px -130px;
+}
+/* line 900, main.scss */
+header nav li li:hover.denver-nuggets .bg-equipes {
+  background-position: -1300px -130px;
+}
+/* line 903, main.scss */
+header nav li li:hover.detroit-pistons .bg-equipes {
+  background-position: -1430px -130px;
+}
+/* line 906, main.scss */
+header nav li li:hover.golden-state-warriors .bg-equipes {
+  background-position: -1560px -130px;
+}
+/* line 909, main.scss */
+header nav li li:hover.houston-rockets .bg-equipes {
+  background-position: -1690px -130px;
+}
+/* line 912, main.scss */
+header nav li li:hover.indiana-pacers .bg-equipes {
+  background-position: -1820px -130px;
+}
+/* line 915, main.scss */
+header nav li li:hover.los-angeles-clippers .bg-equipes {
+  background-position: -1950px -130px;
+}
+/* line 918, main.scss */
+header nav li li:hover.los-angeles-lakers .bg-equipes {
+  background-position: -2080px -130px;
+}
+/* line 921, main.scss */
+header nav li li:hover.memphis-grizzlies .bg-equipes {
+  background-position: -2210px -130px;
+}
+/* line 924, main.scss */
+header nav li li:hover.miami-heat .bg-equipes {
+  background-position: -2340px -130px;
+}
+/* line 927, main.scss */
+header nav li li:hover.milwaukee-bucks .bg-equipes {
+  background-position: -2470px -130px;
+}
+/* line 930, main.scss */
+header nav li li:hover.minnesota-timberwolves .bg-equipes {
+  background-position: -2600px -130px;
+}
+/* line 933, main.scss */
+header nav li li:hover.new-orleans-hornets .bg-equipes {
+  background-position: -2730px -130px;
+}
+/* line 936, main.scss */
+header nav li li:hover.oklahoma-city-thunder .bg-equipes {
+  background-position: -2860px -130px;
+}
+/* line 939, main.scss */
+header nav li li:hover.orlando-magic .bg-equipes {
+  background-position: -2990px -130px;
+}
+/* line 942, main.scss */
+header nav li li:hover.phenix-suns .bg-equipes {
+  background-position: -3120px -130px;
+}
+/* line 945, main.scss */
+header nav li li:hover.portland-blazers .bg-equipes {
+  background-position: -3250px -130px;
+}
+/* line 948, main.scss */
+header nav li li:hover.sacramento-kings .bg-equipes {
+  background-position: -3380px -130px;
+}
+/* line 951, main.scss */
+header nav li li:hover.san-antonio-spurs .bg-equipes {
+  background-position: -3510px -130px;
+}
+/* line 954, main.scss */
+header nav li li:hover.utah-jazz .bg-equipes {
+  background-position: -3640px -130px;
+}
+/* line 957, main.scss */
+header nav li li:hover.buffalo-braves .bg-equipes {
+  background-position: -3370px -130px;
+}
+/* line 960, main.scss */
+header nav li li:hover.washington-wizards .bg-equipes {
+  background-position: -3770px -130px;
+}
+
+/* line 965, main.scss */
 .solid {
   position: relative;
   top: 0;
@@ -843,7 +1090,7 @@ body #main header nav li li:hover .bg-equipes {
   background-position: 4px 48px;
 }
 
-/* line 783, main.scss */
+/* line 973, main.scss */
 #bottom-bar {
   transition: all 0.5s ease;
   overflow: hidden;
@@ -852,31 +1099,31 @@ body #main header nav li li:hover .bg-equipes {
   width: 920px;
   height: 100%;
 }
-/* line 790, main.scss */
+/* line 980, main.scss */
 #bottom-bar.hidden {
   width: 0px;
 }
-/* line 793, main.scss */
+/* line 983, main.scss */
 #bottom-bar a, #bottom-bar h1 {
   font-size: 18px;
   color: #313249;
   text-align: center;
 }
-/* line 798, main.scss */
+/* line 988, main.scss */
 #bottom-bar h1 {
   min-height: 46px;
   margin-top: 0;
 }
-/* line 802, main.scss */
+/* line 992, main.scss */
 #bottom-bar h2 {
   font-size: 0.7em;
   margin: 0;
 }
-/* line 806, main.scss */
+/* line 996, main.scss */
 #bottom-bar p {
   margin-bottom: 5px;
 }
-/* line 809, main.scss */
+/* line 999, main.scss */
 #bottom-bar a {
   display: inline-block;
   margin-left: 0px;
@@ -887,11 +1134,11 @@ body #main header nav li li:hover .bg-equipes {
   overflow: hidden;
   border-right: 1px solid #b6b9c0;
 }
-/* line 818, main.scss */
+/* line 1008, main.scss */
 #bottom-bar a:last-child {
   border: none;
 }
-/* line 830, main.scss */
+/* line 1011, main.scss */
 #bottom-bar a.show {
   padding-top: 0;
   padding-bottom: 0;
@@ -902,13 +1149,14 @@ body #main header nav li li:hover .bg-equipes {
   width: 160px;
 }
 
-/* line 842, main.scss */
-.bottom-bar {
+/* line 1023, main.scss */
+body .bottom-bar {
   height: 332px;
-  margin-top: 60px !important;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
-/* line 846, main.scss */
+/* line 1028, main.scss */
 #choose {
   cursor: pointer;
   float: left;
@@ -917,7 +1165,7 @@ body #main header nav li li:hover .bg-equipes {
   height: 100%;
   color: white;
 }
-/* line 853, main.scss */
+/* line 1035, main.scss */
 #choose p {
   color: white;
   border: 0px solid red;
@@ -938,46 +1186,49 @@ body #main header nav li li:hover .bg-equipes {
   font-size: 24px;
   font-weight: normal;
 }
-/* line 873, main.scss */
+/* line 1055, main.scss */
 #choose span {
   -webkit-transform: rotate(90deg);
   display: block;
 }
 
-/* line 878, main.scss */
+/* line 1060, main.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 881, main.scss */
+/* line 1063, main.scss */
 #nba-logo {
   transition: all 1s ease;
   overflow: hidden;
 }
 
-/* line 885, main.scss */
+/* line 1067, main.scss */
 body, html, #main {
   height: 100%;
 }
 
-/* line 888, main.scss */
+/* line 1070, main.scss */
 #main {
   width: 100%;
-  transition: all 1s ease;
 }
-/* line 891, main.scss */
+/* line 1072, main.scss */
 #main.open {
   margin-left: -330px;
 }
-/* line 894, main.scss */
+/* line 1075, main.scss */
 #main.double {
   margin-left: -660px;
 }
 
-/* line 898, main.scss */
+/* line 1079, main.scss */
 #menu {
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  top: 100%;
   width: 0;
-  height: 100%;
+  color: white;
   transition: all 1s ease;
   background: #2a2c3f;
   /* Old browsers */
@@ -995,48 +1246,62 @@ body, html, #main {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2a2c3f', endColorstr='#313348',GradientType=1 );
   /* IE6-9 */
+  z-index: 1000;
 }
-/* line 911, main.scss */
+/* line 1096, main.scss */
+#menu h2 {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+/* line 1101, main.scss */
+#menu img {
+  border: 3px solid #202231;
+}
+/* line 1104, main.scss */
+#menu p {
+  margin: 10px 0;
+}
+/* line 1107, main.scss */
+#menu article {
+  border-bottom: 1px solid #606272;
+  padding-bottom: 15px;
+  padding-top: 30px;
+}
+/* line 1112, main.scss */
 #menu.open {
   width: 330px;
+  padding: 0 30px;
+  padding-bottom: 9px;
 }
-/* line 914, main.scss */
-#menu > ul {
-  position: fixed;
-  background: #2a2c3f;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #2a2c3f 0%, #313348 12%, #313348 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #2a2c3f), color-stop(12%, #313348), color-stop(100%, #313348));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #2a2c3f 0%, #313348 12%, #313348 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #2a2c3f 0%, #313348 12%, #313348 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #2a2c3f 0%, #313348 12%, #313348 100%);
-  /* IE10+ */
-  background: linear-gradient(to right, #2a2c3f 0%, #313348 12%, #313348 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2a2c3f', endColorstr='#313348',GradientType=1 );
-  /* IE6-9 */
-  height: 100%;
-  width: 100%;
+/* line 1117, main.scss */
+#menu .hidden {
+  display: none;
 }
-/* line 926, main.scss */
-#menu > ul > li {
+/* line 1120, main.scss */
+#menu section {
+  margin-top: 5%;
+  overflow: hidden;
+}
+/* line 1124, main.scss */
+#menu > div {
+  width: 340px;
+}
+/* line 1126, main.scss */
+#menu > div > li {
   height: 60px;
   width: 100%;
 }
-/* line 929, main.scss */
-#menu > ul > li a {
+/* line 1129, main.scss */
+#menu > div > li a {
   width: 100%;
   height: 100%;
   display: block;
   padding-left: 55px;
   line-height: 60px;
 }
-/* line 938, main.scss */
-#menu > ul li:hover {
+/* line 1138, main.scss */
+#menu > div li:hover {
   background: #7e818b;
   /* Old browsers */
   background: -moz-linear-gradient(left, #7e818b 0%, #bdc1c7 12%, #bdc1c7 100%);
@@ -1054,16 +1319,16 @@ body, html, #main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7e818b', endColorstr='#bdc1c7',GradientType=1 );
   /* IE6-9 */
 }
-/* line 947, main.scss */
-#menu > ul li:hover a {
+/* line 1147, main.scss */
+#menu > div li:hover a {
   color: #313249;
 }
-/* line 952, main.scss */
-#menu > ul ul {
+/* line 1152, main.scss */
+#menu > div ul {
   display: none;
 }
-/* line 954, main.scss */
-#menu > ul ul.show {
+/* line 1154, main.scss */
+#menu > div ul.show {
   position: absolute;
   display: block;
   margin-left: 330px;
@@ -1086,12 +1351,12 @@ body, html, #main {
   height: 100%;
   z-index: 9999;
 }
-/* line 969, main.scss */
-#menu > ul ul.show a {
+/* line 1169, main.scss */
+#menu > div ul.show a {
   color: #ecf0f1;
 }
 
-/* line 976, main.scss */
+/* line 1176, main.scss */
 body {
   font-size: 18px;
   font-family: "montserratregular";
@@ -1099,37 +1364,38 @@ body {
   overflow-x: hidden;
 }
 
-/* line 982, main.scss */
+/* line 1182, main.scss */
 section {
   width: 100%;
   min-height: 100%;
 }
 
-/* line 986, main.scss */
+/* line 1186, main.scss */
 a {
   color: white;
   text-decoration: none;
 }
 
-/* line 990, main.scss */
-section#home {
+/* line 1190, main.scss */
+#home {
   color: #ecf0f1;
   height: 100%;
   background-image: url("../img/pattern_home.png"), url("../img/home_screen.jpg");
   background-position: left top,right bottom;
+  -webkit-background-size: auto, cover;
+  -moz-background-size: auto, cover;
+  -o-background-size: auto, cover;
+  background-size: auto, cover;
   background-repeat: repeat,no-repeat;
-  -webkit-background-size: auto;
-  -moz-background-size: auto;
-  -o-background-size: auto;
-  background-size: auto;
+  overflow: hidden;
 }
-/* line 1003, main.scss */
-section#home.loading header {
+/* line 1204, main.scss */
+#home.loading header {
   height: 0;
   overflow: hidden;
 }
-/* line 1008, main.scss */
-section#home header {
+/* line 1209, main.scss */
+#home header {
   position: absolute;
   width: 100%;
   height: 60px;
@@ -1138,23 +1404,24 @@ section#home header {
   background-color: rgba(49, 50, 73, 0.5);
   font-family: "montserratbold";
   border-top: 1px solid #191925;
+  padding: 0;
 }
-/* line 1017, main.scss */
-section#home header nav {
+/* line 1219, main.scss */
+#home header nav {
   text-align: center;
 }
-/* line 1019, main.scss */
-section#home header nav > ul > li {
+/* line 1221, main.scss */
+#home header nav > ul > li {
   display: inline-block;
   text-align: center;
   width: 155px;
 }
-/* line 1023, main.scss */
-section#home header nav > ul > li:hover ul {
+/* line 1225, main.scss */
+#home header nav > ul > li:hover ul {
   height: 262px;
 }
-/* line 1026, main.scss */
-section#home header nav > ul > li > span {
+/* line 1228, main.scss */
+#home header nav > ul > li > span {
   text-decoration: none;
   height: 39px;
   border-left: 1px solid #191925;
@@ -1166,57 +1433,58 @@ section#home header nav > ul > li > span {
   width: 160px;
   cursor: pointer;
 }
-/* line 1037, main.scss */
-section#home header nav > ul > li > span:hover {
+/* line 1239, main.scss */
+#home header nav > ul > li > span:hover {
   background-color: #313249;
 }
-/* line 1040, main.scss */
-section#home header nav > ul > li > span:first-child {
+/* line 1242, main.scss */
+#home header nav > ul > li > span:first-child {
   border-left: 1px solid #393951;
 }
-/* line 1043, main.scss */
-section#home header nav > ul > li > span:last-child {
+/* line 1245, main.scss */
+#home header nav > ul > li > span:last-child {
   border-right: 1px solid #191925;
 }
-/* line 1050, main.scss */
-section#home .content {
+/* line 1252, main.scss */
+#home .content {
   width: 960px;
   margin: auto;
 }
-/* line 1053, main.scss */
-section#home .content h1 {
+/* line 1255, main.scss */
+#home .content h1 {
   font-weight: normal;
   margin: 0 20px;
   font-family: "arvobold";
   font-size: 1.7em;
   text-transform: uppercase;
 }
-/* line 1059, main.scss */
-section#home .content h1 span {
+/* line 1261, main.scss */
+#home .content h1 span {
   width: 100px;
   height: 1px;
   background-color: white;
   display: inline-block;
   margin: 0 10px 10px 10px;
 }
-/* line 1067, main.scss */
-section#home .content img {
+/* line 1269, main.scss */
+#home .content img {
+  width: 70%;
   margin-bottom: 10px;
 }
-/* line 1071, main.scss */
-section#home .logo {
+/* line 1274, main.scss */
+#home .logo {
   position: relative;
-  top: 3%;
+  top: 15%;
   text-align: center;
 }
 
-/* line 1077, main.scss */
+/* line 1280, main.scss */
 ul {
   padding: 0;
   margin: 0;
 }
 
-/* line 1081, main.scss */
+/* line 1284, main.scss */
 .detailsmenu ul {
   position: absolute;
   bottom: 0;
@@ -1231,7 +1499,7 @@ ul {
   overflow: hidden;
 }
 
-/* line 1097, main.scss */
+/* line 1300, main.scss */
 .detailsmenu ul li {
   float: left;
   width: 188px;
@@ -1240,7 +1508,7 @@ ul {
   padding-top: 33px;
 }
 
-/* line 1104, main.scss */
+/* line 1307, main.scss */
 .detailsmenu ul li:after {
   content: "";
   width: 1px;
@@ -1250,107 +1518,123 @@ ul {
   margin-top: -170px;
 }
 
-/* line 1112, main.scss */
+/* line 1315, main.scss */
 .detailsmenu ul li:last-child:after {
   display: none;
 }
 
-/* line 1115, main.scss */
+/* line 1318, main.scss */
 .detailsmenu ul li:hover {
   background-color: #923645;
   cursor: pointer;
 }
 
-/* line 1120, main.scss */
+/* line 1323, main.scss */
 .detailsmenu ul li p {
   line-height: 18px;
 }
 
-/* line 1123, main.scss */
+/* line 1326, main.scss */
 .detailsmenu ul li:hover p {
   color: #313249;
 }
 
-/* line 1126, main.scss */
+/* line 1329, main.scss */
 .background {
   fill: none;
   pointer-events: all;
 }
 
-/* line 1131, main.scss */
+/* line 1334, main.scss */
 #states {
   fill: #aaa;
   stroke: #fff;
   stroke-width: 1.5px;
 }
 
-/* line 1137, main.scss */
+/* line 1340, main.scss */
 #states .active {
   fill: #b23843;
 }
 
-/* line 1140, main.scss */
+/* line 1343, main.scss */
 #states rect {
   fill: url(/img/pattern_map.png);
 }
 
-/* line 1143, main.scss */
+/* line 1346, main.scss */
 path {
   transition: all 1s ease;
 }
 
-/* line 1146, main.scss */
+/* line 1349, main.scss */
 .container {
   width: 980px;
   margin: 0 auto;
 }
 
-/* line 1150, main.scss */
+/* line 1353, main.scss */
 #stats-style {
   background-image: url(/img/bg-stats.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  min-height: 0;
   background-color: #313249;
   -webkit-background-size: cover;
   background-size: cover;
+  min-height: 0;
 }
-/* line 1158, main.scss */
+/* line 1361, main.scss */
+#stats-style.show {
+  max-height: 0%;
+  transition: all 1s ease;
+}
+/* line 1365, main.scss */
+#stats-style.rendered {
+  max-height: 300%;
+  min-height: 100%;
+}
+/* line 1369, main.scss */
+#stats-style.noheight {
+  height: auto;
+  transition: height 0s;
+}
+/* line 1373, main.scss */
 #stats-style > section {
   min-height: 0;
-  padding-top: 60px;
 }
 
-/* line 1163, main.scss */
+/* line 1377, main.scss */
 #stats {
   color: white;
 }
-/* line 1165, main.scss */
+/* line 1379, main.scss */
+#stats h1 {
+  color: white;
+}
+/* line 1382, main.scss */
 #stats div {
   overflow: hidden;
 }
-/* line 1168, main.scss */
+/* line 1385, main.scss */
 #stats > section {
   min-height: 100%;
   transition: all 1s ease 1s;
 }
-/* line 1171, main.scss */
-#stats > section > div {
-  display: inline-block;
-  transition: width 1s ease, height 0s ease 1s;
-  width: 100%;
-  vertical-align: top;
-  height: 2000px;
+/* line 1391, main.scss */
+#stats #awards.hidden .bg, #stats #awards.hidden .notif {
+  -webkit-transform: scale(0) !important;
+  transition-delay: 0s !important;
 }
-/* line 1180, main.scss */
+/* line 1396, main.scss */
 #stats #awards > div {
   display: inline-block;
   width: 32.5%;
   height: 280px;
   vertical-align: middle;
   text-align: center;
+  margin-bottom: 50px;
 }
-/* line 1186, main.scss */
+/* line 1403, main.scss */
 #stats #awards > div .bg {
   transition: all 0.5s ease 0s;
   background-image: url(/img/sprite-awards.png);
@@ -1358,40 +1642,104 @@ path {
   height: 200px;
   width: 200px;
   margin: 0 auto;
-  background-position-y: -5px;
+  background-position: 0 -5px;
   -webkit-transform: scale(1);
 }
-/* line 1197, main.scss */
-#stats #awards > div.on .bg {
-  background-position-y: -210px;
+/* line 1416, main.scss */
+#stats #awards .mvp.show .bg {
+  background-position: 0 -210px;
 }
-/* line 1203, main.scss */
+/* line 1420, main.scss */
+#stats #awards .mvp .bg {
+  background-position: 0 -10px;
+}
+/* line 1426, main.scss */
+#stats #awards .all-star-mvp.show .bg {
+  background-position: -400px -210px;
+}
+/* line 1430, main.scss */
 #stats #awards .all-star-mvp .bg {
-  background-position-x: -400px;
+  background-position: -400px -10px;
   transition-delay: 0.5s;
 }
-/* line 1209, main.scss */
+/* line 1434, main.scss */
+#stats #awards .all-star-mvp .notif {
+  transition-delay: 0.75s;
+}
+/* line 1440, main.scss */
+#stats #awards .defensive-player-of-the-year.show .bg {
+  background-position: -600px -210px;
+}
+/* line 1444, main.scss */
 #stats #awards .defensive-player-of-the-year .bg {
-  background-position-x: -600px;
+  background-position: -600px -10px;
   transition-delay: 1s;
 }
-/* line 1215, main.scss */
+/* line 1448, main.scss */
+#stats #awards .defensive-player-of-the-year .notif {
+  transition-delay: 1.25s;
+}
+/* line 1454, main.scss */
+#stats #awards .sixth-man-of-the-year.show .bg {
+  background-position: -200px -210px;
+}
+/* line 1458, main.scss */
 #stats #awards .sixth-man-of-the-year .bg {
-  background-position-x: -200px;
+  background-position: -200px -10px;
   transition-delay: 1.5s;
 }
-/* line 1221, main.scss */
+/* line 1462, main.scss */
+#stats #awards .sixth-man-of-the-year .notif {
+  transition-delay: 1.75s;
+}
+/* line 1468, main.scss */
+#stats #awards .rookie-of-the-year.show .bg {
+  background-position: -810px -210px;
+}
+/* line 1472, main.scss */
 #stats #awards .rookie-of-the-year .bg {
-  background-position-x: -810px;
+  background-position: -810px -10px;
   transition-delay: 2s;
 }
-/* line 1227, main.scss */
+/* line 1476, main.scss */
+#stats #awards .rookie-of-the-year .notif {
+  transition-delay: 2.25s;
+}
+/* line 1482, main.scss */
+#stats #awards .nba-champion.show .bg {
+  background-position: -1020px -210px;
+}
+/* line 1486, main.scss */
 #stats #awards .nba-champion .bg {
-  background-position-x: -1020px;
+  background-position: -1020px -10px;
   transition-delay: 2.5s;
 }
+/* line 1490, main.scss */
+#stats #awards .nba-champion .notif {
+  transition-delay: 2.75s;
+}
 
-/* line 1234, main.scss */
+/* line 1496, main.scss */
+#valuehover {
+  background-color: black;
+  width: 300px;
+  height: 80px;
+}
+
+/* line 1501, main.scss */
+#valuehover p {
+  width: 80px;
+  height: 80px;
+  background-color: #777caf;
+}
+
+/* line 1506, main.scss */
+#compare svg {
+  position: absolute;
+  left: 0;
+}
+
+/* line 1510, main.scss */
 .notif {
   background-color: #b23843;
   height: 35px;
@@ -1404,9 +1752,11 @@ path {
   position: absolute;
   margin-left: 200px;
   margin-top: 25px;
+  z-index: 35;
+  transition: all 0.5s ease;
 }
 
-/* line 1251, main.scss */
+/* line 1529, main.scss */
 .team {
   display: inline-block;
   width: 200px;
@@ -1415,291 +1765,277 @@ path {
   padding-left: 15px;
   background-repeat: no-repeat;
   background-image: url(/img/sprite-legende.png);
-  background-position-y: 3px;
+  background-position: 0 3px;
 }
 
-/* line 1261, main.scss */
+/* line 1539, main.scss */
 #teams {
   color: #313249;
 }
 
-/* line 1265, main.scss */
+/* line 1543, main.scss */
 #legend .new-york-knicks {
-  background-position-y: 3px;
+  background-position: 0 3px;
 }
-/* line 1268, main.scss */
+/* line 1546, main.scss */
 #legend .san-antonio-spurs {
-  background-position-y: -11px;
+  background-position: 0 -11px;
 }
-/* line 1271, main.scss */
+/* line 1549, main.scss */
 #legend .los-angeles-lakers {
-  background-position-y: -26px;
+  background-position: 0 -26px;
 }
-/* line 1274, main.scss */
+/* line 1552, main.scss */
 #legend .denver-nuggets {
-  background-position-y: -41px;
+  background-position: 0 -41px;
 }
-/* line 1277, main.scss */
+/* line 1555, main.scss */
 #legend .atlanta-hawks {
-  background-position-y: -57px;
+  background-position: 0 -57px;
 }
-/* line 1280, main.scss */
+/* line 1558, main.scss */
 #legend .portland-blazers {
-  background-position-y: -72px;
+  background-position: 0 -72px;
 }
-/* line 1283, main.scss */
+/* line 1561, main.scss */
 #legend .milwaukee-bucks {
-  background-position-y: -87px;
+  background-position: 0 -87px;
 }
-/* line 1286, main.scss */
+/* line 1564, main.scss */
 #legend .buffalo-braves {
-  background-position-y: -101px;
+  background-position: 0 -101px;
 }
-/* line 1289, main.scss */
+/* line 1567, main.scss */
 #legend .chicago-bulls {
-  background-position-y: -116px;
+  background-position: 0 -116px;
 }
-/* line 1292, main.scss */
+/* line 1570, main.scss */
 #legend .cap {
-  background-position-y: -131px;
+  background-position: 0 -131px;
 }
-/* line 1295, main.scss */
+/* line 1573, main.scss */
 #legend .baltimore-bullets {
-  background-position-y: -146px;
+  background-position: 0 -146px;
 }
-/* line 1298, main.scss */
+/* line 1576, main.scss */
 #legend .washington-wizards {
-  background-position-y: -161px;
+  background-position: 0 -161px;
 }
-/* line 1301, main.scss */
+/* line 1579, main.scss */
 #legend .philadelphie-sixers {
-  background-position-y: -176px;
+  background-position: 0 -176px;
 }
-/* line 1304, main.scss */
+/* line 1582, main.scss */
 #legend .houston-rockets {
-  background-position-y: -191px;
+  background-position: 0 -191px;
 }
-/* line 1307, main.scss */
+/* line 1585, main.scss */
 #legend .phenix-suns {
-  background-position-y: -206px;
+  background-position: 0 -206px;
 }
-/* line 1310, main.scss */
+/* line 1588, main.scss */
 #legend .seattle-supersonics {
-  background-position-y: -221px;
+  background-position: 0 -221px;
 }
-/* line 1313, main.scss */
+/* line 1591, main.scss */
 #legend .golden-state-warriors {
-  background-position-y: -236px;
+  background-position: 0 -236px;
 }
-/* line 1316, main.scss */
+/* line 1594, main.scss */
 #legend .kansas-city-kings {
-  background-position-y: -251px;
+  background-position: 0 -251px;
 }
-/* line 1319, main.scss */
+/* line 1597, main.scss */
 #legend .boston-celtics {
-  background-position-y: -266px;
+  background-position: 0 -266px;
 }
-/* line 1322, main.scss */
+/* line 1600, main.scss */
 #legend .cleveland-cavaliers {
-  background-position-y: -281px;
+  background-position: 0 -281px;
 }
-/* line 1325, main.scss */
+/* line 1603, main.scss */
 #legend .detroit-pistons {
-  background-position-y: -296px;
+  background-position: 0 -296px;
 }
-/* line 1328, main.scss */
+/* line 1606, main.scss */
 #legend .brooklyn-nets {
-  background-position-y: -311px;
+  background-position: 0 -311px;
 }
-/* line 1331, main.scss */
+/* line 1609, main.scss */
 #legend .utah-jazz {
-  background-position-y: -326px;
+  background-position: 0 -326px;
 }
-/* line 1334, main.scss */
+/* line 1612, main.scss */
 #legend .dallas-mavericks {
-  background-position-y: -341px;
+  background-position: 0 -341px;
 }
-/* line 1337, main.scss */
+/* line 1615, main.scss */
 #legend .charlotte-bobcats {
-  background-position-y: -356px;
+  background-position: 0 -356px;
 }
-/* line 1340, main.scss */
+/* line 1618, main.scss */
 #legend .indiana-pacers {
-  background-position-y: -371px;
+  background-position: 0 -371px;
 }
-/* line 1343, main.scss */
+/* line 1621, main.scss */
 #legend .orlando-magic {
-  background-position-y: -386px;
+  background-position: 0 -386px;
 }
-/* line 1346, main.scss */
+/* line 1624, main.scss */
 #legend .miami-heat {
-  background-position-y: -401px;
+  background-position: 0 -401px;
 }
-/* line 1349, main.scss */
+/* line 1627, main.scss */
 #legend .toronto-raptors {
-  background-position-y: -416px;
+  background-position: 0 -416px;
 }
-/* line 1352, main.scss */
+/* line 1630, main.scss */
 #legend .minnesota-timberwolves {
-  background-position-y: -431px;
+  background-position: 0 -431px;
 }
-/* line 1355, main.scss */
+/* line 1633, main.scss */
 #legend .sacramento-kings {
-  background-position-y: -446px;
+  background-position: 0 -446px;
 }
-/* line 1358, main.scss */
+/* line 1636, main.scss */
 #legend .new-orleans-hornets {
-  background-position-y: -461px;
+  background-position: 0 -461px;
 }
-/* line 1361, main.scss */
+/* line 1639, main.scss */
 #legend .los-angeles-clippers {
-  background-position-y: -476px;
+  background-position: 0 -476px;
 }
-/* line 1364, main.scss */
+/* line 1642, main.scss */
 #legend .memphis-grizzlies {
-  background-position-y: -491px;
+  background-position: 0 -491px;
 }
-/* line 1367, main.scss */
+/* line 1645, main.scss */
 #legend .oklahoma-city-thunder {
-  background-position-y: -506px;
+  background-position: 0 -506px;
 }
 
-/* line 1371, main.scss */
+/* line 1649, main.scss */
 #slider > article {
   transition: all 1s ease;
 }
-/* line 1373, main.scss */
+/* line 1651, main.scss */
 #slider > article.hidden {
   position: absolute;
   margin-left: -100%;
 }
 
-/* line 1379, main.scss */
-.transition .bg {
-  -webkit-transform: scale(0) !important;
-}
-
-/* line 1383, main.scss */
+/* line 1656, main.scss */
 .dial {
   width: 19.5%;
   display: inline-block;
 }
 
-/* line 1387, main.scss */
+/* line 1660, main.scss */
 nav.center {
   text-align: center;
 }
 
-/* line 1390, main.scss */
-#stats > section > div.title.underline {
-  width: 250px;
-  height: 2px;
-  border-top: 1px white solid;
-  margin: 0 auto;
-  display: block;
-}
-
-/* line 1397, main.scss */
+/* line 1663, main.scss */
 #stats > section > h1 {
   margin-bottom: 14px;
   font-size: 1.35em;
 }
 
-/* line 1401, main.scss */
+/* line 1667, main.scss */
 #stats > section > nav {
-  margin-top: 25px;
   margin-bottom: 45px;
 }
 
-/* line 1405, main.scss */
+/* line 1670, main.scss */
 nav.navigation a {
-  padding: 5px 24px;
+  padding: 5px 22px;
+  font-size: 16px;
 }
-/* line 1407, main.scss */
+/* line 1673, main.scss */
 nav.navigation a.active {
   border-bottom: 1px #b23843 solid;
 }
 
-/* line 1412, main.scss */
+/* line 1678, main.scss */
 #players nav.navigation a {
   transition: all 0.5s ease;
   border-bottom: none;
 }
-/* line 1413, main.scss */
+/* line 1679, main.scss */
 #players nav.navigation a.active {
   background-color: #b23843;
 }
 
-/* line 1421, main.scss */
+/* line 1687, main.scss */
 .number strong {
   color: white;
   font-size: 10em;
 }
 
-/* line 1426, main.scss */
+/* line 1692, main.scss */
 .tiers {
-  width: 33.3330%;
+  width: 32.99%;
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 1432, main.scss */
+/* line 1698, main.scss */
 .lignes span {
-  width: 90px;
+  width: 94px;
   height: 1px;
   background-color: white;
   display: inline-block;
   margin: 0 10px 5px 10px;
 }
 
-/* line 1440, main.scss */
+/* line 1706, main.scss */
 ul.legend li span {
   width: 20px;
   height: 15px;
   display: inline-block;
 }
 
-/* line 1445, main.scss */
+/* line 1711, main.scss */
 ul.legend li.points span {
   background-color: #b23843;
 }
 
-/* line 1446, main.scss */
+/* line 1712, main.scss */
 ul.legend li.rebounds span {
   background-color: #1abc9c;
 }
 
-/* line 1447, main.scss */
+/* line 1713, main.scss */
 ul.legend li.fieldsGoalsMade span {
   background-color: #3498db;
 }
 
-/* line 1448, main.scss */
+/* line 1714, main.scss */
 ul.legend li.assists span {
   background-color: #9b59b6;
 }
 
-/* line 1449, main.scss */
+/* line 1715, main.scss */
 ul.legend li.freeThrow span {
   background-color: #34495e;
 }
 
-/* line 1450, main.scss */
+/* line 1716, main.scss */
 ul.legend li.threePointsMade span {
   background-color: #f1c40f;
 }
 
-/* line 1451, main.scss */
+/* line 1717, main.scss */
 ul.legend li.blocks span {
   background-color: #e67e22;
 }
 
-/* line 1452, main.scss */
+/* line 1718, main.scss */
 ul.legend li.all span {
   background-color: white;
 }
 
-/* line 1454, main.scss */
+/* line 1720, main.scss */
 .circlestat {
   width: 6px;
   height: 6px;
@@ -1708,161 +2044,390 @@ ul.legend li.all span {
   border-radius: 50%;
 }
 
-/* line 1456, main.scss */
+/* line 1722, main.scss */
 .points li {
   border: 2px solid #b23843;
 }
 
-/* line 1457, main.scss */
+/* line 1723, main.scss */
 .blocks li {
   border: 2px solid #e67e22;
 }
 
-/* line 1458, main.scss */
+/* line 1724, main.scss */
 .threepointers li {
   border: 2px solid #f1c40f;
 }
 
-/* line 1459, main.scss */
+/* line 1725, main.scss */
 .fieldgoals li {
   border: 2px solid #3498db;
 }
 
-/* line 1460, main.scss */
+/* line 1726, main.scss */
 .rebounds li {
   border: 2px solid #1abc9c;
 }
 
-/* line 1461, main.scss */
+/* line 1727, main.scss */
 .freeThrow li {
   border: 2px solid #34495e;
 }
 
-/* line 1462, main.scss */
+/* line 1728, main.scss */
 .assists li {
   border: 2px solid #9b59b6;
 }
 
-/* line 1463, main.scss */
+/* line 1729, main.scss */
 .points li {
   background-color: #b23843;
 }
 
-/* line 1464, main.scss */
+/* line 1730, main.scss */
 .blocks li {
   background-color: #e67e22;
 }
 
-/* line 1465, main.scss */
+/* line 1731, main.scss */
 .threepointers li {
   background-color: #f1c40f;
 }
 
-/* line 1466, main.scss */
+/* line 1732, main.scss */
 .fieldgoals li {
   background-color: #3498db;
 }
 
-/* line 1467, main.scss */
+/* line 1733, main.scss */
 .rebounds li {
   background-color: #1abc9c;
 }
 
-/* line 1468, main.scss */
+/* line 1734, main.scss */
 .freeThrow li {
   background-color: #34495e;
 }
 
-/* line 1469, main.scss */
+/* line 1735, main.scss */
 .assists li {
   background-color: #9b59b6;
 }
 
-/* line 1470, main.scss */
-h4 {
-  color: white;
-  width: 500px;
-}
-
-/* line 1471, main.scss */
+/* line 1737, main.scss */
 h4 span {
   float: right;
 }
 
-/* line 1473, main.scss */
+/* line 1739, main.scss */
 div.yearsinfos {
   display: inline-block;
   width: 300px;
   float: right;
 }
+/* line 1743, main.scss */
+div.yearsinfos h4 {
+  font-size: 1em;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+/* line 1748, main.scss */
+div.yearsinfos p {
+  font-size: 0.8em;
+  font-weight: 100;
+}
 
-/* line 1478, main.scss */
+/* line 1753, main.scss */
 ul.legend {
   bottom: 0;
   display: inline-block;
-  margin-top: 50px;
+  margin-top: 8%;
+  margin-bottom: 5%;
 }
 
-/* line 1483, main.scss */
+/* line 1759, main.scss */
 ul.legend li {
   cursor: pointer;
   display: inline-block;
+  margin-left: 17px;
 }
 
-/* line 1487, main.scss */
+/* line 1764, main.scss */
 #graph {
   display: inline-block;
 }
 
-/* line 1490, main.scss */
+/* line 1767, main.scss */
 #graph svg g g {
   cursor: pointer;
 }
 
-/* line 1493, main.scss */
+/* line 1770, main.scss */
 #graph svg > circle:last-child {
   cursor: pointer;
 }
 
-/* line 1496, main.scss */
+/* line 1773, main.scss */
 #graph svg > circle:last-child:hover {
   cursor: pointer;
 }
 
-/* line 1499, main.scss */
+/* line 1776, main.scss */
 #graph g g:hover {
   opacity: 0.8;
 }
 
-/* line 1502, main.scss */
+/* line 1779, main.scss */
 .active {
   opacity: 1 !important;
 }
 
-/* line 1506, main.scss */
+/* line 1782, main.scss */
 #graph g g {
   opacity: 0.5;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-/* line 1511, main.scss */
+/* line 1787, main.scss */
 .open-menu {
-  position: fixed;
+  position: absolute;
   right: 25px;
-  top: 25px;
+  margin-top: 25px;
+  text-transform: none !important;
+}
+
+/* line 1793, main.scss */
+.blanc .open-menu a {
+  color: #313249;
 }
 
 @media (min-width: 979px) {
-  /* line 1517, main.scss */
+  /* line 1797, main.scss */
   #map svg {
     position: absolute;
     left: 0;
   }
 }
 @media (max-width: 980px) {
-  /* line 1523, main.scss */
+  /* line 1803, main.scss */
   body {
     overflow: auto;
   }
+}
+/* line 1807, main.scss */
+#overlay {
+  transition: opacity 0.5s ease, z-index 0s ease 0.5s;
+  background-color: #313149;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+/* line 1815, main.scss */
+#overlay.show {
+  opacity: 0.8;
+  transition: opacity 0.5s ease, z-index 0s ease;
+  z-index: 999;
+}
+
+/* line 1821, main.scss */
+.square {
+  width: 40px;
+  height: 40px;
+  background-color: #b23843;
+  margin: 10px 0;
+  display: block;
+}
+
+/* line 1828, main.scss */
+#arrows {
+  position: fixed;
+  z-index: 998;
+  top: 38%;
+  left: 0;
+}
+/* line 1833, main.scss */
+#arrows .prev {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAOCAYAAADjXQYbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjQ3N0FBQjdENDFCMTFFMjk3OUFERUU0RERDRTU1NjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjQ3N0FBQjhENDFCMTFFMjk3OUFERUU0RERDRTU1NjEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCNDc3QUFCNUQ0MUIxMUUyOTc5QURFRTRERENFNTU2MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCNDc3QUFCNkQ0MUIxMUUyOTc5QURFRTRERENFNTU2MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlNWLVgAAABhSURBVHjaYnzz4SMDFIgC8WIgjgXi1yABJqgEFxBvBmJ3KM0Fk2QG4uVAbA5VaA7lM4MkJwKxHwMqAPEnMyLZCQL/gZgRxmFiwAMY////D2a8/fgJRacwPx9+nUNLEiDAAK/5FPRQSSOmAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* line 1838, main.scss */
+#arrows .next {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAOCAYAAADjXQYbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTNBRUMzNTNENDFDMTFFMkIyRkZFQjRGNzU5ODYxRTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTNBRUMzNTRENDFDMTFFMkIyRkZFQjRGNzU5ODYxRTUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1M0FFQzM1MUQ0MUMxMUUyQjJGRkVCNEY3NTk4NjFFNSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1M0FFQzM1MkQ0MUMxMUUyQjJGRkVCNEY3NTk4NjFFNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnwDtdMAAABfSURBVHjaYvz//z/D24+fGKDgPxAzCvPzgTlMDHjA0JJkfPPhIzIf7E+ijW2H6viPpBuE20HGgoxZBcQhSJrWA3EwE1RVPBCfhEqA6BiQOMzOb0DsC8Q7oDSIzwAQYADRzhxFlID6IAAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* line 1844, main.scss */
+circle {
+  cursor: pointer;
+}
+
+/* line 1848, main.scss */
+.infos-stats p {
+  text-align: center;
+}
+
+/* line 1853, main.scss */
+.points h1 {
+  text-align: center;
+}
+/* line 1855, main.scss */
+.points h1 strong {
+  font-size: 2em;
+}
+/* line 1860, main.scss */
+.points .lignes span {
+  width: 104px;
+}
+
+/* line 1867, main.scss */
+.infos .lignes span {
+  width: 112px;
+}
+
+/* line 1872, main.scss */
+.white {
+  color: white;
+}
+
+/* line 1875, main.scss */
+#the-team {
+  color: white;
+  background-image: url(/img/bg_team.jpg);
+  background-position: left top,right bottom;
+  background-repeat: repeat,no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+/* line 1886, main.scss */
+#the-team > div > a {
+  display: block;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 170px;
+  margin: 0 11px;
+}
+/* line 1892, main.scss */
+#the-team > div > a aside {
+  color: #b23843;
+  font-size: 30px;
+  font-family: 'montserratbold';
+}
+/* line 1897, main.scss */
+#the-team > div > a h2 {
+  font-family: 'arvobold';
+}
+/* line 1900, main.scss */
+#the-team > div > a p {
+  font-size: 11px;
+}
+/* line 1903, main.scss */
+#the-team > div > a .bg {
+  height: 170px;
+  width: 170px;
+  background-image: url(/img/sprite-team.png);
+  background-repeat: no-repeat;
+}
+/* line 1912, main.scss */
+#the-team .thierry .bg {
+  background-position: -2px 1px;
+}
+/* line 1917, main.scss */
+#the-team .pierre .bg {
+  background-position: -192px 1px;
+}
+/* line 1922, main.scss */
+#the-team .arnaud .bg {
+  background-position: -382px 1px;
+}
+/* line 1927, main.scss */
+#the-team .sam .bg {
+  background-position: -572px 1px;
+}
+/* line 1932, main.scss */
+#the-team .anthony .bg {
+  background-position: -762px 1px;
+}
+/* line 1936, main.scss */
+#the-team .margin-top {
+  margin-top: 60px;
+}
+/* line 1939, main.scss */
+#the-team footer {
+  margin-top: 120px;
+}
+
+/* line 1943, main.scss */
+.title.underline {
+  width: 250px;
+  height: 2px;
+  border-top: 1px white solid;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 1950, main.scss */
+.blanc .title.underline {
+  border-top: 1px #313249 solid;
+}
+
+/* line 1953, main.scss */
+.btn {
+  padding: 15px;
+}
+/* line 1955, main.scss */
+.btn.red {
+  background-color: #b23843;
+}
+
+/* line 1959, main.scss */
+footer {
+  text-align: center;
+}
+
+/* line 1962, main.scss */
+header {
+  padding: 60px 0 30px 0;
+}
+/* line 1964, main.scss */
+header h1 {
+  margin-bottom: 20px;
+}
+
+/* line 1969, main.scss */
+#compare {
+  min-height: 900px;
+}
+/* line 1971, main.scss */
+#compare li {
+  display: inline-block;
+  margin: 19px;
+}
+/* line 1975, main.scss */
+#compare select {
+  background-color: #313249;
+  border: none;
+  color: white;
+  text-align: center;
+  -webkit-appearance: none;
+  padding: 14px 0px 14px 40px;
+}
+/* line 1983, main.scss */
+#compare option {
+  background-color: #313249;
+  color: white;
+  padding: 5px 5px;
+  text-transform: capitalize;
+}
+/* line 1989, main.scss */
+#compare > div {
+  width: 457px;
+  margin: 0 auto;
 }

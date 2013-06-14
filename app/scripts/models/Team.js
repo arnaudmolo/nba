@@ -62,32 +62,34 @@ define(['backbone', '.././views/BottomBarView', '.././views/StatsView'], functio
     };
 
     Team.prototype.render = function() {
-      this.statsView = new StatsView({
-        model: this
-      });
-      return $("#stats").empty().prepend(this.statsView.render());
+      if (this.get('sluggedName') !== window.temp.showedTeam) {
+        window.temp.showedTeam = this.get('sluggedName');
+        this.statsView = new StatsView({
+          model: this
+        });
+        return $("#stats").empty().prepend(this.statsView.render());
+      }
     };
 
     Team.prototype.stats = function() {
-      if (this.statsView === null) {
-        this.render();
-      }
+      this.render();
       this.statsView.data();
       return this;
     };
 
     Team.prototype.awards = function() {
-      if (this.statsView === null) {
-        this.render();
-      }
+      this.render();
       return this.statsView.awards();
     };
 
     Team.prototype.players = function() {
-      if (this.statsView === null) {
-        this.render();
-      }
+      this.render();
       return this.statsView.players();
+    };
+
+    Team.prototype.compare = function() {
+      this.render();
+      return this.statsView.compare();
     };
 
     return Team;

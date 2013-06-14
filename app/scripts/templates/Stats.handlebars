@@ -1,49 +1,89 @@
-<h1 class="center uppercase">All you <strong>need</strong> to know</h1>
-<div class="title underline"></div>
+<header>
+    <h1 class="center uppercase">All you <strong>need</strong> to know</h1>
+    <div class="title underline"></div>
+</header>
 <nav class="center navigation">
     <a class="center" href="#/stats/{{sluggedName}}">Statistics</a>
     <a class="center" href="#/awards/{{sluggedName}}">Awards</a>
     <a class="center" href="#/players/{{sluggedName}}">Players</a>
-    <a class="center" href="#/Compare/{{sluggedName}}">Compare</a>
+    <a class="center" href="#/compare/{{sluggedName}}">Compare</a>
 </nav>
 <section id="slider">
     <article id="data" class="container">
         <div class="left">
         </div>
     </article>
-    <article id="awards" class="hidden container transition">
-        <div class="mvp">
+    <article id="awards" class="hidden container">
+        <div class="mvp
+            {{#ifCond awards.mvp '>' 0}}
+            show
+            {{/ifCond}}">
             <p>Most Valuable Player</p>
-            <div class="notif">x2</div>
+            {{#ifCond awards.mvp '>' 1}}
+            <div class="notif">x{{awards.mvp}}</div>
+            {{/ifCond}}
             <div class="bg"></div>
         </div>
-        <div class="all-star-mvp">
+        <div class="all-star-mvp
+            {{#ifCond awards.all-star-mvp '>' 0}}
+            show
+            {{/ifCond}}">
             <p>All Star MVP</p>
+            {{#ifCond awards.all-star-mvp '>' 1}}
+            <div class="notif">x{{awards.all-star-mvp}}</div>
+            {{/ifCond}}
             <div class="bg"></div>
         </div>
-        <div class="defensive-player-of-the-year">
+        <div class="defensive-player-of-the-year
+            {{#ifCond awards.defensive-player-of-the-year '>' 0}}
+            show
+            {{/ifCond}}">
             <p>Defensive player of the year</p>
+            {{#ifCond awards.defensive-player-of-the-year '>' 1}}
+            <div class="notif">x{{awards.defensive-player-of-the-year}}</div>
+            {{/ifCond}}
             <div class="bg"></div>
         </div>
-        <div class="sixth-man-of-the-year">
+        <div class="sixth-man-of-the-year
+            {{#ifCond awards.six-man-of-the-year '>' 0}}
+            show
+            {{/ifCond}}">
             <p>Sixth man of the year</p>
+            {{#ifCond awards.six-man-of-the-year '>' 1}}
+            <div class="notif">x{{awards.six-man-of-the-year}}</div>
+            {{/ifCond}}
             <div class="bg"></div>
         </div>
-        <div class="rookie-of-the-year">
+        <div class="rookie-of-the-year
+            {{#ifCond awards.rookie-of-the-year '>' 0}}
+            show
+            {{/ifCond}}">
             <p>Rookie of the year</p>
+            {{#ifCond awards.rookie-of-the-year '>' 1}}
+            <div class="notif">x{{awards.rookie-of-the-year}}</div>
+            {{/ifCond}}
             <div class="bg"></div>
         </div>
-        <div class="nba-champion">
+        <div class="nba-champion
+            {{#ifCond awards.nba-champion '>' 0}}
+            show
+            {{/ifCond}}">
             <p>NBA Champion</p>
+            {{#ifCond awards.nba-champion '>' 1}}
+            <div class="notif">x{{awards.nba-champion}}</div>
+            {{/ifCond}}
             <div class="bg"></div>
         </div>
     </article>
-    <article id="players" class="hidden container transition">
+    <article id="players" class="hidden container">
         <nav class="center navigation changePlayer">
             <a href="#/1" class="active best-ever">{{players.[0].firstname}} {{players.[0].lastname}}</a>
             <a href="#/2" class="best-year">{{players.[1].firstname}} {{players.[1].lastname}}</a>
         </nav>
         <div class="player">
         </div>
+    </article>
+    <article id="compare" class="hidden container">
+        
     </article>
 </section>

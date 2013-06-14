@@ -3,22 +3,16 @@ requirejs.config({
     backbone: "framework/backbone",
     handlebars: "framework/handlebars",
     lodash: "framework/lodash",
-    jquery: "framework/jquery.min",
     view: "views/View",
     goto: "framework/goto",
     d3: "framework/d3",
-    jqeasing: "framework/jquery.easing.1.2"
+    jqeasing: "framework/jquery.easing.1.2",
+    inview: "framework/inView"
   },
   shim: {
     backbone: {
-      deps: ["lodash", "jquery"],
+      deps: ["lodash"],
       exports: "Backbone"
-    },
-    goto: {
-      deps: ["jquery"]
-    },
-    jqeasing: {
-      deps: ["jqeasing"]
     }
   }
 });

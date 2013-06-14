@@ -1,13 +1,32 @@
 var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView', './DataView'], function(templateString, Backbone, View, PlayerView, DataView) {
+define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView', './DataView', './CompareView'], function(templateString, Backbone, View, PlayerView, DataView, CompareView) {
   var StatsView, _ref;
 
   Handlebars.registerHelper("debug", function(optionalValue) {
-    console.log(this);
+    console.log('debug', this);
+    console.log(optionalValue);
     if (optionalValue) {
       return console.log(optionalValue);
+    }
+  });
+  Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
+    switch (operator) {
+      case "==":
+        return (v1 === v2 ? options.fn(this) : options.inverse(this));
+      case "===":
+        return (v1 === v2 ? options.fn(this) : options.inverse(this));
+      case "<":
+        return (v1 < v2 ? options.fn(this) : options.inverse(this));
+      case "<=":
+        return (v1 <= v2 ? options.fn(this) : options.inverse(this));
+      case ">":
+        return (v1 > v2 ? options.fn(this) : options.inverse(this));
+      case ">=":
+        return (v1 >= v2 ? options.fn(this) : options.inverse(this));
+      default:
+        return options.inverse(this);
     }
   });
   return StatsView = (function(_super) {
@@ -26,7 +45,9 @@ define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView', '
     StatsView.prototype.initialize = function() {
       this.el = document.createElement('section');
       this.$el = $(this.el);
-      return this.listenTo(this.model, 'change', this.render);
+      this.listenTo(this.model, 'change', this.render);
+      this.parent = $("#stats-style");
+      return this.parent.addClass('show');
     };
 
     StatsView.prototype.render = function() {
@@ -39,9 +60,13 @@ define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView', '
         data = this.model.attributes;
       }
       this.el.innerHTML = template(data);
-      this.toHide = this.$el.find('#awards, #data, #players');
+      this.toHide = this.$el.find('#awards, #data, #players, #compare');
       this.onRendered();
       return this.el;
+    };
+
+    StatsView.prototype.onRendered = function() {
+      return this.parent.addClass('rendered');
     };
 
     StatsView.prototype.menuNav = function(index) {
@@ -53,30 +78,34 @@ define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView', '
     };
 
     StatsView.prototype.data = function() {
+      var show;
+
       if (this.dataView === void 0) {
         this.dataView = new DataView({
           model: this.model,
           el: $("#data")[0]
         });
       }
-      this.toHide.addClass('hidden').addClass('transition');
-      this.$el.find('#data').removeClass('hidden').find('.center.navigation a');
-      return this.menuNav(0);
+      show = this.$el.find('#data');
+      this.toHide.not(show).addClass('hidden');
+      show.removeClass('hidden');
+      this.menuNav(0);
+      return this.parent.attr('data-url', 'stats/' + this.model.get('sluggedName'));
     };
 
     StatsView.prototype.awards = function() {
       var show;
 
-      this.toHide.addClass('hidden');
-      show = this.$el.find('#awards').removeClass('hidden');
+      show = this.$el.find('#awards');
+      this.toHide.not(show).addClass('hidden');
+      show.removeClass('hidden');
       this.menuNav(1);
-      return show.on('webkitTransitionEnd', function() {
-        this.classList.remove('transition');
-        return $(this).unbind('webkitTransitionEnd');
-      });
+      return this.parent.attr('data-url', 'awards/' + this.model.get('sluggedName'));
     };
 
     StatsView.prototype.players = function() {
+      var show;
+
       if (this.playerView === void 0) {
         this.playerView = new PlayerView({
           model: this.model.get('players')[0],
@@ -86,9 +115,27 @@ define(['text!templates/Stats.handlebars', 'backbone', 'view', './PlayerView', '
       this.$el.find('.changePlayer a.best-ever').addClass('active');
       this.$el.find('.changePlayer a.best-year').removeClass('active');
       this.playerView.render();
-      this.toHide.addClass('hidden').addClass('transition');
-      this.$el.find('#players').removeClass('hidden');
-      return this.menuNav(2);
+      show = this.$el.find('#players');
+      this.toHide.not(show).addClass('hidden');
+      show.removeClass('hidden');
+      this.menuNav(2);
+      return this.parent.attr('data-url', 'players/' + this.model.get('sluggedName'));
+    };
+
+    StatsView.prototype.compare = function() {
+      var compare;
+
+      compare = $(document.getElementById('compare'));
+      if (this.compareView === void 0) {
+        this.compareView = new CompareView({
+          model: this.model,
+          el: compare
+        });
+      }
+      this.toHide.not(compare).addClass('hidden');
+      compare.removeClass('hidden');
+      this.menuNav(3);
+      return this.compareView.render();
     };
 
     StatsView.prototype.bestEver = function(e) {

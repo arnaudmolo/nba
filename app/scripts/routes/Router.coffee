@@ -8,6 +8,8 @@ define ['backbone','goto'], ->
             'playoffs':'playoffs'
             'awards/:name':'awards'
             'players/:name':'players'
+            'the-team': 'theTeam'
+            'compare/:name': 'compare'
         state: (name)->
             window.mainView.goTo(name)
             $.scrollTo "#teams", 500, axis: 'y'
@@ -15,27 +17,19 @@ define ['backbone','goto'], ->
         init: ->
 
         stats: (name)->
-            window.transition = true
-            if window.transition
-                window.mainView.goTo(window.mainView.stats(name).get('state'), zoom: window.transition, stats: true)
-            else
-                $.scrollTo "#stats", 1000,
-                    axis: 'y'
-                window.mainView.stats name
-            window.mainView.menu.close()
+            window.mainView.goTo(window.mainView.stats(name).get('state'), zoom: window.transition, stats: true)
         map:->
             $.scrollTo "#teams", 500,
                 axis: 'y'
         playoffs: ->
-            $.scrollTo "#playoffs", 500,
+            $.scrollTo "#playoffs-style", 500,
                 axis: 'y'
         awards: (name)->
-            if window.transition
-                window.mainView.goTo(window.mainView.awards(name).get('state'), zoom: window.transition, stats: true)
-            else
-                window.mainView.awards(name)
+            window.mainView.goTo(window.mainView.awards(name).get('state'), zoom: window.transition, stats: true)
         players: (name)->
-            if window.transition
-                window.mainView.goTo(window.mainView.players(name).get('state'), zoom: window.transition, stats: true)
-            else
-                window.mainView.players(name)
+            window.mainView.goTo(window.mainView.players(name).get('state'), zoom: window.transition, stats: true)
+        theTeam: ->
+            $.scrollTo "#the-team", 500,
+                axis: 'y'
+        compare: (name)->
+            window.mainView.goTo(window.mainView.compare(name).get('state'), zoom: window.transition, stats: true)

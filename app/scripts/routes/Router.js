@@ -19,7 +19,9 @@ define(['backbone', 'goto'], function() {
       'map': 'map',
       'playoffs': 'playoffs',
       'awards/:name': 'awards',
-      'players/:name': 'players'
+      'players/:name': 'players',
+      'the-team': 'theTeam',
+      'compare/:name': 'compare'
     };
 
     Router.prototype.state = function(name) {
@@ -33,19 +35,10 @@ define(['backbone', 'goto'], function() {
     Router.prototype.init = function() {};
 
     Router.prototype.stats = function(name) {
-      window.transition = true;
-      if (window.transition) {
-        window.mainView.goTo(window.mainView.stats(name).get('state'), {
-          zoom: window.transition,
-          stats: true
-        });
-      } else {
-        $.scrollTo("#stats", 1000, {
-          axis: 'y'
-        });
-        window.mainView.stats(name);
-      }
-      return window.mainView.menu.close();
+      return window.mainView.goTo(window.mainView.stats(name).get('state'), {
+        zoom: window.transition,
+        stats: true
+      });
     };
 
     Router.prototype.map = function() {
@@ -55,31 +48,36 @@ define(['backbone', 'goto'], function() {
     };
 
     Router.prototype.playoffs = function() {
-      return $.scrollTo("#playoffs", 500, {
+      return $.scrollTo("#playoffs-style", 500, {
         axis: 'y'
       });
     };
 
     Router.prototype.awards = function(name) {
-      if (window.transition) {
-        return window.mainView.goTo(window.mainView.awards(name).get('state'), {
-          zoom: window.transition,
-          stats: true
-        });
-      } else {
-        return window.mainView.awards(name);
-      }
+      return window.mainView.goTo(window.mainView.awards(name).get('state'), {
+        zoom: window.transition,
+        stats: true
+      });
     };
 
     Router.prototype.players = function(name) {
-      if (window.transition) {
-        return window.mainView.goTo(window.mainView.players(name).get('state'), {
-          zoom: window.transition,
-          stats: true
-        });
-      } else {
-        return window.mainView.players(name);
-      }
+      return window.mainView.goTo(window.mainView.players(name).get('state'), {
+        zoom: window.transition,
+        stats: true
+      });
+    };
+
+    Router.prototype.theTeam = function() {
+      return $.scrollTo("#the-team", 500, {
+        axis: 'y'
+      });
+    };
+
+    Router.prototype.compare = function(name) {
+      return window.mainView.goTo(window.mainView.compare(name).get('state'), {
+        zoom: window.transition,
+        stats: true
+      });
     };
 
     return Router;

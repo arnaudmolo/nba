@@ -60,7 +60,6 @@ define(['backbone', 'view', 'd3'], function(Backbone, View, ignore) {
         return this;
       }
       click = function(d) {
-        console.log(d);
         window.mainView.map.zoom(d);
         if (d !== void 0) {
           return window.router.navigate('#/state/' + d.properties.name);
@@ -72,7 +71,9 @@ define(['backbone', 'view', 'd3'], function(Backbone, View, ignore) {
       this.rect.attr("class", "background").attr("width", this.width()).attr("height", this.height).attr('visible', 'hidden').on("click", click, this);
       this.svgMap = g = this.svg.append("g").attr("id", "states");
       d3.json("readme.json", function(json) {
-        g.selectAll("path").data(json.features).enter().append("path").attr("d", path).on("click", click);
+        g.selectAll("path").data(json.features).enter().append("path").attr('fill', function(d) {
+          return d.properties.color;
+        }).attr("d", path).on("click", click);
         window.mainView.loaded();
         return click();
       });
